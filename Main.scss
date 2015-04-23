@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 // SASS Functions, Mixins and Variables
-@import "_Settings/_Index",
-	"_Variables";
+@import "_Framework/_Index";
+@import "_Variables";
 
 // Generic rules
 @import "Generic/_Head";
