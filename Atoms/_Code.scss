@@ -1,0 +1,36 @@
+/*
+Code & pre-formatted text elements
+
+Styleguide 3.12
+*/
+
+/*
+Default styles
+
+Markup:
+<code>.css{ color: red; }</code><br>
+<kbd>.css{ color: red; }</kbd><br>
+<samp>.css{ color: red; }</samp><br>
+<pre>.css{ color: red; }</pre>
+
+Styleguide 3.12.1
+*/
+code,
+kbd,
+pre,
+samp {
+	/**
+	 * Corrects font family set oddly in Safari 5 and Chrome.
+	 */
+	font-family: $mono-font-family;
+	font-size: 1em;
+}
+
+pre {
+	/**
+	 * Improves readability of pre-formatted text in all browsers.
+	 */
+	white-space: pre-wrap;
+	@extend %u-m0;
+	@extend %u-mb;
+}

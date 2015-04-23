@@ -1,0 +1,103 @@
+/*
+List elements
+
+Basic styling for lists and definition elements.
+
+Styleguide 3.5
+*/
+
+
+/*
+Unordered- & Ordered-Lists
+
+.reset-list - Resets the standard list styles of an `<ul>` or `<ol>` element.
+
+Markup:
+<ul class="{$modifiers}">
+	<li>Unordered-List</li>
+	<li>I am the first list-element.</li>
+	<li>I am the second list-element.</li>
+	<li>I am the third list-element.</li>
+	<li>I am the fourth list-element.</li>
+</ul>
+<ol class="{$modifiers}">
+	<li>Ordered-List</li>
+	<li>I am the first list-element.</li>
+	<li>I am the second list-element.</li>
+	<li>I am the third list-element.</li>
+	<li>I am the fourth list-element.</li>
+</ol>
+
+Styleguide 3.5.1
+*/
+menu,
+ol,
+ul {
+	padding: 0 0 0 rs(40);
+	@extend %u-m0;
+	@extend %u-mb;
+}
+li > ul,
+li > ol {
+	/**
+	 * Remove vertical spacing from nested lists.
+	 */
+	margin-bottom: 0;
+}
+
+/*
+Reset-List helper class
+*/
+%reset-list,
+.reset-list {
+	/**
+	 *
+	 */
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+/*
+Definitions.
+
+.dl--horizontal - Display a definition list in a horizontal order.
+
+Markup:
+<dl class="{$modifiers}">
+	<dt>Description lists</dt>
+	<dd>A description list is perfect for defining terms.</dd>
+	<dt>Euismod</dt>
+	<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem.</dd>
+	<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+	<dt>Malesuada porta</dt>
+	<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+	<dt>Felis euismod semper eget lacinia</dt>
+	<dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+</dl>
+
+Styleguide 3.5.3
+*/
+dl {
+	@extend %u-m0;
+	@extend %u-mb;
+}
+
+/*
+Horizontal definition abstraction
+*/
+%dl--horizontal,
+.dl--horizontal {
+	@extend .u-cf;
+	dt {
+		float: $start;
+		width: 19%;
+		overflow: hidden;
+		clear: $start;
+		text-align: $end;
+		@extend %u-textBreak;
+	}
+	dd {
+		margin-#{$start}: 21%;
+	}
+}

@@ -1,0 +1,107 @@
+/*
+Mixins
+
+Styleguide 1.2
+*/
+
+
+/*
+High density Image-Dimensions Mixin($fileName, $width, $height)
+
+Creates the required rules for high density optimized images.
+
+<!= type: css || isPureCode !>
+
+Markup:
+.selector {
+	@include hdpi-img('brand-logo.png');
+}
+
+Styleguide 1.2.1
+*/
+@mixin hdpi-img($fileName, $width, $height) {
+	@if(type-of($fileName) != "string") {
+		@warn 'Argument $fileName of hdpi-img() must be a string';
+	}
+	@if((type-of($width) != "number") or (type-of($height) != "number")) {
+		@warn 'Arguments $width and $height of hdpi-img() must be a number';
+	}
+	background-size: $width/2 $height/2;
+	background-image: image-url('#{$fileName}');
+}
+
+
+/*
+REM Unit Mixin($property, $value)
+
+Creates a property independent 'rem' calculation with a pixel fallback, default property is set to 'font-size'.
+
+<!= type: css || isPureCode !>
+
+Markup:
+.selector {
+	@include rem($property: font-size, $value: 18);
+}
+
+Styleguide 1.2.2
+*/
+@mixin rem($property: font-size, $value: 16) {
+	#{$property}: $value +px;
+	#{$property}: ($value / 16)*1rem;
+}
+
+
+/*
+Font-Size Mixin($font-size, $appendVrythm)
+
+Creates a fully formed type style (sizing and vertical rhythm) by passing in a single value.
+
+<!= type: css || isPureCode !>
+
+Markup:
+.selector {
+	@include rem($size: 16, $appendVrythm: true);
+}
+
+Styleguide 1.2.3
+*/
+@mixin font-size($font-size, $appendVrythm: false) {
+	@include rem(font-size, $font-size);
+	@if $appendVrythm {
+		line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+	}
+}
+
+
+/*
+CSS Triangle Mixin($triangleSize, $triangleColor, $triangleDirection)
+
+Creates an css arrow as per http://cssarrowplease.com/.
+
+<!= type: css || isPureCode !>
+
+Markup:
+.selector:after {
+	position: absolute;
+	top: -5px;
+	left: 50%;
+	margin-left: -2.5px;
+	@include cssTriangle(5px, #fff, bottom);
+}
+
+Styleguide 1.2.4
+*/
+@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
+	@if(not ($triangleDirection == "top") and not ($triangleDirection == "bottom") and not ($triangleDirection == "left") and not ($triangleDirection == "right")) {
+		@warn 'Argument $triangleDirection  of cssTriangle() should be either "top", "bottom", "left" or "right" to work appropriately';
+	}
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border: solid $triangleSize;
+	@if ($triangleDirection == "top")    { border-color: $triangleColor transparent transparent transparent; }
+	@if ($triangleDirection == "bottom") { border-color: transparent transparent $triangleColor transparent; }
+	@if ($triangleDirection == "left")   { border-color: transparent transparent transparent $triangleColor; }
+	@if ($triangleDirection == "right")  { border-color: transparent $triangleColor transparent transparent; }
+}

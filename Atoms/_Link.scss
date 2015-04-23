@@ -1,0 +1,47 @@
+/*
+Anchors / Link elements
+
+Basic styling for anchor tags.
+
+Styleguide 3.3
+*/
+
+
+/*
+Standard anchors
+
+Markup:
+<a href="#" class="{$modifiers}">I am an anchor element.</a>
+
+:hover   - Hover styling for anchor elements.
+
+Styleguide 3.3.1
+*/
+a {
+	color: $link-color;
+	text-decoration: none;
+	/**
+	 * Remove the gray background color from active links in IE 10.
+	 */
+	background: transparent;
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: underline;
+	}
+	&:active,
+	&:hover {
+		/**
+		 * Improves readability when focused and also mouse hovered in all browsers.
+		 */
+		outline: 0;
+	}
+	p & {
+		/**
+		 * Increasing the Clickable Area of Inline Links inside a paragraph
+		 */
+		margin: -.33em;
+		padding: .33em;
+		position: relative;
+	}
+}

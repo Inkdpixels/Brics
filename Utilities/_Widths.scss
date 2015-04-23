@@ -1,0 +1,138 @@
+// Grid mixin
+@mixin grid-setup($namespace:  "") {
+	/**
+	* Whole
+	*/
+	.u-w#{$namespace}1\/1              { width: 100%; }
+
+	/**
+	* Halves
+	*/
+	.u-w#{$namespace}1\/2              { width: 50%; }
+
+	/**
+	* Thirds
+	*/
+	.u-w#{$namespace}1\/3              { width: 33.333%; }
+	.u-w#{$namespace}2\/3              { width: 66.666%; }
+
+	/**
+	* Quarters
+	*/
+	.u-w#{$namespace}1\/4              { width: 25%; }
+	.u-w#{$namespace}2\/4              { @extend .u-w#{$namespace}1\/2; }
+	.u-w#{$namespace}3\/4              { width: 75%; }
+
+	/**
+	* Fifths
+	*/
+	.u-w#{$namespace}1\/5              { width: 20%; }
+	.u-w#{$namespace}2\/5              { width: 40%; }
+	.u-w#{$namespace}3\/5              { width: 60%; }
+	.u-w#{$namespace}4\/5              { width: 80%; }
+
+	/**
+	* Sixths
+	*/
+	.u-w#{$namespace}1\/6              { width: 16.666%; }
+	.u-w#{$namespace}2\/6              { @extend .u-w#{$namespace}1\/3; }
+	.u-w#{$namespace}3\/6              { @extend .u-w#{$namespace}1\/2; }
+	.u-w#{$namespace}4\/6              { @extend .u-w#{$namespace}2\/3; }
+	.u-w#{$namespace}5\/6              { width: 83.333%; }
+
+	/**
+	* Eighths
+	*/
+	.u-w#{$namespace}1\/8              { width: 12.5%; }
+	.u-w#{$namespace}2\/8              { @extend .u-w#{$namespace}1\/4; }
+	.u-w#{$namespace}3\/8              { width: 37.5%; }
+	.u-w#{$namespace}4\/8              { @extend .u-w#{$namespace}1\/2; }
+	.u-w#{$namespace}5\/8              { width: 62.5%; }
+	.u-w#{$namespace}6\/8              { @extend .u-w#{$namespace}3\/4; }
+	.u-w#{$namespace}7\/8              { width: 87.5%; }
+
+	/**
+	* Tenths
+	*/
+	.u-w#{$namespace}1\/10             { width: 10%; }
+	.u-w#{$namespace}2\/10             { @extend .u-w#{$namespace}1\/5; }
+	.u-w#{$namespace}3\/10             { width: 30%; }
+	.u-w#{$namespace}4\/10             { @extend .u-w#{$namespace}2\/5; }
+	.u-w#{$namespace}5\/10             { @extend .u-w#{$namespace}1\/2; }
+	.u-w#{$namespace}6\/10             { @extend .u-w#{$namespace}3\/5; }
+	.u-w#{$namespace}7\/10             { width: 70%; }
+	.u-w#{$namespace}8\/10             { @extend .u-w#{$namespace}4\/5; }
+	.u-w#{$namespace}9\/10             { width: 90%; }
+
+	/**
+	* Twelfths
+	*/
+	.u-w#{$namespace}1\/12             { width: 8.333%; }
+	.u-w#{$namespace}2\/12             { @extend .u-w#{$namespace}1\/6; }
+	.u-w#{$namespace}3\/12             { @extend .u-w#{$namespace}1\/4; }
+	.u-w#{$namespace}4\/12             { @extend .u-w#{$namespace}1\/3; }
+	.u-w#{$namespace}5\/12             { width: 41.666% }
+	.u-w#{$namespace}6\/12             { @extend .u-w#{$namespace}1\/2; }
+	.u-w#{$namespace}7\/12             { width: 58.333%; }
+	.u-w#{$namespace}8\/12             { @extend .u-w#{$namespace}2\/3; }
+	.u-w#{$namespace}9\/12             { @extend .u-w#{$namespace}3\/4; }
+	.u-w#{$namespace}10\/12            { @extend .u-w#{$namespace}5\/6; }
+	.u-w#{$namespace}11\/12            { width: 91.666%; }
+}
+
+
+/*
+Width classes
+
+Sizes which are used in conjunction with other objects and abstractions like the grid system.
+
+.u-w1/12 - One twelfth
+.u-w1/10 - One tenth
+.u-w1/8 - One eighth
+.u-w1/6 - One sixth
+.u-w2/12 - Two twelfths
+.u-w1/5 - One fifth
+.u-w2/10 - Two tenths
+.u-w1/4 - One quarter
+.u-w2/8 - Two eighths
+.u-w3/12 - Three twelfths
+.u-w3/10 - Three tenths
+.u-w1/3 - One third
+.u-w2/6 - Two sixths
+.u-w4/12 - Four twelfths
+.u-w3/8 - Three eighths
+.u-w2/5 - Two fifths
+.u-w4/10 - Four tenths
+.u-w5/12 - Five twelfths
+.u-w1/2 - One half
+.u-w2/4 - Two quarters
+.u-w3/6 - Three sixths
+.u-w4/8 - Four eighths
+.u-w5/10 - Five tenths
+.u-w6/12 - Six twelfths
+.u-w7/12 - Seven twelfths
+.u-w3/5 - Three fifths
+.u-w6/10 - Six tenths
+.u-w5/8 - Five eighths
+.u-w2/3 - Two thirds
+.u-w4/6 - Four sixths
+.u-w8/12 - Eight twelfths
+.u-w7/10 - Seven tenths
+.u-w3/4 - Three quarters
+.u-w6/8 - Six eighths
+.u-w9/12 - Nine twelfths
+.u-w4/5 - Four fifths
+.u-w8/10 - Eight tenths
+.u-w5/6 - Five sixths
+.u-w10/12 - Ten twelfths
+.u-w7/8 - Seven eighths
+.u-w9/10 - Nine tenths
+.u-w11/12 - Eleven twelfths
+.u-w1/1 - One whole
+
+Markup:
+<div class="{$modifiers}" style="padding: 10px; background: #eee;">.{$modifiers}</div>
+
+Styleguide 2.6
+*/
+@include grid-setup();

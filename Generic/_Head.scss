@@ -1,0 +1,30 @@
+/*
+Head
+
+Declarations which should be put at the top of the document e.g. @font-face declarations and CSS viewports.
+*/
+
+
+// Disabled until the WP8 CSS Viewport bug is fixed.
+// http://mattstow.com/responsive-design-in-ie10-on-windows-phone-8.html
+//
+// /*
+// CSS Viewport
+// */
+// @viewport { width: device-width; zoom: 1; }
+//
+
+/*
+Global border-box
+@docs http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*/
+html {
+	box-sizing: border-box;
+}
+* {
+	&,
+	&:before,
+	&:after {
+		box-sizing: inherit;
+	}
+}

@@ -1,0 +1,51 @@
+/*
+Layout utilities
+
+Styleguide 2.1
+*/
+
+
+/*
+Float helpers
+
+.u-floatRight - Floats the element to the right boundary.
+.u-floatLeft - Floats the element to the left boundary.
+
+Markup:
+<span class="{$modifiers}">I am an paragraph.</span>
+
+Styleguide 2.1.1
+*/
+%u-floatRight,
+.u-floatRight {
+    float: right;
+}
+
+%u-floatLeft,
+.u-floatLeft {
+    float: left;
+}
+
+
+/*
+Float clearfix
+
+Contain floats: http://www.h5bp.com/q
+
+Markup:
+<div class="u-cf">This element will clear any floats inside of it.</div>
+
+Styleguide 2.1.2
+*/
+%u-cf,
+.u-cf,
+.u-clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

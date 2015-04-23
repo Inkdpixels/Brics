@@ -1,0 +1,78 @@
+/*
+Media
+
+Basic styling for media elements.
+*/
+
+
+/*
+Attachements & Images
+
+Contents: 1: Make Images & Attachements responsive
+					2: Styling the alt="" Text on images
+						 http://csswizardry.com/2011/06/styling-alt-text-on-images/
+					3: Removes border when inside `a` element in IE6/7/8/9, FF3.
+					4: Remove the gap between images and the bottom of their containers:
+						 h5bp.com/i/440
+					5: Decrease font-size on figcaption elements
+*/
+embed,
+iframe,
+object,
+img { /* 1 */
+	max-width: 100%;
+}
+img {
+	font-style: italic; /* 2 */
+	border: 0; /* 3 */
+	vertical-align: middle; /* 4 */
+	&[height] { /* 1 */
+		height: auto;
+	}
+}
+figure {
+	/**
+	 * Addresses margin not present in IE6/7/8/9, S5, O11.
+	 */
+	margin: 1em 40px;
+}
+figcaption { /* 5 */
+	@include font-size(($base-font-size - 2));
+}
+iframe {
+	@extend %u-mb;
+}
+
+/*
+Multimedia elements
+*/
+video {
+	@extend %u-mb;
+}
+audio {
+	@extend %u-mb;
+	min-width: 65%;
+
+	&:not([controls]) {
+		/**
+		 * Prevents modern browsers from displaying `audio` without controls.
+		 */
+		display: none;
+		/**
+		 * Remove excess height in iOS5 devices.
+		 */
+		height: 0;
+	}
+}
+
+/*
+SVG element
+*/
+svg {
+	&:not(:root) {
+		/**
+		 * Corrects overflow displayed oddly in IE9.
+		 */
+		overflow: hidden;
+	}
+}

@@ -1,0 +1,136 @@
+//
+// Variables, variables, variables!
+//
+// @package #{ext_directory()}
+// @path /_Variables.sass
+// @link http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
+//
+
+
+// =============================================================================
+// Project settings
+// =============================================================================
+// Reading direction of this project, if set to 'rtl' - texts, labels
+// and the grid will be aligned to the right side of the document.
+$direction:             ltr;
+
+
+// =============================================================================
+// Brand related variables
+// =============================================================================
+// Your brand colors, for each of these keys, a class text-color helper-class will be generated.
+// f.e. `.u-brandColor-primary { color: #0097d7; }`
+$brand-colors: (
+	primary: #0097d7
+);
+
+// Your main brand font-family
+$brand-font-family:     "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// If your layout makes use of rounded corners, you can specify an general border-radius
+// here to have a consistent setting.
+$brand-border-radius:   1px;
+
+// If you want to use the image-replacement technique for your brand logo,
+// set the 'image' key to the image-name of your brand logo e.g.:
+// $brand-logo: (image: 'logo.png', width: 200px, height: 200px);
+//
+// Be aware that you need to specify the dimensions of your logo, otherwise it won't be displayed.
+$brand-logo: (
+  image: 'brandLogo.png',
+  width: 200px,
+  height: 200px
+);
+
+
+// =============================================================================
+// Base Typesetting
+// =============================================================================
+// Font-family stack variables to standardize the font-setting
+$sans-font-family:      "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif-font-family:     Georgia, "Times New Roman", Times, serif;
+$mono-font-family:      Menlo, Monaco, Consolas, "Courier New", monospace; // Will be set on elements like <code> etc.
+
+// The font-weights below are used to handle webfonts and consistent stylings.
+$bold:                  700;
+$regular:               400;
+$light:                 300;
+
+// Base font settings which will be set on the '<body>' element,
+// '$base-font-size' and '$base-line-height' are pixel values.
+$base-font-size:        16;
+$base-line-height:      24;
+$base-font-family:      $sans-font-family;
+$base-font-weight:      $regular;
+$base-text-color:       #3C474B;
+
+// Typographic spacings (in pixels), these default values will
+// output a basic vertical rythm based on your '$base-line-height'.
+$basic-spacing:         $base-line-height;
+$half-spacing:          $basic-spacing / 2;
+
+
+// =============================================================================
+// Layout
+// =============================================================================
+// Basic layout width (in pixels) - will be set on the '.siteWrapper' class
+// The value is wrapped in the relative-size function which converts pixels into em's.
+$layout-width:          rs(960);
+
+// Is this layout centered? If set to 'true' the '.siteWrapper' class will be centered.
+$centered-layout:       true;
+
+// Inner spacing for all grid-items.
+$column-gutter:         20px;
+
+// The background which will be set on the <body> element, you can also pass in
+// other arguments e.g.:
+// $body-background: image-url('body-bg.gif') top left repeat-x #fff;
+$body-background:       #fff;
+
+// Used to generate some colors, this doesn't have any direct effect on
+// the .siteContent container or it's background.
+$content-background:    #fff;
+
+// default units for media-query mixins - it must include a digit e.g.:
+// $mq-unit: 1em; or $mq-unit: 1px;
+$mq-unit:               1px;
+
+
+// =============================================================================
+// Design related variables
+// =============================================================================
+// Default color for all anchors and links.
+$link-color:            map-get($brand-colors, primary);
+
+// Default styling for horizontal rules and bordered elements like tables.
+$basic-border-color:    color-adjust($content-background, 20%);
+$basic-border-style:    solid;
+
+
+// =============================================================================
+// Forms
+// =============================================================================
+// The height of the element itself.
+$textInput: (
+	height:               $base-line-height +px,
+	bottomSpacing:        $half-spacing,
+	border:               1px solid $basic-border-color,
+	borderRadius:         $brand-border-radius,
+	boxShadow:            inset 0 1px 1px rgba(#000, 0.075),
+	fontSize:             14,
+	textColor:            lighten($base-text-color, 5%)
+);
+
+
+// =============================================================================
+// Buttons
+// =============================================================================
+// The basic bottom-margin on all text-inputs.
+$button: (
+	bottomSpacing:        $half-spacing,
+	innerPadding:         .5em .75em, // Set in em's so we can change the size of the button depending on the font-size.
+	fontSize:             .8em,
+	background:           map-get($brand-colors, primary),
+	textColor:            color-adjust(map-get($brand-colors, primary), 100%)
+);

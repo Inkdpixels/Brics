@@ -1,0 +1,46 @@
+/*
+Form elements
+
+Basic styling for form element labels.
+
+Styleguide 3.6
+*/
+
+
+/*
+Labels
+
+Markup:
+<label>I am an label</label>
+
+Styleguide 3.6.1
+*/
+label {
+	display: block;
+	font-weight: $bold;
+	@include font-size(14, $appendVrythm: true);
+	&[for] {
+		cursor: pointer;
+	}
+}
+
+/*
+Legends
+
+Markup:
+<fieldset>
+	<legend>I am an fieldset legend.</legend>
+</fieldset>
+
+Styleguide 3.6.2
+*/
+legend {
+	display: block;
+	width: 100%;
+	@extend %u-mb;
+
+	@include font-size($base-font-size + 4);
+	border-bottom: 1px $basic-border-style $basic-border-color;
+
+	padding: 0;
+}

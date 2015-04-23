@@ -1,0 +1,47 @@
+/*
+Navigations
+
+Styleguide 4.2
+*/
+
+/*
+Nav Object
+
+A modified version of the navigation object from inuit.css.
+
+.nav - Throws a list into horizontal mode.
+.nav.nav--stacked - Throws a list into vertical mode.
+.nav.nav--fit - Forces a list to occupy 100% of the available width of it's parent.
+
+Markup:
+<ul class="{$modifiers}">
+	<li><a href="">Home</a></li>
+	<li><a href="">About</a></li>
+	<li><a href="">Products</a></li>
+	<li><a href="">Contact</a></li>
+</ul>
+
+Styleguide 4.2.1
+*/
+%nav,
+.nav {
+	@extend %reset-list;
+	li { display: inline-block; }
+	a { display: block; }
+}
+
+%nav--stacked,
+.nav--stacked {
+	li {
+		display: list-item;
+	}
+}
+
+%nav--fit,
+.nav--fit {
+	display: table;
+	width: 100%;
+	> li {
+		display: table-cell;
+	}
+}

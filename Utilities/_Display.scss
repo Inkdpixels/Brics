@@ -1,0 +1,34 @@
+/*
+Display utilities
+
+Styleguide 2.2
+*/
+
+
+/*
+Visibillity helpers
+
+.u-block - Display the target as an block element.
+.u-hidden - Hide from both screenreaders and browsers: http://www.h5bp.com/u
+.u-invisible - Hide visually and from screenreaders, but maintain layout.
+
+Markup:
+<div class="{$modifiers}">This element won't be visible.</div>
+
+Styleguide 2.2.1
+*/
+%u-block,
+.u-block {
+  display: block !important;
+}
+
+%u-hidden,
+.u-hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+%u-invisible,
+.u-invisible {
+    visibility: hidden;
+}

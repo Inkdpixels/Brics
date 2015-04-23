@@ -1,0 +1,77 @@
+/*
+Heading elements
+
+Basic styling for headings and sub-headings.
+
+Styleguide 3.1
+*/
+
+
+/*
+Headings
+
+Markup:
+<h1>I am an first-level heading</h1>
+<h2>I am an second-level heading</h2>
+<h3>I am an third-level heading</h3>
+<h4>I am an fourth-level heading</h4>
+<h5>I am an fifth-level heading</h5>
+<h6>I am an sixth-level heading</h6>
+
+Styleguide 3.1.1
+*/
+.h,
+%h {
+	font-weight: $bold;
+
+	/**
+	 * Optimized kerning for large font sizes
+	 * use this only on large font-sizes (f.e. headings) to avoid performance issues.
+	 */
+	text-rendering: optimizeLegibility;
+}
+
+/*
+Heading modifiers
+
+.h1 - Style the `<h#>`-element like a standard `<h1>`-element.
+.h2 - Style the `<h#>`-element like a standard `<h2>`-element.
+.h3 - Style the `<h#>`-element like a standard `<h3>`-element.
+.h4 - Style the `<h#>`-element like a standard `<h4>`-element.
+.h5 - Style the `<h#>`-element like a standard `<h5>`-element.
+.h6 - Style the `<h#>`-element like a standard `<h6>`-element.
+
+Markup:
+<h1 class="{$modifiers}">I am an first-level heading</h1>
+<h2 class="{$modifiers}">I am an second-level heading</h2>
+<h3 class="{$modifiers}">I am an third-level heading</h3>
+<h4 class="{$modifiers}">I am an fourth-level heading</h4>
+<h5 class="{$modifiers}">I am an fifth-level heading</h5>
+<h6 class="{$modifiers}">I am an sixth-level heading</h6>
+
+Styleguide 3.1.2
+*/
+.h1, %h1 {
+	@extend %h;
+	font-size: 36px;
+}
+.h2, %h2 {
+	@extend %h;
+	font-size: 30px;
+}
+.h3, %h3 {
+	@extend %h;
+	font-size: 24px;
+}
+.h4, %h4 {
+	@extend %h;
+	font-size: 20px;
+}
+.h5, %h5 {
+	@extend %h;
+	font-size: 16px;
+}
+.h6, %h6 {
+	@extend %h;
+	font-size: 16px;
+}

@@ -1,0 +1,60 @@
+/*
+Form
+
+Styleguide 4.3
+*/
+
+/*
+Form wrapper elements
+*/
+fieldset {
+	/**
+	 * Reset border, margin, and padding to define a consistend style accross all browsers.
+	 */
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+form {
+	@extend %u-mb;
+}
+
+/*
+Form-Inline abstraction
+
+.form--inline - Display a `<form>` and all it's content in a horizontal order.
+
+Markup:
+<form class="{$modifiers}">
+	<label>Username: </label>
+	<input class="textInput" type="text" placeholder="Username...">
+	<label>Password: </label>
+	<input class="textInput" type="password" placeholder="Password...">
+	<label class="label--checkbox">
+		<input type="checkbox">Remember me
+	</label>
+	<button type="submit" class="btn">Sign in</button>
+</form>
+
+Styleguide 4.3.1
+*/
+%form--inline,
+.form--inline {
+	label {
+		margin-#{$end}: .3em;
+	}
+	.label--checkbox {
+		input { margin-#{$end}: .35em; }
+		margin-#{$end}: 1em;
+	}
+	input { margin-#{$end}: 1em; }
+	label,
+	button,
+	input,
+	select,
+	textarea {
+		display: inline-block;
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+}

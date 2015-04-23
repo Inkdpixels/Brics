@@ -1,0 +1,65 @@
+/*
+Brand styles
+
+Helper classes for brand related stylings.
+
+Styleguide 2.5
+*/
+
+
+
+/*
+Brand text styles
+
+Markup:
+<span class="u-brand">I am an paragraph.</span>
+
+Styleguide 2.5.1
+*/
+%u-brand,
+.u-brand {
+	font-family: $brand-font-family;
+	color: map-get($brand-colors, primary);
+}
+
+/*
+Brand color helpers
+#{generateModifierComments($brand-colors, "u-brandColor-", " brand color.")}
+
+Markup:
+<span class="{$modifiers}">Brand color helpers.</span>
+
+Styleguide 2.5.2
+*/
+@each $key, $value in $brand-colors {
+	.u-brandColor-#{$key} {
+		color: $value;
+	}
+}
+
+/*
+Brand font-family helper
+
+Markup:
+<span class="u-brandFace">This text will be set in the brands font-family.</span>
+
+Styleguide 2.5.3
+*/
+%u-brandFace,
+.u-brandFace { font-family: $brand-font-family; }
+
+/*
+Brand logos
+
+Markup:
+<img class="u-brandLogo" alt="Brand name" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  />
+
+Styleguide 2.5.4
+*/
+%u-brandLogo,
+.u-brandLogo {
+  display: inline-block;
+  width: map-get($brand-logo, width);
+  height: map-get($brand-logo, height);
+  background: image-url(map-get($brand-logo, image));
+}
