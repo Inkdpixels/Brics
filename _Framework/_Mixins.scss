@@ -9,26 +9,26 @@
 // 		@include cssArrow(5px, #fff, bottom);
 // }
 @mixin cssArrow($triangleSize, $triangleColor, $triangleDirection) {
-	@if(not ($triangleDirection == "top") and not ($triangleDirection == "bottom") and not ($triangleDirection == "left") and not ($triangleDirection == "right")) {
-		@warn 'Argument $triangleDirection  of cssTriangle() should be either "top", "bottom", "left" or "right" to work appropriately';
-	}
+  @if (not ($triangleDirection == "top") and not ($triangleDirection == "bottom") and not ($triangleDirection == "left") and not ($triangleDirection == "right")) {
+    @warn 'Argument $triangleDirection  of cssTriangle() should be either "top", "bottom", "left" or "right" to work appropriately';
+  }
 
-	content: "";
-	display: block;
-	width: 0;
-	height: 0;
-	border: solid $triangleSize;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid $triangleSize;
 
-	@if ($triangleDirection == "bottom") {
-		border-color: $triangleColor transparent transparent transparent;
-	}
-	@if ($triangleDirection == "top") {
-		border-color: transparent transparent $triangleColor transparent;
-	}
-	@if ($triangleDirection == "right") {
-		border-color: transparent transparent transparent $triangleColor;
-	}
-	@if ($triangleDirection == "left") {
-		border-color: transparent $triangleColor transparent transparent;
-	}
+  @if ($triangleDirection == "bottom") {
+    border-color: $triangleColor transparent transparent transparent;
+  }
+  @if ($triangleDirection == "top") {
+    border-color: transparent transparent $triangleColor transparent;
+  }
+  @if ($triangleDirection == "right") {
+    border-color: transparent transparent transparent $triangleColor;
+  }
+  @if ($triangleDirection == "left") {
+    border-color: transparent $triangleColor transparent transparent;
+  }
 }

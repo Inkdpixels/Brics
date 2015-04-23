@@ -8,21 +8,20 @@ $direction: ltr;
 // Base directory for all images.
 $image-base-path: '../Images/';
 
-
 // =============================================================================
 // Brand related variables
 // =============================================================================
 // All brand colors, for each of these keys, a utility color-class will be generated.
 // f.e. `.u-brandColor-primary { color: #0097d7; }`
 $brand-colors: (
-	primary: #0097d7
+        primary: #0097d7
 );
 
 // The main brand font-family
-$brand-font-family:     "Helvetica Neue", Helvetica, Arial, sans-serif;
+$brand-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // If the CD makes use of rounded corners, use this variable for consistency.
-$brand-border-radius:   1px;
+$brand-border-radius: 1px;
 
 // If you want to use the image-replacement technique for your brand logo,
 // set the 'image' key to the image-name of your brand logo e.g.:
@@ -30,70 +29,67 @@ $brand-border-radius:   1px;
 //
 // Be aware that you need to specify the dimensions of your logo, otherwise it won't be displayed.
 $brand-logo: (
-  image: 'BrandLogo.svg',
-  width: 200px,
-  height: 100px
+        image: 'BrandLogo.svg',
+        width: 200px,
+        height: 100px
 );
-
 
 // =============================================================================
 // Base Typesetting
 // =============================================================================
 // Font-family stack variables to standardize the font-setting
-$sans-font-family:      Arial, "Helvetica Neue", Helvetica, sans-serif;
-$serif-font-family:     Georgia, "Times New Roman", Times, serif;
-$mono-font-family:      Menlo, Monaco, Consolas, "Courier New", monospace;
+$sans-font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$serif-font-family: Georgia, "Times New Roman", Times, serif;
+$mono-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 
 // The font-weights below are used to handle webfonts and consistent stylings.
-$bold:                  700;
-$regular:               400;
-$light:                 300;
+$bold: 700;
+$regular: 400;
+$light: 300;
 
 // Base font settings which will be set on the '<body>' element,
 // '$base-font-size' and '$base-line-height' are pixel values.
-$base-font-size:        16;
-$base-line-height:      24;
-$base-font-family:      $sans-font-family;
-$base-font-weight:      $regular;
-$base-text-color:       #3C474B;
+$base-font-size: 16;
+$base-line-height: 24;
+$base-font-family: $sans-font-family;
+$base-font-weight: $regular;
+$base-text-color: #3C474B;
 
 // Typographic spacings (in pixels), these default values will
 // output a basic vertical rythm based on your '$base-line-height'.
-$basic-spacing:         $base-line-height;
-$half-spacing:          $basic-spacing / 2;
-
+$basic-spacing: $base-line-height;
+$half-spacing: $basic-spacing / 2;
 
 // =============================================================================
 // Layout
 // =============================================================================
 // Basic layout width (in pixels) - will be set on the '.siteWrapper' class
 // The value is wrapped in the relative-size function which converts pixels into em's.
-$layout-width:          rs(960);
+$layout-width: rs(960);
 
 // If this boolean is set to 'true' the '.siteWrapper' class will be horizontally centered.
-$centered-layout:       true;
+$centered-layout: true;
 
 // Inner spacing for all grid-items.
-$column-gutter:         20px;
+$column-gutter: 20px;
 
 // The background which will be set on the <body> element.
-$body-background:       #fff;
+$body-background: #fff;
 
 // Used to generate some colors, this doesn't have any direct effect on
 // the .siteContent container or it's background.
-$content-background:    #fff;
+$content-background: #fff;
 
 // default units for media-query mixins - it must include a digit e.g.:
 // $mq-unit: 1em; or $mq-unit: 1px;
-$mq-unit:               1px;
-
+$mq-unit: 1px;
 
 // =============================================================================
 // Design related variables
 // =============================================================================
 // Default color for all anchors and links.
-$link-color:            map-get($brand-colors, primary);
+$link-color: map-get($brand-colors, primary);
 
 // Default styling for horizontal rules and bordered elements like tables.
-$basic-border-color:    color-adjust($content-background, 20%);
-$basic-border-style:    solid;
+$basic-border-color: color-adjust($content-background, 20%);
+$basic-border-style: solid;

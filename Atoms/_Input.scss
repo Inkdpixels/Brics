@@ -1,65 +1,52 @@
-/*
-Form input elements
-
-Basic styling for form inputs.
-
-Styleguide 3.7
-*/
-
+/**
+ * Form inputs
+ */
 
 /*
-Text inputs
-
-.textInput         - Basic styling for text input elements.
-.textInput:hover   - Hover styling for basic text input elements.
-.textInput:focus   - Focused styling for basic text input elements.
-
-Markup:
-<input type="text" class="{$modifiers}" /><br>
-<textarea class="{$modifiers}" cols="40"></textarea>
-
-Styleguide 3.7.1
-*/
+ * The base class for all textInputs.
+ */
 %textInput,
 .textInput {
-	height: $base-line-height + px;
-	padding: .2em .4em;
-	margin-bottom: rs($half-spacing, $unit: rem);
+  height: $base-line-height + px;
+  padding: .2em .4em;
+  margin-bottom: rs($half-spacing, $unit: rem);
 
-	background: $content-background;
-	border: 1px $basic-border-style $basic-border-color;
+  background: $content-background;
+  border: 1px $basic-border-style $basic-border-color;
 
-	font-size: rs(14, $unit: rem);
-	color: lighten($base-text-color, 5%);
+  font-size: rs(14, $unit: rem);
+  color: lighten($base-text-color, 5%);
 }
-textarea {
-	height: auto; /* Reset height since textareas have the attribute rows="" */
-	min-height: ($base-line-height *3) +px; /* Set a min-height for textareas of 3 rows */
 
-	resize: vertical; /* So users cannot expand the textarea over it's boundaries */
-	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9. */
-	vertical-align: top; /* Improves readability and alignment in all browsers. */
+textarea {
+  // Resets the height since textareas have the rows="" attribute.
+  height: auto;
+
+  // Sets a min-height for textareas of 3 rows.
+  min-height: ($base-line-height *3) +px;
+
+  // Prevent expanding the textarea over it's horizontal boundaries.
+  resize: vertical;
+
+  // Removes default vertical scrollbar in IE6/7/8/9.
+  overflow: auto;
+
+  // Improves readability and alignment in all browsers.
+  vertical-align: top;
 }
 
 input::-webkit-datetime-edit {
-	/**
-	 * A possible shadow-dom fix for webkit control spacing on input[type=time]
-	 */
-	margin-top: -.17em;
-	margin-bottom: -.17em;
+  // A possible shadow-dom fix for webkit control spacing on input[type="time"].
+  margin-top: -.17em;
+  margin-bottom: -.17em;
 }
 
+
 /*
-Checkboxes / Radio buttons
-
-Markup:
-<label><input type="checkbox" /> I am an checkbox</label>
-<label><input type="radio" /> I am an radio button</label>
-
-Styleguide 3.7.2
-*/
+ * Standard styling for checkboxes and radio buttons.
+ */
 input[type="checkbox"],
 input[type="radio"] {
-	margin-right: .35em;
-	cursor: pointer;
+  margin-right: .35em;
+  cursor: pointer;
 }

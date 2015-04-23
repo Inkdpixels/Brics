@@ -1,63 +1,47 @@
-/*
-Buttons
-
-Styleguide 3.8
+/**
+ * Buttons
 */
+
 /*
-Button Object
-
-Disguise something as a button.
-
-.btn           - The basic button styles for all .btn's.
-.btn:hover     - Standard hover styling for buttons.
-.btn.btn--full - Set the button width to the width of it's parent element.
-
-Markup:
-<button class="{$modifiers}">Send button</button>
-<input type="button" class="{$modifiers}" value="Button" />
-<input type="reset" class="{$modifiers}" value="Reset" />
-<input type="submit" class="{$modifiers}" value="Submit" />
-<a class="{$modifiers}">An anchor element.</a>
-
-Styleguide 3.8.1
-*/
+ * The base class for all buttons.
+ */
 %btn,
 .btn {
-	display: inline-block;
-	margin-bottom: rs($half-spacing, $unit: rem);
-	/**
-	 * Set in em's so we can change the size of the button depending on the font-size.
-	 */
-	padding: .5em .75em;
-	border: 0;
+  display: inline-block;
+  margin-bottom: rs($half-spacing, $unit: rem);
 
-	background: map-get($brand-colors, primary);
-	border-radius: $brand-border-radius;
-	cursor: pointer;
+  // Set in em's so we can change the size of the button depending on the font-size.
+  padding: .5em .75em;
+  border: 0;
 
-	font-size: .8em;
-	/**
-	 * Normalize some rules accross the targeted elements (<input>, <button> and the .btn class).
-	 */
-	font-weight: normal;
-	line-height: 1;
-	color: color-adjust(map-get($brand-colors, primary), 100%);
-	vertical-align: top;
+  background: map-get($brand-colors, primary);
+  border-radius: $brand-border-radius;
+  cursor: pointer;
 
-	&,
-	&:hover {
-		text-decoration: none;
-	}
+  font-size: .8em;
+
+  // Normalize some rules across the targeted elements (<input>, <button> and the .btn class).
+  font-weight: normal;
+  line-height: 1;
+  color: color-adjust(map-get($brand-colors, primary), 100%);
+  vertical-align: top;
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
 }
 
+/*
+ * Set the button width to the width of it's parent element.
+ */
 %btn--full,
 .btn--full {
-	display: block;
-	text-align: center;
-	/**
-	 * The following is so that this class works properly on inputs as well as anchor tags.
-	 */
-	padding-right: 0;
-	padding-left: 0;
-	width: 100%;
+  display: block;
+  text-align: center;
+
+  // The following is so that this class works properly on inputs as well as anchor tags.
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
 }

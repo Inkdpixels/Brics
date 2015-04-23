@@ -1,22 +1,20 @@
-/*
-Form
-
-Styleguide 4.3
-*/
+/**
+ * Form
+ */
 
 /*
-Form wrapper elements
-*/
+ * Form wrapper elements
+ * ToDo: Move into the Atoms folder.
+ */
 fieldset {
-	/**
-	 * Reset border, margin, and padding to define a consistend style accross all browsers.
-	 */
-	border: 0;
-	margin: 0;
-	padding: 0;
+  // Reset border, margin, and padding to define a consistend style accross all browsers.
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
+
 form {
-	@extend %u-mb;
+  @extend %u-mb;
 }
 
 /*
@@ -35,26 +33,30 @@ Markup:
 	</label>
 	<button type="submit" class="btn">Sign in</button>
 </form>
-
-Styleguide 4.3.1
 */
 %form--inline,
 .form--inline {
-	label {
-		margin-#{$end}: .3em;
-	}
-	.label--checkbox {
-		input { margin-#{$end}: .35em; }
-		margin-#{$end}: 1em;
-	}
-	input { margin-#{$end}: 1em; }
-	label,
-	button,
-	input,
-	select,
-	textarea {
-		display: inline-block;
-		margin-bottom: 0;
-		vertical-align: middle;
-	}
+  label {
+    margin-#{$end}: .3em;
+  }
+
+  .label--checkbox {
+    input {
+      margin-#{$end}: .35em;
+    }
+    margin-#{$end}: 1em;
+  }
+  input {
+    margin-#{$end}: 1em;
+  }
+
+  label,
+  button,
+  input,
+  select,
+  textarea {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
 }

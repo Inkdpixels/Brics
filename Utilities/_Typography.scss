@@ -1,48 +1,34 @@
-/*
-Typographic utilities
-
-Styleguide 2.3
-*/
+/**
+ * Typographic utilities
+ */
 
 /*
-Text alignment
-
-.u-alignCenter - Centers the text.
-.u-alignRight - Aligns the text on it's right boundary.
-.u-alignLeft - Aligns the text on it's left boundary.
-
-Markup:
-<p class="{$modifiers}">I am an paragraph.</p>
-
-Styleguide 2.3.1
-*/
+ * Centers the text.
+ */
 %u-alignCenter,
 .u-alignCenter {
-    text-align: center;
+  text-align: center;
 }
-
-%u-alignRight,
-.u-alignRight {
-    text-align: right;
-}
-
-%u-alignLeft,
-.u-alignLeft {
-    text-align: left;
-}
-
-
 
 /*
-Other utilities
+ * Aligns the text to the right boundary.
+ */
+%u-alignRight,
+.u-alignRight {
+  text-align: right;
+}
 
-.u-textBreak - Break strings when their length exceeds the width of their container.
+/*
+ * Aligns the text to the left boundary.
+ */
+%u-alignLeft,
+.u-alignLeft {
+  text-align: left;
+}
 
-Markup:
-<p class="{$modifiers}">Extralongparagraphhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
-
-Styleguide 2.3.2
-*/
+/*
+ * Break strings/text if it exceeds the boundaries of their container.
+ */
 %u-textBreak,
 .u-textBreak {
   word-wrap: break-word;

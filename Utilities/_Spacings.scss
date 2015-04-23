@@ -1,166 +1,158 @@
-/*
-Spacing utilities
-
-Margin and padding helper classes. Use these to tweak layout on a micro level.
-
-Styleguide 2.4
-*/
+/**
+ * Spacing utilities
+ */
 
 /*
-Margin utilities
-
-.u-m0  - Resets the margin.
-.u-mt0 - Resets the top margin.
-.u-mr0 - Resets the right margin.
-.u-ml0 - Resets the left margin.
-.u-mb0 - Resets the bottom margin.
-.u-m   - Adds a basic margin.
-.u-mt  - Adds a basic margin on the top.
-.u-mr  - Adds a basic margin on the right.
-.u-ml  - Adds a basic margin on the left.
-.u-mb  - Adds a basic margin on the bottom.
-.u-m0-5   - Adds a half sized margin.
-.u-mt0-5  - Adds a half sized margin on the top.
-.u-mr0-5  - Adds a half sized margin on the right.
-.u-ml0-5  - Adds a half sized margin on the left.
-.u-mb0-5  - Adds a half sized margin on the bottom.
-
-Markup:
-<p class="{$modifiers}">I am an paragraph.</p>
-
-Styleguide 2.4.1
-*/
-// Resets
+ * Margin utilities
+ */
 %u-m0,
-.u-m0 { margin: 0; }
-%u-mt0,
-.u-mt0 { margin-top: 0; }
-%u-mr0,
-.u-mr0 { margin-right: 0; }
-%u-ml0,
-.u-ml0 { margin-left: 0; }
-%u-mb0,
-.u-mb0 { margin-bottom: 0; }
+.u-m0 {
+  margin: 0;
+}
 
-// Basic
+%u-mt0,
+.u-mt0 {
+  margin-top: 0;
+}
+
+%u-mr0,
+.u-mr0 {
+  margin-right: 0;
+}
+
+%u-ml0,
+.u-ml0 {
+  margin-left: 0;
+}
+
+%u-mb0,
+.u-mb0 {
+  margin-bottom: 0;
+}
+
 %u-m,
 .u-m {
   margin: rs($basic-spacing, $unit: rem);
 }
+
 %u-mt,
 .u-mt {
   margin-top: rs($basic-spacing, $unit: rem);
 }
+
 %u-mr,
 .u-mr {
   margin-right: rs($basic-spacing, $unit: rem);
 }
+
 %u-ml,
 .u-ml {
   margin-left: rs($basic-spacing, $unit: rem);
 }
+
 %u-mb,
 .u-mb {
   margin-bottom: rs($basic-spacing, $unit: rem);
 }
 
-// Half
 %u-m0-5,
 .u-m0-5 {
   margin: rs($half-spacing, $unit: rem);
 }
+
 %u-mt0-5,
 .u-mt0-5 {
   margin-top: rs($half-spacing, $unit: rem);
 }
+
 %u-mr0-5,
 .u-mr0-5 {
   margin-right: rs($half-spacing, $unit: rem);
 }
+
 %u-ml0-5,
 .u-ml0-5 {
   margin-left: rs($half-spacing, $unit: rem);
 }
+
 %u-mb0-5,
 .u-mb0-5 {
   margin-bottom: rs($half-spacing, $unit: rem);
 }
 
 /*
-Padding utilities
-
-.u-p0  - Resets the padding.
-.u-pt0 - Resets the top padding.
-.u-pr0 - Resets the right padding.
-.u-pl0 - Resets the left padding.
-.u-pb0 - Resets the bottom padding.
-.u-p   - Adds a basic padding.
-.u-pt  - Adds a basic padding on the top.
-.u-pr  - Adds a basic padding on the right.
-.u-pl  - Adds a basic padding on the left.
-.u-pb  - Adds a basic padding on the bottom.
-.u-p0-5   - Adds a half sized padding.
-.u-pt0-5  - Adds a half sized padding on the top.
-.u-pr0-5  - Adds a half sized padding on the right.
-.u-pl0-5  - Adds a half sized padding on the left.
-.u-pb0-5  - Adds a half sized padding on the bottom.
-
-Markup:
-<p class="{$modifiers}">I am an paragraph.</p>
-
-Styleguide 2.4.2
-*/
-// Resets
+ * Padding utilities
+ */
 %u-p0,
-.u-p0 { padding: 0; }
-%u-pt0,
-.u-pt0 { padding-top: 0; }
-%u-pr0,
-.u-pr0 { padding-right: 0; }
-%u-pl0,
-.u-pl0 { padding-left: 0; }
-%u-pb0,
-.u-pb0 { padding-bottom: 0; }
+.u-p0 {
+  padding: 0;
+}
 
-// Basic
+%u-pt0,
+.u-pt0 {
+  padding-top: 0;
+}
+
+%u-pr0,
+.u-pr0 {
+  padding-right: 0;
+}
+
+%u-pl0,
+.u-pl0 {
+  padding-left: 0;
+}
+
+%u-pb0,
+.u-pb0 {
+  padding-bottom: 0;
+}
+
 %u-p,
 .u-p {
   padding: rs($basic-spacing, $unit: rem);
 }
+
 %u-pt,
 .u-pt {
   padding-top: rs($basic-spacing, $unit: rem);
 }
+
 %u-pr,
 .u-pr {
   padding-right: rs($basic-spacing, $unit: rem);
 }
+
 %u-pl,
 .u-pl {
   padding-left: rs($basic-spacing, $unit: rem);
 }
+
 %u-pb,
 .u-pb {
   padding-bottom: rs($basic-spacing, $unit: rem);
 }
 
-// Half
 %u-p0-5,
 .u-p0-5 {
   padding: rs($half-spacing, $unit: rem);
 }
+
 %u-pt0-5,
 .u-pt0-5 {
   padding-top: rs($half-spacing, $unit: rem);
 }
+
 %u-pr0-5,
 .u-pr0-5 {
   padding-right: rs($half-spacing, $unit: rem);
 }
+
 %u-pl0-5,
 .u-pl0-5 {
   padding-left: rs($half-spacing, $unit: rem);
 }
+
 %u-pb0-5,
 .u-pb0-5 {
   padding-bottom: rs($half-spacing, $unit: rem);
