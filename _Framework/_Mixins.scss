@@ -1,22 +1,3 @@
-// Creates the required rules for high density optimized images.
-//
-// For example:
-// .selector {
-// 		@include hdpi-img('brand-logo.png');
-// }
-@mixin hdpi-img($fileName, $width, $height) {
-	@if(type-of($fileName) != "string") {
-		@warn 'Argument $fileName of hdpi-img() must be a string';
-	}
-
-	@if((type-of($width) != "number") or (type-of($height) != "number")) {
-		@warn 'Arguments $width and $height of hdpi-img() must be a number';
-	}
-
-	background-size: $width/2 $height/2;
-	background-image: image-url('#{$fileName}');
-}
-
 // Creates a property independent 'rem' calculation with a pixel fallback, default property is set to 'font-size'.
 //
 // For example:
