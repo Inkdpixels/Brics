@@ -1,56 +1,25 @@
+// Wraps rules around the desired media query context.
 //
-// Media-Query SASS Mixins
-//
-// @package #{ext_directory()}
-// @path _Settings/_MediaQueries.scss
-// @author Rafal Bromirski <http://paranoida.com/>, Tyll Weiß <inkdpixels@gmail.com>
-// @license MIT <http://opensource.org/licenses/MIT>
-// @link https://github.com/paranoida/sass-mediaqueries
-// @version 2.1 (developed on 16/02/2013)
-//
-
-
-/*
-Media-Query SASS Mixins($target-size, $context, $unit)
-
-Wraps rules around the desired media query context.
-
-<!= type: css || isPureCode !>
-
-Markup:
-@include min-screen(width) {}             - shortcut for @media screen and (min-width ...)
-@include max-screen(width) {}             - shortcut for @media screen and (max-width ...)
-@include screen(min-width, max-width) {}  - shortcut for @media screen and (min-width ...) and (max-width ...)
-@include hdpi {}                          - devices with high-density screens
-
-Styleguide 1.2.6
-*/
-
-// =============================================================================
-// Screen
-// =============================================================================
+// For example:
+// @include min-screen(width) {}             - shortcut for @media screen and (min-width ...)
+// @include max-screen(width) {}             - shortcut for @media screen and (max-width ...)
+// @include screen(min-width, max-width) {}  - shortcut for @media screen and (min-width ...) and (max-width ...)
+// @include hdpi {}                          - devices with high-density screens
 @mixin screen($res-min, $res-max) {
 	@media screen and ( min-width: if(unitless($res-min), $res-min*$mq-unit, $res-min) ) and ( max-width: if(unitless($res-max), $res-max*$mq-unit, $res-max) ) {
 		@content;
 	}
 }
-
 @mixin max-screen($res) {
 	@media screen and ( max-width: if(unitless($res), $res*$mq-unit, $res) ) {
 		@content;
 	}
 }
-
 @mixin min-screen($res) {
 	@media screen and ( min-width: if(unitless($res), $res*$mq-unit, $res) ) {
 		@content;
 	}
 }
-
-
-// =============================================================================
-// HDPI
-// =============================================================================
 @mixin hdpi {
 	@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
 		@content;

@@ -1,24 +1,9 @@
-/*
-Functions
-
-Styleguide 1.1
-*/
-
-
-/*
-Image-Url($imagePath)
-
-Returns the path of an Image asset.
-
-<!= type: css || isPureCode !>
-
-Markup:
-.selector {
-	background-image: image-url("logo.png");
-}
-
-Styleguide 1.1.1
-*/
+// Returns the path of an Image asset.
+//
+// For example:
+// .selector {
+// 		background-image: image-url("logo.png");
+// }
 @function image-url($imagePath) {
 	@if(type-of($imagePath) != "string") {
 		@warn 'Argument $imagePath of image-url() must be a string';
@@ -27,32 +12,25 @@ Styleguide 1.1.1
 	@return url(#{"../Images/" + $imagePath});
 }
 
-
-
-/*
-Relative Size($target-size, $context, $unit)
-
-Calculates em's based on pixel values.
-
-<!= type: css || isPureCode !>
-
-Markup:
-.selector {
-	font-size: rs(19, 16);
-}
-
-Styleguide 1.1.2
-*/
+// Calculates em's based on pixel values.
+//
+// For example:
+// .selector {
+// 		font-size: rs(19, 16);
+// }
 @function rs($target-size, $context: $base-font-size, $unit: em) {
 	@if(type-of($target-size) != "number") {
 		@warn 'Argument $target-size of rs() must be a number';
 	}
+
 	@if(type-of($context) != "number") {
 		@warn 'Argument $context of rs() must be a number';
 	}
+
 	@if(type-of($unit) != "string") {
 		@warn 'Argument $unit of rs() must be a string';
 	}
+
 	@if(not ($unit == "em" or $unit == "rem")) {
 		@warn 'Argument $unit of rs() must be either "em" or "rem"';
 	}
@@ -60,8 +38,6 @@ Styleguide 1.1.2
 	@return #{$target-size/$context}$unit;
 }
 
-
-//
 // Text direction check
 //
 // Checks the reading-direction of the site based on the '$direction' variable and sets the correct $start and $end variables
@@ -74,58 +50,41 @@ $end: right !default;
 	$end: left;
 }
 
-
-/*
-Color-Adjust($color, $contrast)
-
-Adjusts a color based on the lightness which is passed as a second parameter, this function was written by @necolas(https://github.com/necolas/).
-
-<!= type: css || isPureCode !>
-
-Markup:
-.selector {
-	background: color-adjust(#0097d7, 100%);
-}
-
-// Styleguide 1.1.3
-*/
+// Adjusts a color based on the lightness which is passed as a second parameter, this function was written by @necolas(https://github.com/necolas/).
+//
+// For example:
+// .selector {
+// 		background: color-adjust(#0097d7, 100%);
+// }
 @function color-adjust($color, $contrast: 100%) {
 	@if(type-of($color) != "color") {
 		@warn 'Argument $color of color-adjust() must be a color';
 	}
+
 	@if(type-of($contrast) != "number") {
 		@warn 'Argument $contrast of color-adjust() must be a number';
 	}
 
 	@if (lightness($color) > 50) {
 		@return darken($color, $contrast)
-	}
-	@else {
+	} @else {
 		@return lighten($color, $contrast)
 	}
 }
 
-
-/*
-Map-Fetch($map, $keys)
-
-Navigates through nested Sass maps, this function was written by @jlong(https://github.com/jlong/)
-
-<!= type: css || isPureCode !>
-
-Markup:
-@each $key, $value in map-get($headings, elements) {
-	.selector {
-	 	font-size: map-fetch($headings, elements $key font-size) +px;
-	}
-}
-
-Styleguide 1.1.4
-*/
+// Navigates through nested Sass maps, this function was written by @jlong(https://github.com/jlong/)
+//
+// For example:
+// @each $key, $value in map-get($headings, elements) {
+// 		.selector {
+// 	 		font-size: map-fetch($headings, elements $key font-size) +px;
+// 		}
+// }
 @function map-fetch($map, $keys) {
 	@if(type-of($map) != "map") {
 		@warn 'Argument $map of map-fetch() must be a Sass map';
 	}
+
 	@if(type-of($keys) != "list") {
 		@warn 'Argument $keys of map-fetch() must be a Sass list';
 	}
@@ -133,59 +92,52 @@ Styleguide 1.1.4
 	$key: nth($keys, 1);
 	$length: length($keys);
 	$value: map-get($map, $key);
+
 	@if ($length > 1) {
 		$rest: ();
+
 		@for $i from 2 through $length {
 			$rest: append($rest, nth($keys, $i))
 		}
+
 		@return map-fetch($value, $rest)
 	} @else {
 		@return $value;
 	}
 }
 
-
-/*
-Map-RemoveKeys($map, $keys)
-
-Removes multiple keys in a Sass map.
-
-<!= type: css || isPureCode !>
-
-Markup:
-$newDecalarationsMap: map-removeKeys($declarations, font-size margin-bottom);
-
-Styleguide 1.1.5
-*/
+// Removes multiple keys in a Sass map.
+//
+// For example:
+// $newDecalarationsMap: map-removeKeys($declarations, font-size margin-bottom);
 @function map-removeKeys($map, $keys) {
 	@if(type-of($map) != "map") {
 		@warn 'Argument $map of map-removeKeys() must be a Sass map';
 	}
+
 	@if(not (type-of($keys) == "list") and not (type-of($keys) == "string")) {
 		@warn 'Argument $keys of map-removeKeys() must be a Sass list or string';
 	}
 
 	$length: length($keys);
+
 	@if ($length > 1) {
 		$restMap: $map;
+
 		@each $key in $keys {
 			$restMap: map-remove($restMap, $key);
 		}
+
 		@return $restMap;
 	} @else {
 		@return map-remove($map, $keys);
 	}
 }
 
-
-/*
-generateModifierComments($map, $keys)
-
-Generate the modifier class comments for kss-node from a Sass map.
-
-Markup:
-generateModifierComments($brand-colors, " brand color.")
-*/
+// Generate the modifier class comments for kss-node from a Sass map.
+//
+// For example:
+// generateModifierComments($brand-colors, " brand color.")
 @function generateModifierComments($map, $modifierClassPrefix , $additionalDescriptionText) {
 	@if(type-of($map) != "map") {
 		@warn 'Argument $map of generateModifierComments() must be a Sass map';
