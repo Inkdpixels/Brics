@@ -24,24 +24,24 @@ Styleguide 3.8.1
 %btn,
 .btn {
 	display: inline-block;
-	@include rem(margin-bottom, map-get($button, bottomSpacing));
+	@include rem(margin-bottom, $half-spacing);
 	/**
 	 * Set in em's so we can change the size of the button depending on the font-size.
 	 */
-	padding: map-get($button, innerPadding);
+	padding: .5em .75em;
 	border: 0;
 
-	background: map-get($button, background);
+	background: map-get($brand-colors, primary);
 	border-radius: $brand-border-radius;
 	cursor: pointer;
 
-	font-size: map-get($button, fontSize);
+	font-size: .8em;
 	/**
 	 * Normalize some rules accross the targeted elements (<input>, <button> and the .btn class).
 	 */
 	font-weight: normal;
 	line-height: 1;
-	color: map-get($button, textColor);
+	color: color-adjust(map-get($brand-colors, primary), 100%);
 	vertical-align: top;
 
 	&,

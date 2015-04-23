@@ -22,17 +22,15 @@ Styleguide 3.7.1
 */
 %textInput,
 .textInput {
-	height: map-get($textInput, height);
+	height: $base-line-height + px;
 	padding: .2em .4em;
-	@include rem(margin-bottom, map-get($textInput, bottomSpacing));
+	@include rem(margin-bottom, $half-spacing);
 
 	background: $content-background;
-	border: map-get($textInput, border);
-	border-radius: map-get($textInput, borderRadius);
-	box-shadow: map-get($textInput, boxShadow);
+	border: 1px $basic-border-style $basic-border-color;
 
-	@include font-size(map-get($textInput, fontSize));
-	color: map-get($textInput, textColor);
+	@include font-size(14);
+	color: lighten($base-text-color, 5%);
 }
 textarea {
 	height: auto; /* Reset height since textareas have the attribute rows="" */

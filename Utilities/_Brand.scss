@@ -62,4 +62,5 @@ Styleguide 2.5.4
   width: map-get($brand-logo, width);
   height: map-get($brand-logo, height);
   background: image-url(map-get($brand-logo, image));
+  background-size: cover;
 }
