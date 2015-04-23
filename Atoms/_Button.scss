@@ -24,7 +24,7 @@ Styleguide 3.8.1
 %btn,
 .btn {
 	display: inline-block;
-	@include rem(margin-bottom, $half-spacing);
+	margin-bottom: rs($half-spacing, $unit: rem);
 	/**
 	 * Set in em's so we can change the size of the button depending on the font-size.
 	 */

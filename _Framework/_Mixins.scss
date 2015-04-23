@@ -1,28 +1,3 @@
-// Creates a property independent 'rem' calculation with a pixel fallback, default property is set to 'font-size'.
-//
-// For example:
-// .selector {
-// 		@include rem($property: font-size, $value: 18);
-// }
-@mixin rem($property: font-size, $value: 16) {
-	#{$property}: $value +px;
-	#{$property}: ($value / 16)*1rem;
-}
-
-// Creates a fully formed type style (sizing and vertical rhythm) by passing in a single value.
-//
-// For example:
-// .selector {
-// 		@include rem($size: 16, $appendVrythm: true);
-// }
-@mixin font-size($font-size, $appendVrythm: false) {
-	@include rem(font-size, $font-size);
-
-	@if $appendVrythm {
-		line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
-	}
-}
-
 // Creates an css arrow as per http://cssarrowplease.com/.
 //
 // For example:

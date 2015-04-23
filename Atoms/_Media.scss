@@ -37,7 +37,7 @@ figure {
 	margin: 1em 40px;
 }
 figcaption { /* 5 */
-	@include font-size(($base-font-size - 2));
+  font-size: rs($base-font-size - 2, $unit: rem);
 }
 iframe {
 	@extend %u-mb;

@@ -24,12 +24,12 @@ Styleguide 3.7.1
 .textInput {
 	height: $base-line-height + px;
 	padding: .2em .4em;
-	@include rem(margin-bottom, $half-spacing);
+	margin-bottom: rs($half-spacing, $unit: rem);
 
 	background: $content-background;
 	border: 1px $basic-border-style $basic-border-color;
 
-	@include font-size(14);
+	font-size: rs(14, $unit: rem);
 	color: lighten($base-text-color, 5%);
 }
 textarea {

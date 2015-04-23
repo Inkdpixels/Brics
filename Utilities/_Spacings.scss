@@ -45,45 +45,45 @@ Styleguide 2.4.1
 // Basic
 %u-m,
 .u-m {
-  @include rem(margin, $basic-spacing);
+  margin: rs($basic-spacing, $unit: rem);
 }
 %u-mt,
 .u-mt {
-  @include rem(margin-top, $basic-spacing);
+  margin-top: rs($basic-spacing, $unit: rem);
 }
 %u-mr,
 .u-mr {
-  @include rem(margin-right, $basic-spacing);
+  margin-right: rs($basic-spacing, $unit: rem);
 }
 %u-ml,
 .u-ml {
-  @include rem(margin-left, $basic-spacing);
+  margin-left: rs($basic-spacing, $unit: rem);
 }
 %u-mb,
 .u-mb {
-  @include rem(margin-bottom, $basic-spacing);
+  margin-bottom: rs($basic-spacing, $unit: rem);
 }
 
 // Half
 %u-m0-5,
 .u-m0-5 {
-  @include rem(margin, $half-spacing);
+  margin: rs($half-spacing, $unit: rem);
 }
 %u-mt0-5,
 .u-mt0-5 {
-  @include rem(margin-top, $half-spacing);
+  margin-top: rs($half-spacing, $unit: rem);
 }
 %u-mr0-5,
 .u-mr0-5 {
-  @include rem(margin-right, $half-spacing);
+  margin-right: rs($half-spacing, $unit: rem);
 }
 %u-ml0-5,
 .u-ml0-5 {
-  @include rem(margin-left, $half-spacing);
+  margin-left: rs($half-spacing, $unit: rem);
 }
 %u-mb0-5,
 .u-mb0-5 {
-  @include rem(margin-bottom, $half-spacing);
+  margin-bottom: rs($half-spacing, $unit: rem);
 }
 
 /*
@@ -125,43 +125,43 @@ Styleguide 2.4.2
 // Basic
 %u-p,
 .u-p {
-  @include rem(padding, $basic-spacing);
+  padding: rs($basic-spacing, $unit: rem);
 }
 %u-pt,
 .u-pt {
-  @include rem(padding-top, $basic-spacing);
+  padding-top: rs($basic-spacing, $unit: rem);
 }
 %u-pr,
 .u-pr {
-  @include rem(padding-right, $basic-spacing);
+  padding-right: rs($basic-spacing, $unit: rem);
 }
 %u-pl,
 .u-pl {
-  @include rem(padding-left, $basic-spacing);
+  padding-left: rs($basic-spacing, $unit: rem);
 }
 %u-pb,
 .u-pb {
-  @include rem(padding-bottom, $basic-spacing);
+  padding-bottom: rs($basic-spacing, $unit: rem);
 }
 
 // Half
 %u-p0-5,
 .u-p0-5 {
-  @include rem(padding, $half-spacing);
+  padding: rs($half-spacing, $unit: rem);
 }
 %u-pt0-5,
 .u-pt0-5 {
-  @include rem(padding-top, $half-spacing);
+  padding-top: rs($half-spacing, $unit: rem);
 }
 %u-pr0-5,
 .u-pr0-5 {
-  @include rem(padding-right, $half-spacing);
+  padding-right: rs($half-spacing, $unit: rem);
 }
 %u-pl0-5,
 .u-pl0-5 {
-  @include rem(padding-left, $half-spacing);
+  padding-left: rs($half-spacing, $unit: rem);
 }
 %u-pb0-5,
 .u-pb0-5 {
-  @include rem(padding-bottom, $half-spacing);
+  padding-bottom: rs($half-spacing, $unit: rem);
 }

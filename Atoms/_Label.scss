@@ -18,7 +18,7 @@ Styleguide 3.6.1
 label {
 	display: block;
 	font-weight: $bold;
-	@include font-size(14, $appendVrythm: true);
+  font-size: rs(14, $unit: rem);
 	&[for] {
 		cursor: pointer;
 	}
@@ -39,7 +39,7 @@ legend {
 	width: 100%;
 	@extend %u-mb;
 
-	@include font-size($base-font-size + 4);
+	font-size: rs($base-font-size + 4, $unit: rem);
 	border-bottom: 1px $basic-border-style $basic-border-color;
 
 	padding: 0;

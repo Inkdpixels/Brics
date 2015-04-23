@@ -35,7 +35,7 @@
 		@warn 'Argument $unit of rs() must be either "em" or "rem"';
 	}
 
-	@return #{$target-size/$context}$unit;
+	@return #{$target-size/$context} + $unit;
 }
 
 // Text direction check
