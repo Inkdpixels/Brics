@@ -9,7 +9,7 @@
 		@warn 'Argument $imagePath of image-url() must be a string';
 	}
 
-	@return url(#{"../Images/" + $imagePath});
+	@return url(#{$image-base-path + $imagePath});
 }
 
 // Calculates em's based on pixel values.
