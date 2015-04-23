@@ -1,4 +1,4 @@
-// Creates an css arrow as per http://cssarrowplease.com/.
+// Creates an css arrow as on http://cssarrowplease.com/.
 //
 // For example:
 // .selector:after {
@@ -6,9 +6,9 @@
 // 		top: -5px;
 // 		left: 50%;
 // 		margin-left: -2.5px;
-// 		@include cssTriangle(5px, #fff, bottom);
+// 		@include cssArrow(5px, #fff, bottom);
 // }
-@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
+@mixin cssArrow($triangleSize, $triangleColor, $triangleDirection) {
 	@if(not ($triangleDirection == "top") and not ($triangleDirection == "bottom") and not ($triangleDirection == "left") and not ($triangleDirection == "right")) {
 		@warn 'Argument $triangleDirection  of cssTriangle() should be either "top", "bottom", "left" or "right" to work appropriately';
 	}
