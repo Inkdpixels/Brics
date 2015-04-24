@@ -20,7 +20,7 @@ label {
 legend {
   display: block;
   width: 100%;
-  @extend %u-mb;
+  margin-bottom: rs($basic-spacing);
 
   font-size: rs($base-font-size + 4, $unit: rem);
   border-bottom: 1px $basic-border-style $basic-border-color;

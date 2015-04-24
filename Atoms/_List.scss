@@ -6,8 +6,7 @@ menu,
 ol,
 ul {
   padding: 0 0 0 rs(40);
-  @extend %u-m0;
-  @extend %u-mb;
+  margin: 0 0 rs($basic-spacing);
 }
 
 li > ul,
@@ -34,8 +33,7 @@ li > ol {
  * Definitions
  */
 dl {
-  @extend %u-m0;
-  @extend %u-mb;
+  margin: 0 0 rs($basic-spacing);
 }
 
 /*
@@ -43,14 +41,15 @@ dl {
  */
 %dl--horizontal,
 .dl--horizontal {
-  @extend .u-cf;
+  @include u-cf();
+
   dt {
     float: $start;
     width: 19%;
     overflow: hidden;
     clear: $start;
     text-align: $end;
-    @extend %u-textBreak;
+    @include u-textBreak();
   }
   dd {
     margin-#{$start}: 21%;

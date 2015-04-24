@@ -14,6 +14,5 @@ samp {
 pre {
   // Improves readability of pre-formatted text in all browsers.
   white-space: pre-wrap;
-  @extend %u-m0;
-  @extend %u-mb;
+  margin: 0 0 rs($basic-spacing);
 }

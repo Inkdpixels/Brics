@@ -5,8 +5,7 @@
 /*
  * The base class for all buttons.
  */
-%btn,
-.btn {
+@mixin btn() {
   display: inline-block;
   margin-bottom: rs($half-spacing, $unit: rem);
 
@@ -31,12 +30,14 @@
     text-decoration: none;
   }
 }
+.btn {
+  @include btn();
+}
 
 /*
  * Set the button width to the width of it's parent element.
  */
-%btn--full,
-.btn--full {
+@mixin btn--full() {
   display: block;
   text-align: center;
 
@@ -44,4 +45,7 @@
   padding-right: 0;
   padding-left: 0;
   width: 100%;
+}
+.btn--full {
+  @include btn--full();
 }

@@ -12,7 +12,6 @@ body {
   background: $body-background;
 }
 
-%siteWrapper,
 .siteWrapper {
   @if $centered-layout {
     margin-left: auto;

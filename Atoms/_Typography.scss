@@ -3,8 +3,7 @@
  */
 
 p {
-  @extend %u-m0;
-  @extend %u-mb;
+  margin: 0 0 rs($basic-spacing);
 }
 
 b,

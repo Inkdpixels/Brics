@@ -62,8 +62,7 @@ Styleguide 3.9.1
 %table,
 .table {
   width: 100%;
-  margin-top: 0;
-  @extend %u-mb;
+  margin: 0 0 rs($basic-spacing);
   td, th {
     padding: 0.5em;
   }

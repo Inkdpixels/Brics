@@ -38,7 +38,7 @@ figcaption {
 audio,
 video,
 iframe {
-  @extend %u-mb;
+  margin: 0 0 rs($basic-spacing);
 }
 
 audio {

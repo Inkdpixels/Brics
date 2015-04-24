@@ -18,6 +18,9 @@
   color: lighten($base-text-color, 5%);
 }
 
+/*
+ * Base styling for form input fields.
+ */
 textarea {
   // Resets the height since textareas have the rows="" attribute.
   height: auto;
