@@ -1,0 +1,63 @@
+/**
+ * Collection of CSS3 Keyframe Animations.
+ */
+
+/*
+ * Scales the element up to it's initial proportions and fades it into the viewport.
+ */
+@keyframes ScaledUpFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@mixin u-aniScaledUpFadeIn() {
+  animation: ScaleUpFadeIn .3s both;
+}
+.u-aniScaledUpFadeIn {
+  @include u-aniScaledUpFadeIn();
+}
+
+/*
+ * Moves the element from the top into the users viewport.
+ */
+@keyframes FlyDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@mixin u-aniFlyDown() {
+  animation: FlyDown .3s both;
+}
+.u-aniFlyDown {
+  @include u-aniFlyDown();
+}
+
+/*
+ * Moves the element from the bottom out of the users viewport.
+ */
+@keyframes FlyUpOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+@mixin u-aniFlyUpOut() {
+  animation: FlyUpOut .3s both;
+}
+.u-aniFlyUpOut {
+  @include u-aniFlyUpOut();
+}
