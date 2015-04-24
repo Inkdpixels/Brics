@@ -1,0 +1,14 @@
+/*
+ * Form wrapper elements
+ */
+
+fieldset {
+  // Reset border, margin, and padding to define a consistend style accross all browsers.
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  margin: 0 0 rs($basic-spacing);
+}
