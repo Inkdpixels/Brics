@@ -5,7 +5,6 @@
 /*
  * Floats the element to the right boundary.
  */
-%u-floatRight,
 .u-floatRight {
   float: right;
 }
@@ -13,7 +12,6 @@
 /*
  * Floats the element to the left boundary.
  */
-%u-floatLeft,
 .u-floatLeft {
   float: left;
 }
@@ -21,9 +19,7 @@
 /*
  * Clearfix for floated elements.
  */
-%u-cf,
-.u-cf,
-.u-clearfix {
+@mixin u-cf() {
   &:before,
   &:after {
     content: '';
@@ -32,4 +28,8 @@
   &:after {
     clear: both;
   }
+}
+.u-cf,
+.u-clearfix {
+  @include u-cf();
 }
