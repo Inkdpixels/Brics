@@ -9,12 +9,12 @@
 .nav {
   @include u-resetList();
 
-  li {
+  > li {
     display: inline-block;
-  }
 
-  a {
-    display: block;
+    > a {
+      display: block;
+    }
   }
 }
 
@@ -22,7 +22,7 @@
  * Throws a list into vertical mode.
  */
 .nav--stacked {
-  li {
+  > li {
     display: list-item;
   }
 }
