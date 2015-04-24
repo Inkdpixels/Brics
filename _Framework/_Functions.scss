@@ -66,9 +66,20 @@ $end: right !default;
   }
 
   @if (lightness($color) > 50) {
-    @return darken($color, $contrast)
+    @return darken($color, $contrast);
   } @else {
-    @return lighten($color, $contrast)
+    @return lighten($color, $contrast);
   }
+}
+
+
+// Returns the z-index value for the given key.
+//
+// For example:
+// .selector {
+// 		z-index: z('myElement');
+// }
+@function z($key) {
+  @return map-get($zIndexes, $key);
 }
 

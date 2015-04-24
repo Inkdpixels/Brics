@@ -80,9 +80,15 @@ $body-background: #fff;
 // the .siteContent container or it's background.
 $content-background: #fff;
 
-// default units for media-query mixins - it must include a digit e.g.:
+// Default units for media-query mixins - it must include a digit e.g.:
 // $mq-unit: 1em; or $mq-unit: 1px;
 $mq-unit: 1px;
+
+// Z-Index Masterlist, describe your z-index'es here, and use the z() function in your Sass files.
+// F.e: z-index: z('myElement');
+$zIndexes: (
+        // myElement: 1000
+);
 
 // =============================================================================
 // Design related variables
