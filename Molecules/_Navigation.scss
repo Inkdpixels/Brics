@@ -7,7 +7,7 @@
  * Throws a list into horizontal mode.
  */
 .nav {
-  @extend %reset-list;
+  @include u-resetList();
 
   li {
     display: inline-block;

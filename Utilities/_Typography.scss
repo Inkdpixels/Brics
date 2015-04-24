@@ -47,3 +47,15 @@
 .u-invertText {
   @include u-invertText();
 }
+
+/*
+ * Reset-List helper class
+ */
+@mixin u-resetList() {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.u-resetList {
+  @include u-resetList();
+}
