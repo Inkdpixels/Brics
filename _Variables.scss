@@ -28,10 +28,12 @@ $brand-border-radius: 1px;
 // $brand-logo: (image: 'logo.png', width: 200px, height: 200px);
 //
 // Be aware that you need to specify the dimensions of your logo, otherwise it won't be displayed.
-$brand-logo: (
-        image: 'BrandLogo.svg',
-        width: 200px,
-        height: 100px
+$brand-logos: (
+        default: (
+                image: 'BrandLogo.svg',
+                width: 200px,
+                height: 100px
+        )
 );
 
 // =============================================================================
