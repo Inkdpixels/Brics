@@ -3,23 +3,15 @@
  */
 
 /*
-Form-Inline abstraction
+ * The base class for all forms.
+ */
+.form {
+  margin-bottom: rs($basic-spacing);
+}
 
-.form--inline - Display a `<form>` and all it's content in a horizontal order.
-
-Markup:
-<form class="{$modifiers}">
-	<label>Username: </label>
-	<input class="textInput" type="text" placeholder="Username...">
-	<label>Password: </label>
-	<input class="textInput" type="password" placeholder="Password...">
-	<label class="label--checkbox">
-		<input type="checkbox">Remember me
-	</label>
-	<button type="submit" class="btn">Sign in</button>
-</form>
-*/
-%form--inline,
+/*
+ * Display a `<form>` and it's inputs in a horizontal order.
+ */
 .form--inline {
   label {
     margin-#{$end}: .3em;
