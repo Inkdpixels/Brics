@@ -5,14 +5,13 @@
 /*
  * Brand text styles
  */
-%u-brand,
 .u-brand {
   font-family: $brand-font-family;
   color: map-get($brand-colors, primary);
 }
 
 /*
- * Brand color helpers
+ * Brand text colors
  */
 @each $key, $value in $brand-colors {
   .u-brandColor-#{$key} {
@@ -23,7 +22,6 @@
 /*
  * Brand font-family helper
  */
-%u-brandFace,
 .u-brandFace {
   font-family: $brand-font-family;
 }
@@ -31,7 +29,6 @@
 /*
  * Brand logos
  */
-%u-brandLogo,
 .u-brandLogo {
   display: inline-block;
   width: map-get($brand-logo, width);
