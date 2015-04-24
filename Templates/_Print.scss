@@ -5,9 +5,8 @@
 @media print {
   * {
     background: transparent !important;
-    /**
-     * Black prints faster: h5bp.com/s
-     */
+
+    // Black prints faster: h5bp.com/s
     color: black !important;
     box-shadow: none !important;
     text-shadow: none !important;
@@ -22,9 +21,7 @@
     page-break-inside: avoid;
   }
   thead {
-    /**
-     * h5bp.com/t
-     */
+    // h5bp.com/t
     display: table-header-group;
   }
   tr,
