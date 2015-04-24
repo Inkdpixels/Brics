@@ -3,7 +3,7 @@
  */
 
 // Spacings mixin
-@mixin spacings-setup($namespace: "") {
+@mixin spacings-setup($namespace: '') {
   // Margin Resets
   .u-m#{$namespace}#{'0'} {
     margin: 0;

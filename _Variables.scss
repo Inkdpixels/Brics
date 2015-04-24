@@ -18,7 +18,7 @@ $brand-colors: (
 );
 
 // The main brand font-family
-$brand-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$brand-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // If the CD makes use of rounded corners, use this variable for consistency.
 $brand-border-radius: 1px;
@@ -38,9 +38,9 @@ $brand-logo: (
 // Base Typesetting
 // =============================================================================
 // Font-family stack variables to standardize the font-setting
-$sans-font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-$serif-font-family: Georgia, "Times New Roman", Times, serif;
-$mono-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+$sans-font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$serif-font-family: Georgia, 'Times New Roman', Times, serif;
+$mono-font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 
 // The font-weights below are used to handle webfonts and consistent stylings.
 $bold: 700;

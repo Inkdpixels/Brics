@@ -2,10 +2,10 @@
 //
 // For example:
 // .selector {
-// 		background-image: image-url("logo.png");
+// 		background-image: image-url('logo.png');
 // }
 @function image-url($imagePath) {
-  @if (type-of($imagePath) != "string") {
+  @if (type-of($imagePath) != 'string') {
     @warn 'Argument $imagePath of image-url() must be a string';
   }
 
@@ -19,19 +19,19 @@
 // 		font-size: rs(19, 16);
 // }
 @function rs($target-size, $context: $base-font-size, $unit: em) {
-  @if (type-of($target-size) != "number") {
+  @if (type-of($target-size) != 'number') {
     @warn 'Argument $target-size of rs() must be a number';
   }
 
-  @if (type-of($context) != "number") {
+  @if (type-of($context) != 'number') {
     @warn 'Argument $context of rs() must be a number';
   }
 
-  @if (type-of($unit) != "string") {
+  @if (type-of($unit) != 'string') {
     @warn 'Argument $unit of rs() must be a string';
   }
 
-  @if (not ($unit == "em" or $unit == "rem")) {
+  @if (not ($unit == 'em' or $unit == 'rem')) {
     @warn 'Argument $unit of rs() must be either "em" or "rem"';
   }
 
@@ -57,11 +57,11 @@ $end: right !default;
 // 		background: color-adjust(#0097d7, 100%);
 // }
 @function color-adjust($color, $contrast: 100%) {
-  @if (type-of($color) != "color") {
+  @if (type-of($color) != 'color') {
     @warn 'Argument $color of color-adjust() must be a color';
   }
 
-  @if (type-of($contrast) != "number") {
+  @if (type-of($contrast) != 'number') {
     @warn 'Argument $contrast of color-adjust() must be a number';
   }
 
