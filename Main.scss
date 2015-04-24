@@ -3,11 +3,7 @@
 // SASS Functions, Mixins and Variables
 @import "_Framework/_Index";
 @import "_Variables";
-// Generic rules
-@import "Generic/_Head";
-@import "Generic/_Normalize";
-@import "Generic/_Base";
-@import "Generic/_T3General";
+
 // Utilities
 @import "Utilities/_Brand";
 @import "Utilities/_Display";
@@ -15,7 +11,9 @@
 @import "Utilities/_Spacings";
 @import "Utilities/_Typography";
 @import "Utilities/_Widths";
+
 // Atoms
+@import "Atoms/_Base";
 @import "Atoms/_Heading";
 @import "Atoms/_Typography";
 @import "Atoms/_Link";
@@ -28,12 +26,15 @@
 @import "Atoms/_Ruler";
 @import "Atoms/_Media";
 @import "Atoms/_Table";
+
 // Molecules
 @import "Molecules/_Form";
 @import "Molecules/_Navigation";
 @import "Molecules/_Grid";
+
 // Organisms
 @import "Organisms/SiteHeader";
 @import "Organisms/SiteFooter";
+
 // Templates
 @import "Templates/_Print";
