@@ -19,7 +19,6 @@ li > ol {
  * Reset-List helper class
  * ToDo: Move into the util namespace.
  */
-%reset-list,
 .reset-list {
   /**
    *
@@ -37,9 +36,8 @@ dl {
 }
 
 /*
- * Horizontal definition abstraction
+ * Displays the definition element in a horizontal order.
  */
-%dl--horizontal,
 .dl--horizontal {
   @include u-cf();
 

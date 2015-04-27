@@ -8,26 +8,27 @@ object,
 img {
   // Make images and other media related elements responsive.
   max-width: 100%;
+
+  // Removes standard border, as well as the border when inside `a` element in IE6/7/8/9, FF3.
+  border: 0;
 }
 
 img {
   // Styling the alt="" Text on images.
   font-style: italic;
 
-  // Removes border when inside `a` element in IE6/7/8/9, FF3.
-  border: 0;
-
-  // Remove the gap between images and the bottom of their containers
+  // Remove the gap between images and the bottom of their containers.
   vertical-align: middle;
 
+  // Make sure every image is fully scalable in the height as well.
   &[height] {
     height: auto;
   }
 }
 
 figure {
-  // Addresses margin not present in IE6/7/8/9, S5, O11.
-  margin: 1em 40px;
+  // Resets margin in IE6/7/8/9, S5, O11.
+  margin: 0;
 }
 
 figcaption {

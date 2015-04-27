@@ -57,9 +57,6 @@ Markup:
 
 Styleguide 3.9.1
 */
-
-
-%table,
 .table {
   width: 100%;
   margin: 0 0 rs($basic-spacing);
@@ -68,7 +65,6 @@ Styleguide 3.9.1
   }
 }
 
-%table--bordered,
 .table--bordered {
   border: 1px solid $basic-border-color;
   border-collapse: separate;
@@ -84,7 +80,6 @@ Styleguide 3.9.1
   }
 }
 
-%table--striped,
 .table--striped {
   td, th {
     border-bottom: 1px solid $basic-border-color;
@@ -94,14 +89,12 @@ Styleguide 3.9.1
   }
 }
 
-%table--condensed,
 .table--condensed {
   td, th {
     padding: 0.25em 0.5em 0.25em;
   }
 }
 
-%table--zebra,
 .table--zebra {
   tbody {
     tr:nth-child(even) {
