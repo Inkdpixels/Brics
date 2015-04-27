@@ -21,7 +21,7 @@ Markup:
 */
 %nav,
 .nav {
-  @extend %reset-list;
+  @include u-resetList();
 
   li {
     display: inline-block;
@@ -29,6 +29,7 @@ Markup:
 
   a {
     display: block;
+    @include u-linkReset();
   }
 }
 
