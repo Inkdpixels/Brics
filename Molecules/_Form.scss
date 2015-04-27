@@ -3,38 +3,8 @@
  */
 
 /*
- * Form wrapper elements
- * ToDo: Move into the Atoms folder.
+ * Display a `<form>` and all it's content in a horizontal order.
  */
-fieldset {
-  // Reset border, margin, and padding to define a consistend style accross all browsers.
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-form {
-  @extend %u-mb;
-}
-
-/*
-Form-Inline abstraction
-
-.form--inline - Display a `<form>` and all it's content in a horizontal order.
-
-Markup:
-<form class="{$modifiers}">
-	<label>Username: </label>
-	<input class="textInput" type="text" placeholder="Username...">
-	<label>Password: </label>
-	<input class="textInput" type="password" placeholder="Password...">
-	<label class="label--checkbox">
-		<input type="checkbox">Remember me
-	</label>
-	<button type="submit" class="btn">Sign in</button>
-</form>
-*/
-%form--inline,
 .form--inline {
   label {
     margin-#{$end}: .3em;

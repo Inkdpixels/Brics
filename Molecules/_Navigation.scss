@@ -3,23 +3,8 @@
  */
 
 /*
-Nav Object
-
-A modified version of the navigation object from inuit.css.
-
-.nav - Throws a list into horizontal mode.
-.nav.nav--stacked - Throws a list into vertical mode.
-.nav.nav--fit - Forces a list to occupy 100% of the available width of it's parent.
-
-Markup:
-<ul class="{$modifiers}">
-	<li><a href="">Home</a></li>
-	<li><a href="">About</a></li>
-	<li><a href="">Products</a></li>
-	<li><a href="">Contact</a></li>
-</ul>
-*/
-%nav,
+ * Throws a list into horizontal mode.
+ */
 .nav {
   @include u-resetList();
 
@@ -33,14 +18,18 @@ Markup:
   }
 }
 
-%nav--stacked,
+/*
+ * Throws a list into vertical mode.
+ */
 .nav--stacked {
   li {
     display: list-item;
   }
 }
 
-%nav--fit,
+/*
+ * Forces a list to occupy 100% of the available width of it's parent.
+ */
 .nav--fit {
   display: table;
   width: 100%;

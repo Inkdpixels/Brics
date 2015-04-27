@@ -5,25 +5,27 @@
 /*
  * Floats the element to the right boundary.
  */
-%u-floatRight,
-.u-floatRight {
+@mixin u-floatRight() {
   float: right;
+}
+.u-floatRight {
+  @include u-floatRight();
 }
 
 /*
  * Floats the element to the left boundary.
  */
-%u-floatLeft,
-.u-floatLeft {
+@mixin u-floatLeft() {
   float: left;
+}
+.u-floatLeft {
+  @include u-floatLeft();
 }
 
 /*
  * Clearfix for floated elements.
  */
-%u-cf,
-.u-cf,
-.u-clearfix {
+@mixin u-cf() {
   &:before,
   &:after {
     content: '';
@@ -32,4 +34,8 @@
   &:after {
     clear: both;
   }
+}
+.u-cf,
+.u-clearfix {
+  @include u-cf();
 }

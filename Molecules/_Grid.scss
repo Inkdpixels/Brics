@@ -2,22 +2,18 @@
  * Grids
  */
 
-/*
-Grid Object
-
-Grid object which makes use of the generated width classes.
-*/
 $grid-gutter: ($column-gutter / 2);
 
-%grid,
+/*
+ * Grid object which is based on the util width classes.
+ */
 .g,
 .grid {
-  @extend .u-cf;
+  @include u-cf();
   margin-left: -#{$grid-gutter};
   margin-right: -#{$grid-gutter};
 }
 
-%grid__item,
 .gi,
 .grid__item {
   float: $start;
