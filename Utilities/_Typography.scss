@@ -33,6 +33,26 @@
 }
 
 /*
+ * Reduces the font-size to the smallest value.
+ */
+@mixin u-tinyText() {
+  font-size: rs($base-font-size - 3, $unit: rem);
+}
+.u-tinyText {
+  @include u-tinyText();
+}
+
+/*
+ * Enlarges the font-size to the smallest value.
+ */
+@mixin u-largeText() {
+  font-size: rs($base-font-size + 6, $unit: rem);
+}
+.u-largeText {
+  @include u-largeText();
+}
+
+/*
  * Break strings/text if it exceeds the boundaries of their container.
  */
 @mixin u-textBreak() {
