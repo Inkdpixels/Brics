@@ -16,7 +16,7 @@
  * Aligns the text to the right boundary.
  */
 @mixin u-alignRight() {
-  text-align: right;
+  text-align: $end;
 }
 .u-alignRight {
   @include u-alignRight();
@@ -26,7 +26,7 @@
  * Aligns the text to the left boundary.
  */
 @mixin u-alignLeft() {
-  text-align: right;
+  text-align: $start;
 }
 .u-alignLeft {
   @include u-alignLeft();

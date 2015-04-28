@@ -6,7 +6,7 @@
  * Floats the element to the right boundary.
  */
 @mixin u-floatRight() {
-  float: right;
+  float: $end;
 }
 .u-floatRight {
   @include u-floatRight();
@@ -16,7 +16,7 @@
  * Floats the element to the left boundary.
  */
 @mixin u-floatLeft() {
-  float: left;
+  float: $start;
 }
 .u-floatLeft {
   @include u-floatLeft();
