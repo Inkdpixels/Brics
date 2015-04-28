@@ -81,9 +81,9 @@
  * Removes all standard stylings for a list element and it's siblings.
  */
 @mixin u-resetList() {
-  list-style: none;
-  margin-bottom: 0;
   padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
 .u-resetList {
   @include u-resetList();
@@ -102,8 +102,8 @@
   }
 
   p & {
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
 }
 .u-linkReset {

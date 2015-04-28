@@ -29,11 +29,12 @@ dl {
   @include u-cf();
 
   dt {
-    float: $start;
     width: 19%;
+    float: $start;
     overflow: hidden;
     clear: $start;
     text-align: $end;
+
     @include u-textBreak();
   }
   dd {

@@ -9,6 +9,7 @@ label {
   display: block;
   font-weight: $bold;
   font-size: rs(14, $unit: rem);
+
   &[for] {
     cursor: pointer;
   }
@@ -20,10 +21,8 @@ label {
 legend {
   display: block;
   width: 100%;
-  margin-bottom: rs($basic-spacing);
-
-  font-size: rs($base-font-size + 4, $unit: rem);
-  border-bottom: 1px $basic-border-style $basic-border-color;
-
   padding: 0;
+  margin-bottom: rs($basic-spacing);
+  border-bottom: 1px $basic-border-style $basic-border-color;
+  font-size: rs($base-font-size + 4, $unit: rem);
 }

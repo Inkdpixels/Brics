@@ -26,8 +26,8 @@ a {
 
   // Increasing the clickable area of inline links inside a paragraph.
   p & {
+    position: relative;
     margin: -.33em;
     padding: .33em;
-    position: relative;
   }
 }
