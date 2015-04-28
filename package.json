@@ -4,7 +4,7 @@
   "description": "A Starter Sass-Kit which embraces OOCSS, BEM and the Atomic Design-Approach",
   "main": "Main.scss",
   "scripts": {
-    "test": "./node_modules/.bin/node-sass Main.scss > Main.css"
+    "test": "./node_modules/.bin/node-sass --o ./_Tests/ Main.scss"
   },
   "repository": {
     "type": "git",

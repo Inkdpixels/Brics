@@ -1,5 +1,5 @@
 # Installed Node dependencies.
 node_modules
 
-# Generated file from node-sass.
-Main.css
+# Future gh-pages and compiled files.
+_Tests/
