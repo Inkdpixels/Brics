@@ -3,6 +3,13 @@
  */
 
 /*
+ * The base class for all forms.
+ */
+.form {
+  margin-bottom: rs($basic-spacing, $unit: rem);
+}
+
+/*
  * Display a `<form>` and all it's content in a horizontal order.
  */
 .form--inline {
