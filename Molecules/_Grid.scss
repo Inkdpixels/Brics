@@ -2,7 +2,7 @@
  * Grids
  */
 
-$grid-gutter: ($column-gutter / 2);
+$grid-gutter: $column-gutter / 2;
 
 /*
  * Grid object which is based on the util width classes.
