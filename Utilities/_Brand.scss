@@ -1,17 +1,20 @@
 /**
- * Brand Helper classes for brand related stylings.
+ * Helper classes for brand related stylings.
  */
 
 /*
- * Brand text styles
+ * Brand text styles.
  */
-.u-brand {
+@mixin u-brand() {
   font-family: $brand-font-family;
   color: map-get($brand-colors, primary);
+ }
+.u-brand {
+  @include u-brand();
 }
 
 /*
- * Brand text colors
+ * Brand color helpers.
  */
 @each $key, $value in $brand-colors {
   .u-brandColor-#{$key} {
@@ -20,14 +23,17 @@
 }
 
 /*
- * Brand font-family helper
+ * Brand font-family helper.
  */
-.u-brandFace {
+@mixin u-brandFace() {
   font-family: $brand-font-family;
+}
+.u-brandFace {
+  @include u-brandFace();
 }
 
 /*
- * Brand logos
+ * Brand logos.
  */
 .u-brandLogo {
   display: inline-block;

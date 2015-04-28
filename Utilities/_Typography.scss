@@ -5,22 +5,51 @@
 /*
  * Centers the text.
  */
-.u-alignCenter {
+@mixin u-alignCenter() {
   text-align: center;
+}
+.u-alignCenter {
+  @include u-alignCenter();
 }
 
 /*
  * Aligns the text to the right boundary.
  */
-.u-alignRight {
+@mixin u-alignRight() {
   text-align: right;
+}
+.u-alignRight {
+  @include u-alignRight();
 }
 
 /*
  * Aligns the text to the left boundary.
  */
+@mixin u-alignLeft() {
+  text-align: right;
+}
 .u-alignLeft {
-  text-align: left;
+  @include u-alignLeft();
+}
+
+/*
+ * Reduces the font-size to the smallest value.
+ */
+@mixin u-tinyText() {
+  font-size: rs($base-font-size - 3, $unit: rem);
+}
+.u-tinyText {
+  @include u-tinyText();
+}
+
+/*
+ * Enlarges the font-size to the smallest value.
+ */
+@mixin u-largeText() {
+  font-size: rs($base-font-size + 6, $unit: rem);
+}
+.u-largeText {
+  @include u-largeText();
 }
 
 /*
@@ -49,7 +78,7 @@
 }
 
 /*
- * Reset-List helper class
+ * Removes all standard stylings for a list element and it's siblings.
  */
 @mixin u-resetList() {
   list-style: none;
@@ -58,4 +87,25 @@
 }
 .u-resetList {
   @include u-resetList();
+}
+
+/*
+ * Removes all standard stylings for an anchor/link element.
+ */
+@mixin u-linkReset() {
+  color: currentColor;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+
+  p & {
+    margin: 0;
+    padding: 0;
+  }
+}
+.u-linkReset {
+  @include u-linkReset();
 }

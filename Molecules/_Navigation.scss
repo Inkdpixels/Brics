@@ -3,7 +3,6 @@
  */
 
 /*
- * Base nav Class.
  * Throws a list into horizontal mode.
  */
 .nav {
@@ -14,6 +13,8 @@
 
     > a {
       display: block;
+      
+      @include u-linkReset();
     }
   }
 }
@@ -33,6 +34,7 @@
 .nav--fit {
   display: table;
   width: 100%;
+  
   > li {
     display: table-cell;
   }
