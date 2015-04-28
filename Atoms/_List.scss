@@ -23,9 +23,8 @@ dl {
 }
 
 /*
- * Horizontal definition abstraction
+ * Displays the definition element in a horizontal order.
  */
-%dl--horizontal,
 .dl--horizontal {
   @include u-cf();
 

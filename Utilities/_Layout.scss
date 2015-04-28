@@ -5,15 +5,21 @@
 /*
  * Floats the element to the right boundary.
  */
-.u-floatRight {
+@mixin u-floatRight() {
   float: right;
+}
+.u-floatRight {
+  @include u-floatRight();
 }
 
 /*
  * Floats the element to the left boundary.
  */
-.u-floatLeft {
+@mixin u-floatLeft() {
   float: left;
+}
+.u-floatLeft {
+  @include u-floatLeft();
 }
 
 /*

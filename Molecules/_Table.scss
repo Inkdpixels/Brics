@@ -1,9 +1,9 @@
 /**
- * Tables
+ * Table
  */
 
 /*
- * Base class for all tables.
+ * Base class for all table-styles.
  */
 .table {
   width: 100%;
@@ -14,7 +14,7 @@
 }
 
 /*
- * Extends the base '.table' class to an basic bordered table.
+ * Adds a border around the table and in between the rows and cells.
  */
 .table--bordered {
   border: 1px solid $basic-border-color;
@@ -32,7 +32,7 @@
 }
 
 /*
- * Extends the base '.table' class to an clean table with borders below each row.
+ * Adds a border below each row.
  */
 .table--striped {
   td, th {
@@ -44,7 +44,7 @@
 }
 
 /*
- * Extends the base '.table' class to an condensed table.
+ * Reduces the visual gap between each table row.
  */
 .table--condensed {
   td, th {
@@ -53,7 +53,7 @@
 }
 
 /*
- * Extends the base '.table' class to an 'zebra'-styled table with odd & even changing background-colors.
+ * Displays each odd/even row with a changing background to enhance the visual difference between each row element.
  */
 .table--zebra {
   tbody {

@@ -2,23 +2,7 @@
  * Form inputs
  */
 
-/*
- * The base class for all textInputs.
- */
-%textInput,
-.textInput {
-  height: $base-line-height + px;
-  padding: .2em .4em;
-  margin-bottom: rs($half-spacing, $unit: rem);
-
-  background: $content-background;
-  border: 1px $basic-border-style $basic-border-color;
-
-  font-size: rs(14, $unit: rem);
-  color: lighten($base-text-color, 5%);
-}
-
-/*
+ /*
  * Base styling for form input fields.
  */
 textarea {
@@ -38,18 +22,36 @@ textarea {
   vertical-align: top;
 }
 
-input::-webkit-datetime-edit {
+input {
   // A possible shadow-dom fix for webkit control spacing on input[type="time"].
-  margin-top: -.17em;
-  margin-bottom: -.17em;
+  &::-webkit-datetime-edit {
+    margin-top: -.17em;
+    margin-bottom: -.17em;
+  }
+
+  // Base styling for checkboxes and radio buttons.
+  &[type="checkbox"],
+  &[type="radio"] {
+    margin-right: .35em;
+    cursor: pointer;
+  }
 }
 
-
 /*
- * Standard styling for checkboxes and radio buttons.
+ * The base class for all textInputs.
  */
-input[type="checkbox"],
-input[type="radio"] {
-  margin-right: .35em;
-  cursor: pointer;
+@mixin textInput() {
+  height: $base-line-height + px;
+  padding: .2em .4em;
+  margin-bottom: rs($half-spacing, $unit: rem);
+
+  background: $content-background;
+  border: 1px $basic-border-style $basic-border-color;
+
+  font-size: rs(14, $unit: rem);
+  color: lighten($base-text-color, 5%);
+}
+
+.textInput {
+  @include textInput();
 }
