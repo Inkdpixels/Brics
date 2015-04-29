@@ -48,6 +48,7 @@ $mono-font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 $bold: 700;
 $regular: 400;
 $light: 300;
+$thin: 100;
 
 // Base font settings which will be set on the '<body>' element,
 // '$base-font-size' and '$base-line-height' are pixel values.
@@ -55,7 +56,7 @@ $base-font-size: 16;
 $base-line-height: 24;
 $base-font-family: $sans-font-family;
 $base-font-weight: $regular;
-$base-text-color: #3C474B;
+$base-text-color: #51585e;
 
 // Typographic spacings (in pixels), these default values will
 // output a basic vertical rythm based on your '$base-line-height'.
