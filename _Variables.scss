@@ -98,6 +98,9 @@ $zIndexes: (
 // Default color for all anchors and links.
 $link-color: map-get($brand-colors, primary);
 
+// Default color for all buttons.
+$btn-color: map-get($brand-colors, primary);
+
 // Default styling for horizontal rules and bordered elements like tables.
 $basic-border-color: color-adjust($content-background, 20%);
 $basic-border-style: solid;

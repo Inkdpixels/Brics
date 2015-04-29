@@ -10,10 +10,9 @@
   margin-bottom: rs($half-spacing, $unit: rem);
 
   // Set in em's so we can change the size of the button depending on the font-size.
-  padding: .5em .75em;
-  border: 0;
-
-  background: map-get($brand-colors, primary);
+  padding: .8em 1.5em;
+  border: 1px solid currentColor;
+  background: 0;
   border-radius: $brand-border-radius;
   cursor: pointer;
 
@@ -22,12 +21,19 @@
   // Normalize some rules across the targeted elements (<input>, <button> and the .btn class).
   font-weight: normal;
   line-height: 1;
-  color: color-adjust(map-get($brand-colors, primary), 100%);
+  color: $btn-color;
   vertical-align: top;
+  transition: all .2s ease;
 
   &,
   &:hover {
     text-decoration: none;
+  }
+
+  &:hover {
+    background: $btn-color;
+    border-color: $btn-color;
+    color: color-adjust($btn-color, 100%);
   }
 }
 .btn {
@@ -48,4 +54,20 @@
 }
 .btn--full {
   @include btn--full();
+}
+
+/*
+ * Set the button width to the width of it's parent element.
+ */
+@mixin btn--invert() {
+  color: color-adjust($btn-color, 100%);
+
+  &:hover {
+    background: color-adjust($btn-color, 100%);
+    border-color: color-adjust($btn-color, 100%);
+    color: $btn-color;
+  }
+}
+.btn--invert {
+  @include btn--invert();
 }
