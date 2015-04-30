@@ -71,3 +71,15 @@
 .btn--invert {
   @include btn--invert();
 }
+
+/*
+ * Visualize the disabled state of the button.
+ */
+@mixin btn--disabled() {
+  color: $base-text-color;
+  pointer-events: none;
+  opacity: .5;
+}
+.btn--disabled {
+  @include btn--disabled();
+}
