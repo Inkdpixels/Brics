@@ -1,0 +1,68 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300,500,600,700,800,900);
+
+$brand-font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$base-font-weight: 300;
+$layout-max-width: 1000px;
+
+.siteHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 20px 2rem;
+  pointer-events: none;
+}
+.siteHeader__brandLogo {
+  font-size: 3em;
+  color: #FFF !important;
+}
+.siteKeyvisual {
+  position: relative;
+  height: 30rem;
+  background: linear-gradient(169deg,#045e9e 40%,#73c2fb 100%);
+}
+
+.siteKeyvisual__animation {
+  height: 100%;
+  width: 100%;
+}
+
+.siteKeyvisual__claim {
+  position: absolute;
+  left: 0;
+  top: 11.5rem;
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  line-height: 1.3;
+}
+.siteKeyvisual__claim .btn {
+  margin: 0 .5em .7em;
+  font-size: 1rem;
+}
+
+.siteContent {
+  margin-top: 3em;
+}
+
+pre[class*="language-"],
+.exampleBox {
+  padding: 1em;
+  margin-bottom: 3em;
+  border-radius: 2px;
+  background: 0;
+  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.1), 0 1px 2px rgba(63, 63, 68, 0.1);
+}
+pre[class*="language-"] > code {
+  background: 0;
+}
+
+.exampleBox {
+  margin-bottom: 1em;
+}
+
+@import "../../Main";
+@import "Vendor/Prism";

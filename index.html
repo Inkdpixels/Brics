@@ -1,0 +1,409 @@
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>Brics - A starter Sass-Kit for responsive projects.</title>
+	<link rel="stylesheet" type="text/css" href="_Assets/Styles/Main.css">
+</head>
+<body>
+<header class="siteHeader">
+	<div class="siteWrapper">
+		<a href="/" class="siteHeader__brandLogo u-linkReset u-brandFace" title="Home">Brics</a>
+	</div>
+</header>
+<section class="siteKeyvisual">
+	<div class="siteKeyvisual__animation" data-animation></div>
+	<div class="siteKeyvisual__claim u-invertText u-brandFace">
+		<p>A starter Sass-Kit for responsive projects, <br>which embraces OOCSS, BEM and the Atomic Design-Approach.</p>
+		<a href="#documentation" class="btn btn--invert">Documentation</a>
+		<a href="https://github.com/Inkdpixels/Brics/releases" class="btn btn--invert" target="_blank">Download the latest release</a>
+		<p class="u-tinyText">Current version 1.0.1</p>
+	</div>
+</section>
+<main class="siteContent">
+	<div class="siteWrapper">
+		<div class="g">
+			<div class="gi u-w1/4">
+				&nbsp;
+			</div>
+			<div class="gi u-w3/4">
+				<section>
+					<h1>About Brics</h1>
+					<p>
+						Brics is a Sass starter kit for small and large projects. It provides guidelines and methodologies for writing a scalable Sass-Project.
+						Brics embraces OOCSS, BEM, the Atomic Design-Approach and delivers a bunch of example components to get you started for your next project.
+					</p>
+
+					<div class="g">
+						<div class="gi u-w1/2">
+							<div class="u-alignCenter">
+								<img src="_Assets/Images/Sass.svg" alt="" class="u-p1/1 u-w3/4" />
+							</div>
+							<h5>Libsass compatible</h5>
+							<p>Brics is <a href="http://libsass.org/" target="_blank">Libsass</a> compatible, which is a lot faster for compiling Sass files. But still, you can compile Brics with the ruby based pendant as well.</p>
+							<a class="btn" href="https://github.com/Inkdpixels/Brics/releases" target="_blank">Latest Release</a>
+						</div>
+						<div class="gi u-w1/2">
+							<div class="siteHeader__brandLogo u-linkReset u-brandFace" title="Home" style="color: #73c2fb !important; text-align: center; display: block; padding: 1.15em 0; font-size: 5em;">Brics</div>
+							<h5>Scalable to it's last piece</h5>
+							<p>Interested in the thoughts behind Brics? Take a peek at the used methodologies used in Brics, as well as some best practices for writing Sass.</p>
+							<a class="btn btn--disabled" aria-disabled="true" href="">Methodologies & Best practices</a>
+						</div>
+					</div>
+				</section>
+
+				<hr>
+
+				<section>
+					<h1>Installation</h1>
+					<p>
+						Just download a <a href="https://github.com/Inkdpixels/Brics/releases" target="_blank">release</a>, unzip it and start of by modifying the <code>_Variables.scss</code>.
+						The variables file holds all major variables, and offers a quick styling for the essential components and project Settings.
+					</p>
+				</section>
+
+				<hr>
+
+				<section id="documentation">
+					<h1>Components</h1>
+					<p>Components, stylings and utility classes which are in the box.</p>
+
+					<h2>Atoms</h2>
+					<h4>Buttons</h4>
+					<div class="exampleBox" data-code>
+<a class="btn" href="">Button</a>
+<br>
+<a class="btn btn--disabled" aria-disabled="true" href="">Button</a>
+<br>
+<div style="background: currentColor;padding: .75em 1em 0;margin-bottom: .75em;">
+	<a class="btn btn--invert" href="">Inverted button</a>
+</div>
+<a class="btn btn--full" href="">Button</a>
+					</div>
+
+					<h4>Form Elements</h4>
+					<div class="exampleBox" data-code>
+<label>Textinput:</label>
+<input type="text" class="textInput" />
+<label>Textinput - Disabled:</label>
+<input type="text" class="textInput textInput--disabled" disabled aria-disabled="true" />
+<label>Textarea:</label>
+<textarea name="" class="textInput" cols="30" rows="10"></textarea>
+					</div>
+
+					<h4>Headings</h4>
+					<div class="exampleBox" data-code>
+<h1>h1. Heading</h1>
+<h2>h2. Heading</h2>
+<h3>h3. Heading</h3>
+<h4>h4. Heading</h4>
+<h5>h5. Heading</h5>
+<h6>h6. Heading</h6>
+					</div>
+
+					<h4>Anchors & Links</h4>
+					<div class="exampleBox" data-code>
+<a href="">Anchor</a>
+					</div>
+
+					<h4>Lists</h4>
+					<div class="exampleBox" data-code>
+<ul>
+	<li>Unordered list</li>
+	<li>Unordered list item with <br>line breaks</li>
+	<li>
+		Another list item
+		<ul>
+			<li>Nested list item</li>
+			<li>Another nested list item</li>
+		</ul>
+	</li>
+	<li>And another list item</li>
+</ul>
+<ol>
+	<li>Ordered list</li>
+	<li>Ordered list item</li>
+	<li>
+		Another ordered list item
+		<ol>
+			<li>Nest ordered list</li>
+			<li>Another ordered list item</li>
+		</ol>
+	</li>
+	<li>And another ordered list item</li>
+</ol>
+					</div>
+
+					<h4>Quotes</h4>
+					<div class="exampleBox" data-code>
+<p>This is an inlined <q>quote sentence</q> inside a paragraph.</p>
+<blockquote>
+	This is a full block quote
+</blockquote>
+					</div>
+
+					<h4>Rulers</h4>
+					<div class="exampleBox" data-code>
+<hr>
+					</div>
+
+					<h4>Tables</h4>
+					<div class="exampleBox" data-code>
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Residence</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Max Mustermann</td>
+			<td>20</td>
+			<td>Berlin</td>
+		</tr>
+		<tr>
+			<td>Max Mustermann</td>
+			<td>20</td>
+			<td>Berlin</td>
+		</tr>
+		<tr>
+			<td>Max Mustermann</td>
+			<td>20</td>
+			<td>Berlin</td>
+		</tr>
+	</tbody>
+</table>
+					</div>
+
+					<h4>Typography</h4>
+					<div class="exampleBox" data-code>
+<p>
+	This is a paragraph, inside is a <b>bold</b> and <strong>strong</strong> tag.
+	You can also use the <i>italic</i>, <sub>sub</sub> and <sup>sup</sup> elements.<br>
+	For smaller text you can use the <small>small</small> tag,
+	and for special words you can use the <abbr title="The abbr element represents an abbreviation or acronym…">abbreviation</abbr> or the <mark>element</mark>.
+</p>
+					</div>
+
+					<h2>Molecules</h2>
+					<h4>Form</h4>
+					<div class="exampleBox" data-code>
+<h5>Inline-Form</h5>
+<form class="form form--inline">
+	<div class="form__item">
+		<label>Username: </label>
+		<input class="textInput" type="text" placeholder="Username...">
+	</div>
+	<div class="form__item">
+		<label>Password: </label>
+		<input class="textInput" type="password" placeholder="Password...">
+	</div>
+	<div class="form__item">
+		<label>
+			<input type="checkbox">Remember me
+		</label>
+	</div>
+	<div class="form__item">
+		<button type="submit" class="btn">Sign in</button>
+	</div>
+</form>
+					</div>
+
+					<h4>Grid</h4>
+					<div class="exampleBox" data-code>
+<div class="g">
+	<div class="gi u-w1/3">First column</div>
+	<div class="gi u-w1/3">Second column</div>
+	<div class="gi u-w1/3">Third column</div>
+</div>
+					</div>
+
+					<h4>Navigation</h4>
+					<div class="exampleBox" data-code>
+<h5>Standard nav - Inlined into one horizontal line.</h5>
+<nav>
+	<ul class="nav">
+		<li><a href="">First nav item</a></li>
+		<li><a href="">Second nav item</a></li>
+		<li><a href="">Third nav item</a></li>
+		<li><a href="">Fourth nav item</a></li>
+	</ul>
+</nav>
+
+<br>
+<h5>Stacked nav -  Throws a list into vertical mode.</h5>
+<nav>
+	<ul class="nav nav--stacked">
+		<li><a href="">First nav item</a></li>
+		<li><a href="">Second nav item</a></li>
+		<li><a href="">Third nav item</a></li>
+		<li><a href="">Fourth nav item</a></li>
+	</ul>
+</nav>
+
+<br>
+<h5>Fit nav - Forces a list to occupy 100% of the available width of it's parent.</h5>
+<nav>
+	<ul class="nav nav--fit">
+		<li><a href="">First nav item</a></li>
+		<li><a href="">Second nav item</a></li>
+		<li><a href="">Third nav item</a></li>
+		<li><a href="">Fourth nav item</a></li>
+	</ul>
+</nav>
+					</div>
+
+					<h4>Table</h4>
+					<div class="exampleBox" data-code>
+<h5>Base class for all tables</h5>
+<table class="table">
+	<thead>
+	<tr>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Residence</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Max Mustermann</td>
+		<td>20</td>
+		<td>Berlin</td>
+	</tr>
+	<tr>
+		<td>Max Mustermann</td>
+		<td>20</td>
+		<td>Berlin</td>
+	</tr>
+	<tr>
+		<td>Max Mustermann</td>
+		<td>20</td>
+		<td>Berlin</td>
+	</tr>
+	</tbody>
+</table>
+
+<h5>Condensed table</h5>
+<table class="table table--condensed">
+	<thead>
+	<tr>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Residence</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Max Mustermann</td>
+		<td>20</td>
+		<td>Berlin</td>
+	</tr>
+	<tr>
+		<td>Max Mustermann</td>
+		<td>20</td>
+		<td>Berlin</td>
+	</tr>
+	<tr>
+		<td>Max Mustermann</td>
+		<td>20</td>
+		<td>Berlin</td>
+	</tr>
+	</tbody>
+</table>
+
+<h5>Full bordered table</h5>
+<table class="table table--bordered">
+	<thead>
+	<tr>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Residence</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Max Mustermann</td>
+		<td>20</td>
+		<td>Berlin</td>
+	</tr>
+	<tr>
+		<td>Max Mustermann</td>
+		<td>20</td>
+		<td>Berlin</td>
+	</tr>
+	<tr>
+		<td>Max Mustermann</td>
+		<td>20</td>
+		<td>Berlin</td>
+	</tr>
+	</tbody>
+</table>
+
+<h5>Striped table</h5>
+<table class="table table--striped">
+	<thead>
+	<tr>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Residence</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Max Mustermann</td>
+		<td>20</td>
+		<td>Berlin</td>
+	</tr>
+	<tr>
+		<td>Max Mustermann</td>
+		<td>20</td>
+		<td>Berlin</td>
+	</tr>
+	<tr>
+		<td>Max Mustermann</td>
+		<td>20</td>
+		<td>Berlin</td>
+	</tr>
+	</tbody>
+</table>
+
+<h5>Zebra table</h5>
+<table class="table table--zebra">
+	<thead>
+	<tr>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Residence</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Max Mustermann</td>
+		<td>20</td>
+		<td>Berlin</td>
+	</tr>
+	<tr>
+		<td>Max Mustermann</td>
+		<td>20</td>
+		<td>Berlin</td>
+	</tr>
+	<tr>
+		<td>Max Mustermann</td>
+		<td>20</td>
+		<td>Berlin</td>
+	</tr>
+	</tbody>
+</table>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+</main>
+<script src="_Assets/Scripts/Prism.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" async src="_Assets/Scripts/App.js"></script>
+</body>
+</html>

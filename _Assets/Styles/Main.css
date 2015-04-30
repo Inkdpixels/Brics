@@ -1,0 +1,1107 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,100,200,300,500,600,700,800,900);
+.siteHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 20px 2rem;
+  pointer-events: none; }
+
+.siteHeader__brandLogo {
+  font-size: 3em;
+  color: #FFF !important; }
+
+.siteKeyvisual {
+  position: relative;
+  height: 30rem;
+  background: linear-gradient(169deg, #045e9e 40%, #73c2fb 100%); }
+
+.siteKeyvisual__animation {
+  height: 100%;
+  width: 100%; }
+
+.siteKeyvisual__claim {
+  position: absolute;
+  left: 0;
+  top: 11.5rem;
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  line-height: 1.3; }
+
+.siteKeyvisual__claim .btn {
+  margin: 0 .5em .7em;
+  font-size: 1rem; }
+
+.siteContent {
+  margin-top: 3em; }
+
+pre[class*="language-"], .exampleBox {
+  padding: 1em;
+  margin-bottom: 3em;
+  border-radius: 2px;
+  background: 0;
+  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.1), 0 1px 2px rgba(63, 63, 68, 0.1); }
+
+pre[class*="language-"] > code {
+  background: 0; }
+
+.exampleBox {
+  margin-bottom: 1em; }
+
+/**
+ * Declarations which should be put at the top of the document e.g. @font-face declarations and CSS viewports.
+ */
+/*
+ * Global border-box
+ */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/**
+ * Normalize
+ *
+ * A cut-down version of normalize.css
+ * @author Nicolas Gallagher
+ * @link http://necolas.github.com/normalize.css/
+ */
+article, aside, details, figcaption, figure, main, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, progress, video {
+  display: inline-block; }
+
+[hidden] {
+  display: none; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  overflow-y: scroll;
+  /* 2 */ }
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline; }
+
+optgroup {
+  font-weight: bold; }
+
+button, input {
+  line-height: normal; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  /* 3 */ }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Collection of CSS3 Keyframe Animations.
+ */
+/*
+ * Scales the element up to it's initial proportions and fades it into the viewport.
+ */
+@keyframes ScaledUpFadeIn {
+  0% {
+    transform: scale(.4);
+    opacity: 0; }
+
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
+.u-aniScaledUpFadeIn {
+  animation: ScaleUpFadeIn .3s both; }
+
+/*
+ * Moves the element from the top into the users viewport.
+ */
+@keyframes FlyDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0; }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+.u-aniFlyDown {
+  animation: FlyDown .3s both; }
+
+/*
+ * Moves the element from the bottom out of the users viewport.
+ */
+@keyframes FlyUpOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1; }
+
+  100% {
+    transform: translateY(-20px);
+    opacity: 0; } }
+
+.u-aniFlyUpOut {
+  animation: FlyUpOut .3s both; }
+
+/**
+ * Helper classes for brand related stylings.
+ */
+/*
+ * Brand text styles.
+ */
+.u-brand {
+  font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #0097d7; }
+
+/*
+ * Brand color helpers.
+ */
+.u-brandColor-primary {
+  color: #0097d7; }
+
+/*
+ * Brand font-family helper.
+ */
+.u-brandFace {
+  font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/*
+ * Brand logos.
+ */
+.u-brandLogo {
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.u-brandLogo--default {
+  width: 200px;
+  height: 100px;
+  background-image: url(../Images/BrandLogo.svg); }
+
+/**
+ * Display utilities
+ */
+/*
+ * Display the target as an block element.
+ */
+.u-block {
+  display: block !important; }
+
+/*
+ * Hide from both screenreaders and browsers: http://www.h5bp.com/u
+ */
+.u-hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout.
+ */
+.u-invisible {
+  visibility: hidden; }
+
+/**
+ * Layout utilities
+ */
+/*
+ * Floats the element to the right boundary.
+ */
+.u-floatRight {
+  float: right; }
+
+/*
+ * Floats the element to the left boundary.
+ */
+.u-floatLeft {
+  float: left; }
+
+/*
+ * Clearfix for floated elements.
+ */
+.u-cf:before, .u-cf:after, .u-clearfix:before, .u-clearfix:after {
+  content: '';
+  display: table; }
+.u-cf:after, .u-clearfix:after {
+  clear: both; }
+
+/**
+ * Spacing utilities
+ */
+.u-m0 {
+  margin: 0; }
+
+.u-ml0 {
+  margin-left: 0; }
+
+.u-mr0 {
+  margin-right: 0; }
+
+.u-mb0 {
+  margin-bottom: 0; }
+
+.u-mt0 {
+  margin-top: 0; }
+
+.u-p0 {
+  padding: 0; }
+
+.u-pl0 {
+  padding-left: 0; }
+
+.u-pr0 {
+  padding-right: 0; }
+
+.u-pb0 {
+  padding-bottom: 0; }
+
+.u-pt0 {
+  padding-top: 0; }
+
+.u-m1\/1 {
+  margin: 1.5rem; }
+
+.u-ml1\/1 {
+  margin-left: 1.5rem; }
+
+.u-mr1\/1 {
+  margin-right: 1.5rem; }
+
+.u-mb1\/1 {
+  margin-bottom: 1.5rem; }
+
+.u-mt1\/1 {
+  margin-top: 1.5rem; }
+
+.u-p1\/1 {
+  padding: 1.5rem; }
+
+.u-pl1\/1 {
+  padding-left: 1.5rem; }
+
+.u-pr1\/1 {
+  padding-right: 1.5rem; }
+
+.u-pb1\/1 {
+  padding-bottom: 1.5rem; }
+
+.u-pt1\/1 {
+  padding-top: 1.5rem; }
+
+.u-m1\/2 {
+  margin: 0.75rem; }
+
+.u-ml1\/2 {
+  margin-left: 0.75rem; }
+
+.u-mr1\/2 {
+  margin-right: 0.75rem; }
+
+.u-mb1\/2 {
+  margin-bottom: 0.75rem; }
+
+.u-mt1\/2 {
+  margin-top: 0.75rem; }
+
+.u-p1\/2 {
+  padding: 0.75rem; }
+
+.u-pl1\/2 {
+  padding-left: 0.75rem; }
+
+.u-pr1\/2 {
+  padding-right: 0.75rem; }
+
+.u-pb1\/2 {
+  padding-bottom: 0.75rem; }
+
+.u-pt1\/2 {
+  padding-top: 0.75rem; }
+
+/**
+ * Typographic utilities
+ */
+/*
+ * Centers the text.
+ */
+.u-alignCenter {
+  text-align: center; }
+
+/*
+ * Aligns the text to the right boundary.
+ */
+.u-alignRight {
+  text-align: right; }
+
+/*
+ * Aligns the text to the left boundary.
+ */
+.u-alignLeft {
+  text-align: left; }
+
+/*
+ * Reduces the font-size to the smallest value.
+ */
+.u-tinyText {
+  font-size: 0.8125rem; }
+
+/*
+ * Enlarges the font-size to the smallest value.
+ */
+.u-largeText {
+  font-size: 1.375rem; }
+
+/*
+ * Break strings/text if it exceeds the boundaries of their container.
+ */
+.u-textBreak {
+  word-wrap: break-word;
+  hyphens: auto; }
+
+/*
+ * Inverts the text on the element and it's siblings.
+ */
+.u-invertText, .u-invertText h1, .u-invertText h2, .u-invertText h3, .u-invertText h4, .u-invertText h5, .u-invertText h6 {
+  color: white; }
+
+/*
+ * Removes all standard stylings for a list element and it's siblings.
+ */
+.u-resetList {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none; }
+
+/*
+ * Removes all standard stylings for an anchor/link element.
+ */
+.u-linkReset {
+  color: currentColor; }
+  .u-linkReset:hover, .u-linkReset:active, .u-linkReset:focus {
+    text-decoration: none; }
+  p .u-linkReset {
+    padding: 0;
+    margin: 0; }
+
+/**
+ * Sizes which are used in conjunction with other objects and abstractions like the grid system.
+ */
+.u-w1\/1 {
+  width: 100%; }
+
+.u-w1\/2, .u-w2\/4, .u-w3\/6, .u-w4\/8, .u-w5\/10, .u-w6\/12 {
+  width: 50%; }
+
+.u-w1\/3, .u-w2\/6, .u-w4\/12 {
+  width: 33.333%; }
+
+.u-w2\/3, .u-w4\/6, .u-w8\/12 {
+  width: 66.666%; }
+
+.u-w1\/4, .u-w2\/8, .u-w3\/12 {
+  width: 25%; }
+
+.u-w3\/4, .u-w6\/8, .u-w9\/12 {
+  width: 75%; }
+
+.u-w1\/5, .u-w2\/10 {
+  width: 20%; }
+
+.u-w2\/5, .u-w4\/10 {
+  width: 40%; }
+
+.u-w3\/5, .u-w6\/10 {
+  width: 60%; }
+
+.u-w4\/5, .u-w8\/10 {
+  width: 80%; }
+
+.u-w1\/6, .u-w2\/12 {
+  width: 16.666%; }
+
+.u-w5\/6, .u-w10\/12 {
+  width: 83.333%; }
+
+.u-w1\/8 {
+  width: 12.5%; }
+
+.u-w3\/8 {
+  width: 37.5%; }
+
+.u-w5\/8 {
+  width: 62.5%; }
+
+.u-w7\/8 {
+  width: 87.5%; }
+
+.u-w1\/10 {
+  width: 10%; }
+
+.u-w3\/10 {
+  width: 30%; }
+
+.u-w7\/10 {
+  width: 70%; }
+
+.u-w9\/10 {
+  width: 90%; }
+
+.u-w1\/12 {
+  width: 8.333%; }
+
+.u-w5\/12 {
+  width: 41.666%; }
+
+.u-w7\/12 {
+  width: 58.333%; }
+
+.u-w11\/12 {
+  width: 91.666%; }
+
+/**
+ * Base and high-level wrapper elements
+ */
+body {
+  margin: 0;
+  font: 300 100%/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: left;
+  color: #51585e;
+  background: #fff; }
+
+.siteWrapper {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto; }
+
+/**
+ * Buttons
+*/
+/*
+ * The base class for all buttons.
+ */
+.btn {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: .8em 1.5em;
+  border: 1px solid currentColor;
+  background: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: .8em;
+  font-weight: normal;
+  line-height: 1;
+  color: #0097d7;
+  vertical-align: top;
+  transition: all .2s ease; }
+  .btn, .btn:hover {
+    text-decoration: none; }
+  .btn:hover {
+    background: #0097d7;
+    border-color: #0097d7;
+    color: white; }
+
+/*
+ * Set the button width to the width of it's parent element.
+ */
+.btn--full {
+  display: block;
+  text-align: center;
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%; }
+
+/*
+ * Set the button width to the width of it's parent element.
+ */
+.btn--invert {
+  color: white; }
+  .btn--invert:hover {
+    background: white;
+    border-color: white;
+    color: #0097d7; }
+
+/*
+ * Visualize the disabled state of the button.
+ */
+.btn--disabled, .btn[disabled] {
+  color: #51585e;
+  pointer-events: none;
+  opacity: .5; }
+
+/**
+ * Code & pre-formatted text elements
+ */
+code, kbd, pre, samp {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: .8em; }
+
+code {
+  background: #f2f2f2;
+  padding: .3em .5em;
+  border-radius: 2px; }
+  pre code {
+    padding: 0; }
+
+pre {
+  white-space: pre-wrap;
+  margin: 0 0 1.5em; }
+
+/**
+ * Form
+ */
+/*
+ * Form wrapper elements
+ */
+form {
+  margin: 0; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Headings
+ */
+/*
+ * The base class for all headings.
+ */
+.h, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin-top: 0;
+  margin-bottom: .3em;
+  font-weight: 100;
+  text-rendering: optimizeLegibility; }
+
+/*
+ * Heading modifiers
+ * Styles the heading without changing it's importance for SEO robots etc.
+ */
+h1, .h1 {
+  font-size: 40px; }
+
+h2, .h2 {
+  font-size: 30px; }
+
+h3, .h3 {
+  font-size: 24px; }
+
+h4, .h4 {
+  font-size: 20px;
+  font-weight: 200; }
+
+h5, .h5 {
+  font-size: 16px;
+  font-weight: 400; }
+
+h6, .h6 {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+/**
+ * Form inputs
+ */
+/*
+ * Base styling for form input fields.
+ */
+textarea {
+  height: auto;
+  min-height: 72px;
+  resize: vertical;
+  overflow: auto;
+  vertical-align: top; }
+
+input::-webkit-datetime-edit {
+  margin-top: -.17em;
+  margin-bottom: -.17em; }
+input[type="checkbox"], input[type="radio"] {
+  margin-right: .35em;
+  cursor: pointer; }
+
+/*
+ * The base class for all textInputs.
+ */
+.textInput {
+  height: 36px;
+  padding: .2em .5em;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 1px rgba(230, 230, 230, 0.4);
+  font-size: 0.875rem;
+  color: #5d656c; }
+
+/*
+ * Disabled state for inputs.
+ */
+.textInput[disabled], .textInput--disabled {
+  opacity: .5;
+  pointer-events: none; }
+
+/**
+ * Form elements
+ */
+/*
+ * Base styling for all labels.
+ */
+label {
+  display: block;
+  font-weight: 400;
+  font-size: 0.875rem; }
+  label[for] {
+    cursor: pointer; }
+
+/*
+ * Base styling for all legends.
+ */
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 1.25rem; }
+
+/**
+ * Anchors
+ */
+/*
+ * Base styling for all anchors/links.
+ */
+a {
+  color: #0097d7;
+  text-decoration: none;
+  background: transparent; }
+  a:hover, a:active, a:focus {
+    text-decoration: underline; }
+  a:active, a:hover {
+    outline: 0; }
+  p a {
+    position: relative;
+    margin: -.33em;
+    padding: .33em; }
+
+/**
+ * Lists
+ */
+menu, ol, ul {
+  padding: 0 0 0 2.5em;
+  margin: 0 0 1.5em; }
+
+li > ul, li > ol {
+  margin-bottom: 0; }
+
+/**
+ * Definitions
+ */
+dl {
+  margin: 0 0 1.5em; }
+
+/*
+ * Displays the definition element in a horizontal order.
+ */
+.dl--horizontal:before, .dl--horizontal:after {
+  content: '';
+  display: table; }
+.dl--horizontal:after {
+  clear: both; }
+.dl--horizontal dt {
+  width: 19%;
+  float: left;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  word-wrap: break-word;
+  hyphens: auto; }
+.dl--horizontal dd {
+  margin-left: 21%; }
+
+/**
+ * Media elements
+ */
+embed, iframe, object, img {
+  max-width: 100%;
+  border: 0; }
+
+img {
+  font-style: italic;
+  vertical-align: middle; }
+  img[height] {
+    height: auto; }
+
+figure {
+  margin: 0; }
+
+figcaption {
+  font-size: 0.875rem; }
+
+audio, video, iframe {
+  margin: 0 0 1.5em; }
+
+audio {
+  min-width: 65%; }
+  audio:not([controls]) {
+    display: none;
+    height: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+/**
+ * Quotes
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+blockquote {
+  margin: 0 0 1.5em; }
+
+/**
+ * Rulers
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  display: block;
+  height: 0;
+  padding: 0;
+  margin: 3em 0 3em;
+  border: 0;
+  border-top: 1px solid #e6e6e6; }
+
+/**
+ * Tables
+ */
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th {
+  text-align: left;
+  vertical-align: bottom; }
+
+td {
+  vertical-align: top; }
+
+/**
+ * Typographic elements
+ */
+p {
+  margin: 0 0 1.5em; }
+
+b, strong {
+  font-weight: 700; }
+
+small {
+  font-size: 80%; }
+
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+mark {
+  padding-left: .2em;
+  padding-right: .2em;
+  background: #0097d7;
+  color: white; }
+
+dfn {
+  font-style: italic; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/**
+ * Form
+ */
+/*
+ * The base class for all forms.
+ */
+.form {
+  margin-bottom: 1.5rem; }
+
+.form__item {
+  margin-bottom: 0.75rem; }
+
+/*
+ * Display a `<form>` and all it's content in a horizontal order.
+ */
+.form--inline label, .form--inline button, .form--inline input, .form--inline select, .form--inline textarea, .form--inline .form__item {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle; }
+.form--inline .form__item {
+  margin-right: 1em; }
+.form--inline label {
+  margin-right: .3em; }
+
+/**
+ * Grids
+ */
+/*
+ * Grid object which is based on the util width classes.
+ */
+.g, .grid {
+  margin-left: -10px;
+  margin-right: -10px; }
+  .g:before, .g:after, .grid:before, .grid:after {
+    content: '';
+    display: table; }
+  .g:after, .grid:after {
+    clear: both; }
+
+/*
+ * Grid item, floats itself into the grid and depends on the u-w#/# util classes.
+ */
+.gi, .grid__item {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+/**
+ * Navigations
+ */
+/*
+ * Throws a list into horizontal mode.
+ */
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none; }
+  .nav > li {
+    display: inline-block; }
+    .nav > li > a {
+      display: block;
+      color: currentColor; }
+      .nav > li > a:hover, .nav > li > a:active, .nav > li > a:focus {
+        text-decoration: none; }
+      p .nav > li > a {
+        padding: 0;
+        margin: 0; }
+
+/*
+ * Throws a list into vertical mode.
+ */
+.nav--stacked > li {
+  display: list-item; }
+
+/*
+ * Forces a list to occupy 100% of the available width of it's parent.
+ */
+.nav--fit {
+  display: table;
+  width: 100%; }
+  .nav--fit > li {
+    display: table-cell; }
+
+/**
+ * Table
+ */
+/*
+ * Base class for all table-styles.
+ */
+.table {
+  width: 100%;
+  margin-bottom: 1.5em; }
+  .table td, .table th {
+    padding: 0.5em;
+    font-size: 90%; }
+  .table th {
+    font-weight: 400; }
+
+/*
+ * Adds a border around the table and in between the rows and cells.
+ */
+.table--bordered {
+  border: 1px solid #e6e6e6;
+  border-collapse: separate;
+  border-radius: 2px; }
+  .table--bordered td, .table--bordered th {
+    border-left: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6; }
+    .table--bordered td:first-child, .table--bordered th:first-child {
+      border-left: 0; }
+  .table--bordered tr:last-child > td {
+    border-bottom: 0; }
+
+/*
+ * Adds a border below each row.
+ */
+.table--striped td, .table--striped th {
+  border-bottom: 1px solid #e6e6e6; }
+.table--striped th {
+  padding-top: 0;
+  box-shadow: 0 1px 0 rgba(231, 231, 236, 0.7), 0 3px 0 rgba(231, 231, 236, 0.3); }
+
+/*
+ * Reduces the visual gap between each table row.
+ */
+.table--condensed td, .table--condensed th {
+  padding: 0.25em 0.5em 0.25em; }
+
+/*
+ * Displays each odd/even row with a changing background to enhance the visual difference between each row element.
+ */
+.table--zebra tbody tr:nth-child(even) {
+  background: #fff; }
+.table--zebra tbody tr:nth-child(odd) {
+  background: #f2f2f2; }
+
+/*
+ * Site Header
+ */
+/**
+ * Site Footer
+ */
+/**
+ * Print styles - Inlined to avoid another HTTP connection.
+ */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  @page {
+    margin: 0.5cm; }
+
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr, img {
+    page-break-inside: avoid; }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+  h2, h3 {
+    page-break-after: avoid; }
+  a, a:visited {
+    text-decoration: underline; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  .print-hidden {
+    display: none; } }
+
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+code[class*="language-"], pre[class*="language-"] {
+  color: black;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection, code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc; }
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection, code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc; }
+
+@media print {
+  code[class*="language-"], pre[class*="language-"] {
+    text-shadow: none; } }
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto; }
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em; }
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+  color: slategray; }
+
+.token.punctuation {
+  color: #999; }
+
+.namespace {
+  opacity: .7; }
+
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted {
+  color: #905; }
+
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
+  color: #690; }
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5); }
+
+.token.atrule, .token.attr-value, .token.keyword {
+  color: #07a; }
+
+.token.function {
+  color: #DD4A68; }
+
+.token.regex, .token.important, .token.variable {
+  color: #e90; }
+
+.token.important, .token.bold {
+  font-weight: bold; }
+
+.token.italic {
+  font-style: italic; }
+
+.token.entity {
+  cursor: help; }
