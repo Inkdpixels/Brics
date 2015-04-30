@@ -5,7 +5,7 @@
   "main": "Main.scss",
   "scripts": {
     "test": "./node_modules/.bin/node-sass --o ./_Tests/ Main.scss",
-    "build-pages": "./node_modules/.bin/node-sass --o ./_Assets/Styles/ ./_Assets/Sass/Main.scss"
+    "build-pages": "./node_modules/.bin/node-sass --o ./Assets/Styles/ ./Assets/Sass/Main.scss"
   },
   "repository": {
     "type": "git",
