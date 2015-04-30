@@ -68,7 +68,8 @@ $half-spacing: $basic-spacing / 2;
 // =============================================================================
 // Basic layout width (in pixels) - will be set on the '.siteWrapper' class
 // The value is wrapped in the relative-size function which converts pixels into em's.
-$layout-width: rs(960);
+$layout-width: 80%;
+$layout-max-width: rs(1200);
 
 // If this boolean is set to 'true' the '.siteWrapper' class will be horizontally centered.
 $centered-layout: true;
