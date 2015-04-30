@@ -41,9 +41,8 @@ input {
  * The base class for all textInputs.
  */
 @mixin textInput() {
-  height: $base-line-height + px;
-  padding: .2em .4em;
-  margin-bottom: rs($half-spacing, $unit: rem);
+  height: $base-line-height*1.5 + px;
+  padding: .2em .5em;
 
   background: $content-background;
   border: 1px $basic-border-style $basic-border-color;
