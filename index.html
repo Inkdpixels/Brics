@@ -65,32 +65,93 @@
 
 				<section id="documentation">
 					<h1>Components</h1>
-					<p>Components, stylings and utility classes which are in the box.</p>
 
-					<h2>Atoms</h2>
-					<h4>Buttons</h4>
+					<h2>Buttons</h2>
+					<h4>Basic Button</h4>
 					<div class="exampleBox" data-code>
 <a class="btn" href="">Button</a>
-<br>
+					</div>
+
+                    <h4>Disabled Button</h4>
+                    <div class="exampleBox" data-code>
 <a class="btn btn--disabled" aria-disabled="true" href="">Button</a>
-<br>
-<div style="background: currentColor;padding: .75em 1em 0;margin-bottom: .75em;">
-	<a class="btn btn--invert" href="">Inverted button</a>
+                    </div>
+
+                    <h4>Inverted Button</h4>
+                    <div class="exampleBox" data-code>
+<div style="background: currentColor;padding: 1em;margin-bottom: .75em;">
+    <a class="btn btn--invert" href="">Inverted button</a>
 </div>
+                    </div>
+
+                    <h4>Full-width Button</h4>
+                    <div class="exampleBox" data-code>
 <a class="btn btn--full" href="">Button</a>
-					</div>
+                    </div>
 
-					<h4>Form Elements</h4>
-					<div class="exampleBox" data-code>
-<label>Textinput:</label>
-<input type="text" class="textInput" />
-<label>Textinput - Disabled:</label>
-<input type="text" class="textInput textInput--disabled" disabled aria-disabled="true" />
-<label>Textarea:</label>
-<textarea name="" class="textInput" cols="30" rows="10"></textarea>
-					</div>
 
-					<h4>Headings</h4>
+                    <hr/>
+
+
+                    <h2>Forms</h2>
+                    <h4>Basic Example</h4>
+                    <div class="exampleBox" data-code>
+<form class="form">
+    <div class="form__item">
+        <label for="basic-input">Text input:</label>
+        <input id="basic-input" type="text" class="textInput u-w1/1" />
+    </div>
+
+    <div class="form__item">
+        <label for="basic-disabled-input">Disabled text input:</label>
+        <input id="basic-disabled-input" disabled type="text" class="textInput u-w1/1" />
+    </div>
+
+    <div class="form__item">
+        <label for="basic-textarea">Description:</label>
+        <textarea id="basic-textarea" class="textInput u-w1/1"></textarea>
+    </div>
+
+    <div class="form__item">
+        <label for="basic-checkox">
+            <input type="checkbox" id="basic-checkox" />
+            I am a checkbox - Check me!
+        </label>
+    </div>
+
+    <div class="form__item u-alignRight">
+        <input type="submit" value="submit" class="btn" />
+    </div>
+</form>
+                    </div>
+
+                    <h4>Inline Form</h4>
+                    <div class="exampleBox" data-code>
+<form class="form form--inline">
+    <div class="form__item">
+        <label>Username: </label>
+        <input class="textInput" type="text" placeholder="Username...">
+    </div>
+    <div class="form__item">
+        <label>Password: </label>
+        <input class="textInput" type="password" placeholder="Password...">
+    </div>
+    <div class="form__item">
+        <label>
+            <input type="checkbox">Remember me
+        </label>
+    </div>
+    <div class="form__item">
+        <button type="submit" class="btn">Sign in</button>
+    </div>
+</form>
+                    </div>
+
+
+                    <hr>
+
+
+					<h2>Headings</h2>
 					<div class="exampleBox" data-code>
 <h1>h1. Heading</h1>
 <h2>h2. Heading</h2>
@@ -100,12 +161,31 @@
 <h6>h6. Heading</h6>
 					</div>
 
-					<h4>Anchors & Links</h4>
+
+                    <hr>
+
+
+                    <h4>Typography</h4>
+                    <div class="exampleBox" data-code>
+<p>
+    This is a paragraph, inside is a <b>bold</b> and <strong>strong</strong> tag.
+    You can also use the <i>italic</i>, <sub>sub</sub> and <sup>sup</sup> elements.<br>
+    For smaller text you can use the <small>small</small> tag,
+    and for special words you can use the <abbr title="The abbr element represents an abbreviation or acronym…">abbreviation</abbr> or the <mark>element</mark>.
+</p>
+                    </div>
+
+
+                    <hr>
+
+
+					<h2>Anchors & Links</h2>
 					<div class="exampleBox" data-code>
 <a href="">Anchor</a>
 					</div>
 
-					<h4>Lists</h4>
+					<h2>Lists</h2>
+                    <h4>Unordered List</h4>
 					<div class="exampleBox" data-code>
 <ul>
 	<li>Unordered list</li>
@@ -119,98 +199,55 @@
 	</li>
 	<li>And another list item</li>
 </ul>
-<ol>
-	<li>Ordered list</li>
-	<li>Ordered list item</li>
-	<li>
-		Another ordered list item
-		<ol>
-			<li>Nest ordered list</li>
-			<li>Another ordered list item</li>
-		</ol>
-	</li>
-	<li>And another ordered list item</li>
-</ol>
 					</div>
 
-					<h4>Quotes</h4>
+                    <h4>Ordered List</h4>
+                    <div class="exampleBox" data-code>
+<ol>
+    <li>Ordered list</li>
+    <li>Ordered list item</li>
+    <li>
+        Another ordered list item
+        <ol>
+            <li>Nest ordered list</li>
+            <li>Another ordered list item</li>
+        </ol>
+    </li>
+    <li>And another ordered list item</li>
+</ol>
+                    </div>
+
+
+                    <hr>
+
+
+					<h2>Quotes</h2>
+                    <h4>Inlined quotes</h4>
 					<div class="exampleBox" data-code>
 <p>This is an inlined <q>quote sentence</q> inside a paragraph.</p>
-<blockquote>
-	This is a full block quote
-</blockquote>
 					</div>
 
-					<h4>Rulers</h4>
+                    <h4>Full quotes</h4>
+                    <div class="exampleBox" data-code>
+<blockquote>
+    This is a full block quote
+</blockquote>
+                    </div>
+
+
+                    <hr>
+
+
+					<h2>Rulers</h2>
 					<div class="exampleBox" data-code>
 <hr>
 					</div>
 
-					<h4>Tables</h4>
-					<div class="exampleBox" data-code>
-<table>
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Age</th>
-			<th>Residence</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Max Mustermann</td>
-			<td>20</td>
-			<td>Berlin</td>
-		</tr>
-		<tr>
-			<td>Max Mustermann</td>
-			<td>20</td>
-			<td>Berlin</td>
-		</tr>
-		<tr>
-			<td>Max Mustermann</td>
-			<td>20</td>
-			<td>Berlin</td>
-		</tr>
-	</tbody>
-</table>
-					</div>
 
-					<h4>Typography</h4>
-					<div class="exampleBox" data-code>
-<p>
-	This is a paragraph, inside is a <b>bold</b> and <strong>strong</strong> tag.
-	You can also use the <i>italic</i>, <sub>sub</sub> and <sup>sup</sup> elements.<br>
-	For smaller text you can use the <small>small</small> tag,
-	and for special words you can use the <abbr title="The abbr element represents an abbreviation or acronym…">abbreviation</abbr> or the <mark>element</mark>.
-</p>
-					</div>
+                    <hr>
 
-					<h2>Molecules</h2>
-					<h4>Form</h4>
-					<div class="exampleBox" data-code>
-<h5>Inline-Form</h5>
-<form class="form form--inline">
-	<div class="form__item">
-		<label>Username: </label>
-		<input class="textInput" type="text" placeholder="Username...">
-	</div>
-	<div class="form__item">
-		<label>Password: </label>
-		<input class="textInput" type="password" placeholder="Password...">
-	</div>
-	<div class="form__item">
-		<label>
-			<input type="checkbox">Remember me
-		</label>
-	</div>
-	<div class="form__item">
-		<button type="submit" class="btn">Sign in</button>
-	</div>
-</form>
-					</div>
 
-					<h4>Grid</h4>
+					<h2>Grids</h2>
 					<div class="exampleBox" data-code>
 <div class="g">
 	<div class="gi u-w1/3">First column</div>
@@ -219,9 +256,13 @@
 </div>
 					</div>
 
-					<h4>Navigation</h4>
+
+                    <hr>
+
+
+					<h2>Navigations</h2>
+                    <h4>Standard nav (Inlined into one horizontal line).</h4>
 					<div class="exampleBox" data-code>
-<h5>Standard nav - Inlined into one horizontal line.</h5>
 <nav>
 	<ul class="nav">
 		<li><a href="">First nav item</a></li>
@@ -230,9 +271,10 @@
 		<li><a href="">Fourth nav item</a></li>
 	</ul>
 </nav>
+                    </div>
 
-<br>
-<h5>Stacked nav -  Throws a list into vertical mode.</h5>
+                    <h4>Stacked nav (Throws a list into vertical mode).</h4>
+                    <div class="exampleBox" data-code>
 <nav>
 	<ul class="nav nav--stacked">
 		<li><a href="">First nav item</a></li>
@@ -242,8 +284,10 @@
 	</ul>
 </nav>
 
-<br>
-<h5>Fit nav - Forces a list to occupy 100% of the available width of it's parent.</h5>
+                    </div>
+
+                    <h4>Fit nav (Forces a list to occupy 100% of the available width of it's parent).</h4>
+                    <div class="exampleBox" data-code>
 <nav>
 	<ul class="nav nav--fit">
 		<li><a href="">First nav item</a></li>
@@ -254,9 +298,13 @@
 </nav>
 					</div>
 
-					<h4>Table</h4>
+
+                    <hr>
+
+
+					<h2>Tables</h2>
+                    <h4>Basic Example</h4>
 					<div class="exampleBox" data-code>
-<h5>Base class for all tables</h5>
 <table class="table">
 	<thead>
 	<tr>
@@ -283,8 +331,11 @@
 	</tr>
 	</tbody>
 </table>
+                    </div>
 
-<h5>Condensed table</h5>
+
+                    <h4>Condensed table</h4>
+                    <div class="exampleBox" data-code>
 <table class="table table--condensed">
 	<thead>
 	<tr>
@@ -312,7 +363,10 @@
 	</tbody>
 </table>
 
-<h5>Full bordered table</h5>
+                    </div>
+
+                    <h4>Full bordered table</h4>
+                    <div class="exampleBox" data-code>
 <table class="table table--bordered">
 	<thead>
 	<tr>
@@ -340,7 +394,10 @@
 	</tbody>
 </table>
 
-<h5>Striped table</h5>
+                    </div>
+
+                    <h4>Striped table</h4>
+                    <div class="exampleBox" data-code>
 <table class="table table--striped">
 	<thead>
 	<tr>
@@ -368,7 +425,10 @@
 	</tbody>
 </table>
 
-<h5>Zebra table</h5>
+                    </div>
+
+                    <h4>Zebra table</h4>
+                    <div class="exampleBox" data-code>
 <table class="table table--zebra">
 	<thead>
 	<tr>
@@ -397,6 +457,12 @@
 </table>
 					</div>
 				</section>
+
+                <hr>
+
+                <section>
+                    <h1>Utilities</h1>
+                </section>
 			</div>
 		</div>
 	</div>
