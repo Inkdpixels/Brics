@@ -23,6 +23,9 @@ abbr[title] {
 }
 
 mark {
+  padding-left: .2em;
+  padding-right: .2em;
+
   // Addresses styling not present in IE6/7/8/9.
   background: map-get($brand-colors, primary);
   color: color-adjust(map-get($brand-colors, primary), 100%);

@@ -15,6 +15,7 @@ body {
 .siteWrapper {
   position: relative;
   width: $layout-width;
+  max-width: $layout-max-width;
 
   @if $centered-layout {
     margin-left: auto;

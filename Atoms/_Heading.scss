@@ -6,6 +6,8 @@
  * The base class for all headings.
  */
 @mixin h() {
+  margin-top: 0;
+  margin-bottom: .3em;
   font-weight: $thin;
 
   // Optimized kerning for large font sizes.
@@ -21,28 +23,38 @@
  * Styles the heading without changing it's importance for SEO robots etc.
  */
 @mixin h1() {
-  @extend %h;
   font-size: 40px;
+
+  @extend %h;
 }
 @mixin h2() {
-  @extend %h;
   font-size: 30px;
+
+  @extend %h;
 }
 @mixin h3() {
-  @extend %h;
   font-size: 24px;
+
+  @extend %h;
 }
 @mixin h4() {
-  @extend %h;
   font-size: 20px;
+  font-weight: 200;
+
+  @extend %h;
 }
 @mixin h5() {
-  @extend %h;
   font-size: 16px;
+  font-weight: $regular;
+
+  @extend %h;
 }
 @mixin h6() {
+  font-size: 14px;
+  font-weight: $regular;
+  text-transform: uppercase;
+
   @extend %h;
-  font-size: 16px;
 }
 
 h1, .h1 {

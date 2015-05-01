@@ -9,8 +9,13 @@
   width: 100%;
   margin-bottom: rs($basic-spacing);
 
+
   td, th {
     padding: 0.5em;
+    font-size: 90%;
+  }
+  th {
+    font-weight: $regular;
   }
 }
 
@@ -20,6 +25,7 @@
 .table--bordered {
   border: 1px solid $basic-border-color;
   border-collapse: separate;
+  border-radius: $brand-border-radius;
 
   td, th {
     border-left: 1px solid $basic-border-color;
@@ -44,6 +50,7 @@
 
   th {
     padding-top: 0;
+    box-shadow: 0 1px 0 rgba(231, 231, 236, 0.7), 0 3px 0 rgba(231, 231, 236, 0.3);
   }
 }
 

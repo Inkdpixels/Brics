@@ -8,7 +8,17 @@ pre,
 samp {
   // Corrects font family set oddly in Safari 5 and Chrome.
   font-family: $mono-font-family;
-  font-size: 1em;
+  font-size: .8em;
+}
+
+code {
+  background: color-adjust($content-background, 5%);
+  padding: .3em .5em;
+  border-radius: 2px;
+
+  pre & {
+    padding: 0;
+  }
 }
 
 pre {
