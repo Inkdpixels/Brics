@@ -1,0 +1,13 @@
+.siteHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 20px 2rem;
+  pointer-events: none;
+}
+.siteHeader__brandLogo {
+  font-size: 3em;
+  color: #FFF !important;
+}

@@ -14,7 +14,7 @@
 	<div class="siteKeyvisual__animation" data-animation></div>
 	<div class="siteKeyvisual__claim u-invertText u-brandFace">
 		<p>A starter Sass-Kit for responsive projects, <br>which embraces OOCSS, BEM and the Atomic Design-Approach.</p>
-		<a href="#documentation" class="btn btn--invert">Documentation</a>
+		<a href="#components" class="btn btn--invert">Documentation</a>
 		<a href="https://github.com/Inkdpixels/Brics/releases" class="btn btn--invert" target="_blank">Download the latest release</a>
 		<p class="u-tinyText">Current version 1.0.1</p>
 	</div>
@@ -23,10 +23,43 @@
 	<div class="siteWrapper">
 		<div class="g">
 			<div class="gi u-w1/4">
-				&nbsp;
+				<nav>
+                    <ul class="nav nav--stacked siteContent__nav">
+                        <li><a href="#about">About Brics</a></li>
+                        <li><a href="#installation">Installation</a></li>
+                        <li>
+                            <a href="#components">Components</a>
+                            <ul class="nav nav--stacked siteContent__nav__subNav">
+                                <li><a href="#buttons">Buttons</a></li>
+                                <li><a href="#forms">Forms</a></li>
+                                <li><a href="#headings">Headings</a></li>
+                                <li><a href="#typography">Typography</a></li>
+                                <li><a href="#anchors">Anchors & Links</a></li>
+                                <li><a href="#lists">Lists</a></li>
+                                <li><a href="#quotes">Quotes</a></li>
+                                <li><a href="#rulers">Rulers</a></li>
+                                <li><a href="#grids">Grids</a></li>
+                                <li><a href="#navigations">Navigations</a></li>
+                                <li><a href="#tables">Tables</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#utilities">Utilities</a>
+                            <ul class="nav nav--stacked siteContent__nav__subNav">
+                                <li><a href="#util-animations">Animations</a></li>
+                                <li><a href="#util-brand">Brand</a></li>
+                                <li><a href="#util-display">Display</a></li>
+                                <li><a href="#util-layout">Layout</a></li>
+                                <li><a href="#util-spacings">Spacings</a></li>
+                                <li><a href="#util-typography">Typography</a></li>
+                                <li><a href="#util-widths">Widths</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+				</nav>
 			</div>
 			<div class="gi u-w3/4">
-				<section>
+				<section id="about">
 					<h1>About Brics</h1>
 					<p>
 						Brics is a Sass starter kit for small and large projects. It provides guidelines and methodologies for writing a scalable Sass-Project.
@@ -53,7 +86,7 @@
 
 				<hr>
 
-				<section>
+				<section id="installation">
 					<h1>Installation</h1>
 					<p>
 						Just download a <a href="https://github.com/Inkdpixels/Brics/releases" target="_blank">release</a>, unzip it and start of by modifying the <code>_Variables.scss</code>.
@@ -63,10 +96,10 @@
 
 				<hr>
 
-				<section id="documentation">
+				<section id="components">
 					<h1>Components</h1>
 
-					<h2>Buttons</h2>
+					<h2 id="buttons">Buttons</h2>
 					<h4>Basic Button</h4>
 					<div class="exampleBox" data-code>
 <a class="btn" href="">Button</a>
@@ -93,7 +126,7 @@
                     <hr/>
 
 
-                    <h2>Forms</h2>
+                    <h2 id="forms">Forms</h2>
                     <h4>Basic Example</h4>
                     <div class="exampleBox" data-code>
 <form class="form">
@@ -151,7 +184,7 @@
                     <hr>
 
 
-					<h2>Headings</h2>
+					<h2 id="headings">Headings</h2>
 					<div class="exampleBox" data-code>
 <h1>h1. Heading</h1>
 <h2>h2. Heading</h2>
@@ -165,7 +198,7 @@
                     <hr>
 
 
-                    <h4>Typography</h4>
+                    <h2 id="typography">Typography</h2>
                     <div class="exampleBox" data-code>
 <p>
     This is a paragraph, inside is a <b>bold</b> and <strong>strong</strong> tag.
@@ -179,12 +212,12 @@
                     <hr>
 
 
-					<h2>Anchors & Links</h2>
+					<h2 id="anchors">Anchors & Links</h2>
 					<div class="exampleBox" data-code>
 <a href="">Anchor</a>
 					</div>
 
-					<h2>Lists</h2>
+					<h2 id="lists">Lists</h2>
                     <h4>Unordered List</h4>
 					<div class="exampleBox" data-code>
 <ul>
@@ -221,7 +254,7 @@
                     <hr>
 
 
-					<h2>Quotes</h2>
+					<h2 id="quotes">Quotes</h2>
                     <h4>Inlined quotes</h4>
 					<div class="exampleBox" data-code>
 <p>This is an inlined <q>quote sentence</q> inside a paragraph.</p>
@@ -238,7 +271,7 @@
                     <hr>
 
 
-					<h2>Rulers</h2>
+					<h2 id="rulers">Rulers</h2>
 					<div class="exampleBox" data-code>
 <hr>
 					</div>
@@ -247,7 +280,7 @@
                     <hr>
 
 
-					<h2>Grids</h2>
+					<h2 id="grids">Grids</h2>
 					<div class="exampleBox" data-code>
 <div class="g">
 	<div class="gi u-w1/3">First column</div>
@@ -260,7 +293,7 @@
                     <hr>
 
 
-					<h2>Navigations</h2>
+					<h2 id="navigations">Navigations</h2>
                     <h4>Standard nav (Inlined into one horizontal line).</h4>
 					<div class="exampleBox" data-code>
 <nav>
@@ -302,7 +335,7 @@
                     <hr>
 
 
-					<h2>Tables</h2>
+					<h2 id="tables">Tables</h2>
                     <h4>Basic Example</h4>
 					<div class="exampleBox" data-code>
 <table class="table">
@@ -460,7 +493,7 @@
 
                 <hr>
 
-                <section>
+                <section id="utilities">
                     <h1>Utilities</h1>
                 </section>
 			</div>
