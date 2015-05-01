@@ -32,3 +32,26 @@
     border-color: transparent $triangleColor transparent transparent;
   }
 }
+
+
+@mixin placeholder() {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &:placeholder {
+    @content;
+  }
+}
