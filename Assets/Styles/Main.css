@@ -509,7 +509,6 @@ body {
  */
 .btn {
   display: inline-block;
-  margin-bottom: 0.75rem;
   padding: .8em 1.5em;
   border: 1px solid currentColor;
   background: 0;
@@ -1061,7 +1060,7 @@ pre[class*="language-"]::selection, pre[class*="language-"] ::selection, code[cl
 /* Code blocks */
 pre[class*="language-"] {
   padding: 1em;
-  margin: .5em 0;
+  margin: .5em 0 3em;
   overflow: auto; }
 
 /* Inline code */
