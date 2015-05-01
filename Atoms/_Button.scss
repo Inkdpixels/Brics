@@ -7,7 +7,6 @@
  */
 @mixin btn() {
   display: inline-block;
-  margin-bottom: rs($half-spacing, $unit: rem);
 
   // Set in em's so we can change the size of the button depending on the font-size.
   padding: .8em 1.5em;
