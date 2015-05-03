@@ -1,6 +1,7 @@
 var Prism = require('./Vendor/Prism.js');
 var $ = require('jquery');
 var AnimationHeader = require('./Components/AnimationHeader.js');
+var AnimateDemo = require('./Components/AnimateDemo.js');
 var FixedSectionNavigation = require('./Components/FixedSectionNavigation.js');
 var SmoothScroll = require('./Components/SmoothScroll.js');
 
@@ -38,6 +39,10 @@ $(function() {
                 break;
             case 'SmoothScroll':
                 Constructor = SmoothScroll;
+
+                break;
+            case 'AnimateDemo':
+                Constructor = AnimateDemo;
 
                 break;
             default:
