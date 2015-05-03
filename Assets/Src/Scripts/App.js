@@ -1,6 +1,8 @@
 var Prism = require('./Vendor/Prism.js');
 var $ = require('jquery');
 var AnimationHeader = require('./Components/AnimationHeader.js');
+var FixedSectionNavigation = require('./Components/FixedSectionNavigation.js');
+var SmoothScroll = require('./Components/SmoothScroll.js');
 
 $(function() {
     // Create a copy of each data-code section, and display it below with the Prism.js formatter.
@@ -22,17 +24,28 @@ $(function() {
     $('[data-component]').each(function(index, el) {
         var $el = $(el);
         var componentName = $el.data('component');
+        var Constructor;
         var instance;
 
         switch(componentName) {
             case 'FixedSectionNavigation':
-                // console.log('yep');
+                Constructor = FixedSectionNavigation;
+
                 break;
             case 'AnimationHeader':
-                instance = new AnimationHeader($el.get(0));
+                Constructor = AnimationHeader;
+
+                break;
+            case 'SmoothScroll':
+                Constructor = SmoothScroll;
+
                 break;
             default:
                 break;
+        }
+
+        if(Constructor) {
+            instance = new Constructor($el.get(0));
         }
     });
 });

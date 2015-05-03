@@ -11,6 +11,11 @@
 
     > a {
       padding: .5em 0;
+      transition: padding .3s ease;
+
+      &.active {
+        padding-left: 10px;
+      }
     }
   }
 }
@@ -21,6 +26,12 @@
     > a {
       padding: .4em 1.5em;
       color: map-get($brand-colors, primary);
+      transition: padding .3s ease;
+
+      &.active {
+        padding-left: 30px;
+        color: currentColor;
+      }
     }
   }
 }

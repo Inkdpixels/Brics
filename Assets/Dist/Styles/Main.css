@@ -1036,13 +1036,20 @@ sub {
   .siteContent__nav > li {
     padding-bottom: .2em; }
     .siteContent__nav > li > a {
-      padding: .5em 0; }
+      padding: .5em 0;
+      transition: padding .3s ease; }
+      .siteContent__nav > li > a.active {
+        padding-left: 10px; }
 
 .siteContent__nav__subNav {
   padding-bottom: .3em; }
   .siteContent__nav__subNav > li > a {
     padding: .4em 1.5em;
-    color: #0097d7; }
+    color: #0097d7;
+    transition: padding .3s ease; }
+    .siteContent__nav__subNav > li > a.active {
+      padding-left: 30px;
+      color: currentColor; }
 
 /* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
 /**
@@ -1136,3 +1143,11 @@ pre[class*="language-"] {
 
 .token.entity {
   cursor: help; }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: scroll;
+  width: 165px;
+  padding-bottom: 30px; }

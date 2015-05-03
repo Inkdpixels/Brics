@@ -11,3 +11,12 @@ $base-font-weight: 300;
 @import "Organisms/SiteKeyVisual";
 @import "Organisms/SiteContent";
 @import "Vendor/Prism";
+
+.sticky {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: scroll;
+  width: 165px;
+  padding-bottom: 30px;
+}
