@@ -5,7 +5,9 @@
   "main": "Main.scss",
   "scripts": {
     "test": "./node_modules/.bin/node-sass --o ./_Tests/ Main.scss",
-    "build-pages": "./node_modules/.bin/node-sass --o ./Assets/Styles/ ./Assets/Sass/Main.scss"
+    "build-pages": "npm run build-pages-sass && npm run build-pages-scripts",
+    "build-pages-sass": "./node_modules/.bin/node-sass --o ./Assets/Dist/Styles/ ./Assets/Src/Sass/Main.scss",
+    "build-pages-scripts": "./node_modules/.bin/browserify ./Assets/Src/Scripts/App.js > ./Assets/Dist/Scripts/App.min.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,10 @@
   },
   "homepage": "https://github.com/Inkdpixels/Brics",
   "devDependencies": {
+    "browserify": "^10.0.0",
     "node-sass": "^2.1.1"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4"
   }
 }

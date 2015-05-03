@@ -4,7 +4,7 @@ $brand-font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $sans-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $base-font-weight: 300;
 
-@import "../../Main";
+@import "../../../Main";
 
 @import "Molecules/CodeExample";
 @import "Organisms/SiteHeader";

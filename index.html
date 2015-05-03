@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Brics - A starter Sass-Kit for responsive projects.</title>
-	<link rel="stylesheet" type="text/css" href="Assets/Styles/Main.css">
+	<link rel="stylesheet" type="text/css" href="Assets/Dist/Styles/Main.css">
 </head>
 <body>
 <header class="siteHeader">
@@ -10,7 +10,7 @@
 		<a href="/" class="siteHeader__brandLogo u-linkReset u-brandFace" title="Home">Brics</a>
 	</div>
 </header>
-<section class="siteKeyvisual">
+<section class="siteKeyvisual" data-component="AnimationHeader">
 	<div class="siteKeyvisual__animation" data-animation></div>
 	<div class="siteKeyvisual__claim u-invertText u-brandFace">
 		<p>A starter Sass-Kit for responsive projects, <br>which embraces OOCSS, BEM and the Atomic Design-Approach.</p>
@@ -24,7 +24,7 @@
 		<div class="g">
 			<div class="gi u-w1/4">
 				<nav>
-                    <ul class="nav nav--stacked siteContent__nav">
+                    <ul class="nav nav--stacked siteContent__nav" data-component="FixedSectionNavigation">
                         <li><a href="#about">About Brics</a></li>
                         <li><a href="#installation">Installation</a></li>
                         <li>
@@ -69,7 +69,7 @@
 					<div class="g">
 						<div class="gi u-w1/2">
 							<div class="u-alignCenter">
-								<img src="Assets/Images/Sass.svg" alt="" class="u-p1/1 u-w3/4" />
+								<img src="Assets/Dist/Images/Sass.svg" alt="" class="u-p1/1 u-w3/4" />
 							</div>
 							<h5>Libsass compatible</h5>
 							<p>Brics is <a href="http://libsass.org/" target="_blank">Libsass</a> compatible, which is a lot faster for compiling Sass files. But still, you can compile Brics with the ruby based pendant as well.</p>
@@ -495,14 +495,18 @@
 
                 <section id="utilities">
                     <h1>Utilities</h1>
+
+                    <h2 id="util-animations">Animations</h2>
+                    <div class="exampleBox" data-code>
+                        <button>Aniamte me</button>
+                        <div class="u-aniScaledUpFadeIn">Scaled up and faded in.</div>
+                    </div>
                 </section>
 			</div>
 		</div>
 	</div>
 
 </main>
-<script src="Assets/Scripts/Prism.js"></script>
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" async src="Assets/Scripts/App.js"></script>
+<script type="text/javascript" async src="Assets/Dist/Scripts/App.min.js"></script>
 </body>
 </html>
