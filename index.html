@@ -24,7 +24,7 @@
 		<div class="g">
 			<div class="gi u-w1/4">
                 &nbsp;
-				<nav data-component="FixedSectionNavigation">
+				<nav data-component="FixedSectionNavigation" data-class="siteContent__navWrapper--fixed">
                     <ul class="nav nav--stacked siteContent__nav">
                         <li><a href="#about" data-component="SmoothScroll">About Brics</a></li>
                         <li><a href="#installation" data-component="SmoothScroll">Installation</a></li>
@@ -511,6 +511,30 @@
                     <div class="exampleBox" data-code>
 <button data-component="AnimateDemo" data-class="u-aniFlyUpOut">Aniamte me</button>
 <div class="u-aniFlyUpOut">Fading out to the top.</div>
+                    </div>
+
+
+                    <h2 id="util-brand">Brand</h2>
+                    <div class="exampleBox" data-code>
+<p class="u-brand">Display this text in the primary brand color and font family.</p>
+                    </div>
+                    <div class="exampleBox" data-code>
+<p class="u-brandFace">
+    Display this text in the primary brand font family.
+</p>
+                    </div>
+                    <div class="exampleBox" data-code>
+<p class="u-brandColor-primary">
+    Display this text in the primary brand color. <br>
+    For each color in the $brand-colors Sass map, a rule will be auto generated
+</p>
+                    </div>
+                    <div class="exampleBox" data-code>
+<small>
+    An css controlled brand logo image. <br>
+    For each definition in the $brand-logos sass map, a modifier class will be generated.
+</small><br>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Sass" class="u-brandLogo u-brandLogo--sass">
                     </div>
                 </section>
 			</div>

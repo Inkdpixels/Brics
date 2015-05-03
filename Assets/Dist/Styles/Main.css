@@ -148,10 +148,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.u-brandLogo--default {
-  width: 200px;
-  height: 100px;
-  background-image: url(../Images/BrandLogo.svg); }
+.u-brandLogo--sass {
+  width: 150px;
+  height: 170px;
+  background-image: url(../Images/Sass.svg); }
 
 /**
  * Display utilities
@@ -1030,6 +1030,14 @@ sub {
 .siteContent {
   margin-top: 3em; }
 
+.siteContent__navWrapper--fixed {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: scroll;
+  width: 165px;
+  padding-bottom: 30px; }
+
 .siteContent__nav {
   line-height: 1;
   font-size: 90%; }
@@ -1143,11 +1151,3 @@ pre[class*="language-"] {
 
 .token.entity {
   cursor: help; }
-
-.sticky {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  overflow: scroll;
-  width: 165px;
-  padding-bottom: 30px; }

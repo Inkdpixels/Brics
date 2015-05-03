@@ -1,7 +1,17 @@
 .siteContent {
   margin-top: 3em;
 }
+.siteContent__navWrapper {
 
+}
+.siteContent__navWrapper--fixed {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: scroll;
+  width: 165px;
+  padding-bottom: 30px;
+}
 .siteContent__nav {
   line-height: 1;
   font-size: 90%;

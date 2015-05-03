@@ -5,6 +5,7 @@ var FixedSectionNavigation = function(el) {
     this.el = el;
     this.$el = $el;
     this.$anchors = $el.find('a');
+    this.className = $el.data('class') || 'sticky';
     this.origOffsetY = $el.offset().top;
 
     this.findAnchorTargets();
@@ -42,9 +43,9 @@ FixedSectionNavigation.prototype.evaluateFixedState = function() {
     var origOffsetY = this.origOffsetY;
 
     if(window.scrollY >= origOffsetY) {
-        el.classList.add('sticky');
+        el.classList.add(this.className);
     } else {
-        el.classList.remove('sticky');
+        el.classList.remove(this.className);
     }
 };
 

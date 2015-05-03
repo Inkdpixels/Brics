@@ -1,6 +1,14 @@
 @import url(//fonts.googleapis.com/css?family=Exo+2:400,100,200,300,500,600,700,800,900);
 
 $brand-font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$brand-logos: (
+        sass: (
+                image: 'Sass.svg',
+                width: 150px,
+                height: 170px
+        )
+);
+
 $sans-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $base-font-weight: 300;
 
@@ -11,12 +19,3 @@ $base-font-weight: 300;
 @import "Organisms/SiteKeyVisual";
 @import "Organisms/SiteContent";
 @import "Vendor/Prism";
-
-.sticky {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  overflow: scroll;
-  width: 165px;
-  padding-bottom: 30px;
-}
