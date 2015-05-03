@@ -5,6 +5,14 @@
  * @author Lea Verou
  */
 
+pre[class*="language-"] {
+  @include exampleBox(3em);
+
+  > code {
+    background: 0;
+  }
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
     color: black;

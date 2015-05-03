@@ -985,17 +985,11 @@ sub {
     display: none; } }
 
 .exampleBox {
-  margin-bottom: 1em; }
-
-pre[class*="language-"], .exampleBox {
   padding: 1em;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   border-radius: 2px;
   background: 0;
   box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.1), 0 1px 2px rgba(63, 63, 68, 0.1); }
-
-pre[class*="language-"] > code {
-  background: 0; }
 
 .siteHeader {
   position: absolute;
@@ -1056,6 +1050,15 @@ pre[class*="language-"] > code {
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
+pre[class*="language-"] {
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 2px;
+  background: 0;
+  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.1), 0 1px 2px rgba(63, 63, 68, 0.1); }
+  pre[class*="language-"] > code {
+    background: 0; }
+
 code[class*="language-"], pre[class*="language-"] {
   color: black;
   text-shadow: 0 1px white;
