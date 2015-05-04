@@ -62,7 +62,6 @@ input {
   @include textInput();
 }
 
-
 /*
  * Disabled state for inputs.
  */
@@ -73,4 +72,24 @@ input {
 .textInput[disabled],
 .textInput--disabled {
   @include textInput--disabled();
+}
+
+/*
+ * Positive validated state for inputs.
+ */
+@mixin textInput--success() {
+  border-color: $color-positive;
+}
+.textInput--success {
+  @include textInput--success();
+}
+
+/*
+ * Negative validated state for inputs.
+ */
+@mixin textInput--failure() {
+  border-color: $color-negative;
+}
+.textInput--failure {
+  @include textInput--failure();
 }
