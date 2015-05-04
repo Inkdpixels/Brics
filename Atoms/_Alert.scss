@@ -6,9 +6,13 @@
  * The base class for all alerts.
  */
 @mixin alert() {
+  $background-color: map-get($brand-colors, primary);
+
   padding: rs($half-spacing);
   margin-bottom: rs($basic-spacing);
   border-radius: $brand-border-radius;
+  background-color: $background-color;
+  color: color-adjust($background-color, 100%);
 
   :last-child {
     margin-bottom: 0;
