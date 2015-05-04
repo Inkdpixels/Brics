@@ -84,15 +84,35 @@ $body-background: #fff !default;
 // the .siteContent container or it's background.
 $content-background: #fff !default;
 
-// Default units for media-query mixins - it must include a digit e.g.:
-// $mq-unit: 1em; or $mq-unit: 1px;
-$mq-unit: 1px !default;
-
 // Z-Index Masterlist, describe your z-index'es here, and use the z() function in your Sass files.
 // F.e: z-index: z('myElement');
 $zIndexes: (
         // myElement: 1000
 ) !default;
+
+// =============================================================================
+// Responsive related variables
+// =============================================================================
+// Switching this boolean to 'false' will result in fewer width classes,
+// generated from the following Sass-Map.
+$is-responsive: true !default;
+
+// Breakpoints, each breakpoint is accessible via the mq('myKey') @mixin
+// and will output the written rules inside a media-query declaration.
+$mq-breakpoints: (
+        medium: (
+                query: 'screen and (min-width: 600px)',
+                classNameShorthand: 'm'
+        ),
+        large: (
+                query: 'screen and (min-width: 1200px)',
+                classNameShorthand: 'l'
+        )
+) !default;
+
+// Default unit for media-query mixins(min-screen(), max-screen(), screen()) - it must include a digit e.g.:
+// $mq-unit: 1em; or $mq-unit: 1px;
+$mq-unit: 1px !default;
 
 // =============================================================================
 // Design related variables
