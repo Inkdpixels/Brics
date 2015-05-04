@@ -35,8 +35,8 @@
  * Display a negative / failure alert to the user.
  */
 @mixin alert--failure() {
-  background-color: $color-positive;
-  color: color-adjust($color-positive, 100%);
+  background-color: $color-negative;
+  color: color-adjust($color-negative, 100%);
 }
 .alert--failure {
   @include alert--failure();
