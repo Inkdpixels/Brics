@@ -495,6 +495,10 @@
 
                 <section id="utilities">
                     <h1>Utilities</h1>
+					<p>
+						Brics includes a set of helpful utility classes to add certain behaviors to your elements.
+						Each utility class is also aviable via an mixin, to avoid too much chaining of utility classes.
+					</p>
 
                     <h2 id="util-animations">Animations</h2>
                     <div class="exampleBox" data-code>
@@ -535,7 +539,128 @@
 </small><br>
 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Sass" class="u-brandLogo u-brandLogo--sass">
                     </div>
-                </section>
+
+
+					<hr>
+
+
+					<h2 id="util-display">Display</h2>
+					<div class="exampleBox" data-code>
+<span class="u-block">This element hast is displayed as a block element.</span>
+					</div>
+					<div class="exampleBox" data-code>
+<span class="u-hidden">This element is hidden for both screenreaders and browsers.</span>
+					</div>
+					<div class="exampleBox" data-code>
+<span class="u-invisible">This element is only visaully hidden but maintains it's layout.</span>
+					</div>
+
+
+					<hr>
+
+
+					<h2 id="util-layout">Layout</h2>
+					<div class="exampleBox u-cf" data-code>
+<span class="u-floatRight">This element is floated to it's right boundaries.</span>
+					</div>
+					<div class="exampleBox u-cf" data-code>
+<span class="u-floatLeft">This element is floated to it's left boundaries.</span>
+					</div>
+					<div class="exampleBox" data-code>
+<div class="u-cf">
+	<span class="u-floatRight">
+		This element is floated to it's left boundaries and respect
+		it's layout boundaries since the clearfix class was wrapped around it.
+	</span>
+</div>
+					</div>
+
+
+					<hr>
+
+
+					<h2 id="util-spacings">Spacings</h2>
+					<p>
+						Brics has padding and margin spacing utilities built in. For each direction a set of 2 classes(basic spacing and half spacing value) a class will be generated,
+						using a name scheme which you will also find on all width utility classes.
+					</p>
+					<p>
+						Use the classes by choosing either padding(<code>.u-p</code>) or margin(<code>.u-m</code>), the direction shorthand('r' for right, 'b' for bottom etc.) and the targeted value.
+						For example, if you want a full margin on the bottom of your target element, and a half margin on the top, use the class <code>.u-mb1/1</code> for the bottom, and the <code>.u-mt1/2</code> for the top margin.
+					</p>
+					<div class="exampleBox u-cf" data-code>
+<div class="u-m1/1">This element has a basic margin on all sides.</div>
+					</div>
+					<div class="exampleBox u-cf" data-code>
+<div class="u-ml1/2">This element has a half margin on the left side.</div>
+					</div>
+					<div class="exampleBox u-cf" data-code>
+<div class="u-mb1/2">This element has a half margin on the bottom side.</div>
+					</div>
+
+
+					<hr>
+
+
+					<h2 id="util-typography">Typography</h2>
+					<div class="exampleBox u-cf" data-code>
+<div class="u-alignCenter">This text is centered.</div>
+					</div>
+					<div class="exampleBox u-cf" data-code>
+<div class="u-alignRight">This text aligned to the right.</div>
+					</div>
+					<div class="exampleBox u-cf" data-code>
+<div class="u-alignLeft">This text aligned to the left.</div>
+					</div>
+					<div class="exampleBox u-cf" data-code>
+<div class="u-tinyText">This text smaller than the average base font-size.</div>
+					</div>
+					<div class="exampleBox u-cf" data-code>
+<div class="u-largeText">This text larger than the average base font-size.</div>
+					</div>
+					<div class="exampleBox u-cf" data-code>
+<p>The 'u-textBreak' class automatically breaks words which exceed their boundary widths. Below you will find an example without and with the utility class.</p>
+<div>Extralongwordwithoutspacesandbreaksssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</div>
+<div class="u-textBreak">Extralongwordwithoutspacesandbreaksssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</div>
+					</div>
+					<div class="exampleBox u-cf" data-code>
+<div style="background: currentColor; padding: 1em;"><div class="u-invertText">This text is inverted from the base text color.</div></div>
+					</div>
+					<div class="exampleBox u-cf" data-code>
+<ul>
+	<li>A list with</li>
+	<li>the standard</li>
+	<li>list styles</li>
+</ul>
+<ul class="u-resetList">
+	<li>A list</li>
+	<li>without any decorative</li>
+	<li>list styles</li>
+</ul>
+					</div>
+					<div class="exampleBox u-cf" data-code>
+<p>A anchor <a href="">with</a> and <a class="u-linkReset" href="">without</a> decorative link styles.</p>
+					</div>
+
+
+					<hr>
+
+
+					<h2 id="util-widths">Widths</h2>
+					<p>
+						Brics has a set of percentage based width classes built in. The classnames are following the name scheme which is also widely used for the spacing utilities.
+					</p>
+					<p>
+						Use the classes by choosing the targeted width out of a range of on whole(1/1) up to one twelfth(1/12).
+						For example, if you want your target element to be one half of it's parent width, use the class <code>.u-w1/2</code>.
+					</p>
+					<div class="exampleBox u-cf" data-code>
+<div class="u-w1/2" style="background: #E8E8E8;">50%</div>
+<div class="u-w1/3" style="background: #E8E8E8;">33%</div>
+<div class="u-w1/4" style="background: #E8E8E8;">25%</div>
+<span>... and so on.</span>
+					</div>
+				</section>
 			</div>
 		</div>
 	</div>
