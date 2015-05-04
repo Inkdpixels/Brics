@@ -152,3 +152,11 @@
  * Sizes which are used in conjunction with other objects and abstractions like the grid system.
  */
 @include grid-setup();
+
+@if($is-responsive == true) {
+  @each $key, $map in $mq-breakpoints {
+    @include mq($key) {
+      @include grid-setup(map-get($map, 'classNameShorthand'));
+    }
+  }
+}

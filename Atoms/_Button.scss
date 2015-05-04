@@ -83,3 +83,33 @@
 .btn[disabled] {
   @include btn--disabled();
 }
+
+/*
+ * Visualize the positive purpose/action of the button.
+ */
+@mixin btn--positive() {
+  color: $color-positive;
+
+  &:hover {
+    background: $color-positive;
+    border-color: $color-positive;
+  }
+}
+.btn--positive {
+  @include btn--positive();
+}
+
+/*
+ * Visualize the negative purpose/action of the button.
+ */
+@mixin btn--negative() {
+  color: $color-negative;
+
+  &:hover {
+    background: $color-negative;
+    border-color: $color-negative;
+  }
+}
+.btn--negative {
+  @include btn--negative();
+}
