@@ -37,6 +37,11 @@ input {
   }
 }
 
+// Fix the font-settings for input placeholders since they wont get inherited from parent elements e.g. <body>.
+@include placeholder() {
+  font: $base-font-weight #{$base-font-size/16*100}%/#{$base-line-height/$base-font-size} $base-font-family;
+}
+
 /*
  * The base class for all textInputs.
  */
