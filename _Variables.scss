@@ -102,6 +102,8 @@ $link-color: map-get($brand-colors, primary) !default;
 
 // Default color for all buttons.
 $btn-color: map-get($brand-colors, primary) !default;
+$btn-color-positive: #8CD700 !default;
+$btn-color-negative: #D75200 !default;
 
 // Default styling for horizontal rules and bordered elements like tables.
 $basic-border-color: color-adjust($content-background, 10%) !default;
