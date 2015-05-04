@@ -28,3 +28,12 @@
     @content;
   }
 }
+
+// Shorthand to get a media query registered in the $mq-breakpoints sass-map.
+@mixin mq($key) {
+  $mq-definition: map-get($mq-breakpoints, $key);
+
+  @media #{map-get($mq-definition, 'query')} {
+    @content;
+  }
+}
