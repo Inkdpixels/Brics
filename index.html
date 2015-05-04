@@ -36,6 +36,7 @@
                                 <li><a href="#headings" data-component="SmoothScroll">Headings</a></li>
                                 <li><a href="#typography" data-component="SmoothScroll">Typography</a></li>
                                 <li><a href="#anchors" data-component="SmoothScroll">Anchors & Links</a></li>
+                                <li><a href="#alerts" data-component="SmoothScroll">Alerts</a></li>
                                 <li><a href="#lists" data-component="SmoothScroll">Lists</a></li>
                                 <li><a href="#quotes" data-component="SmoothScroll">Quotes</a></li>
                                 <li><a href="#rulers" data-component="SmoothScroll">Rulers</a></li>
@@ -106,6 +107,16 @@
 <a class="btn" href="">Button</a>
 					</div>
 
+                    <h4>Positive Button</h4>
+                    <div class="exampleBox" data-code>
+<a class="btn btn--positive" href="">Button</a>
+                    </div>
+
+                    <h4>Negative Button</h4>
+                    <div class="exampleBox" data-code>
+<a class="btn btn--negative" href="">Button</a>
+                    </div>
+
                     <h4>Disabled Button</h4>
                     <div class="exampleBox" data-code>
 <a class="btn btn--disabled" aria-disabled="true" href="">Button</a>
@@ -123,6 +134,14 @@
 <a class="btn btn--full" href="">Button</a>
                     </div>
 
+                    <h4>Button groups</h4>
+                    <div class="exampleBox" data-code>
+<div class="btnGroup">
+    <a class="btn btnGroup__btn" href="">First Button</a>
+    <a class="btn btnGroup__btn" href="">Second Button</a>
+    <a class="btn btnGroup__btn" href="">Third Button</a>
+</div>
+                    </div>
 
                     <hr/>
 
@@ -181,6 +200,15 @@
 </form>
                     </div>
 
+                    <h4>Form validation and feedback</h4>
+                    <div class="exampleBox" data-code>
+<label for="valid-input">Text input:</label>
+<input id="valid-input" type="text" class="textInput textInput--success u-w1/1" value="This is an positive validated form input" />
+                    </div>
+                    <div class="exampleBox" data-code>
+<label for="invalid-input">Text input:</label>
+<input id="invalid-input" type="text" class="textInput textInput--failure u-w1/1" value="This is an negative validated form input" />
+                    </div>
 
                     <hr>
 
@@ -217,6 +245,35 @@
 					<div class="exampleBox" data-code>
 <a href="">Anchor</a>
 					</div>
+
+
+                    <hr>
+
+                    <h2 id="alerts">Alerts and System feedback</h2>
+                    <h4>Informative feedback</h4>
+                    <div class="exampleBox" data-code>
+<div class="alert">
+    This is an informative messasge.
+</div>
+                    </div>
+
+                    <h4>Positive feedback</h4>
+                    <div class="exampleBox" data-code>
+<div class="alert alert--success">
+    Good job submitting this request.
+</div>
+                    </div>
+
+                    <h4>Negative feedback</h4>
+                    <div class="exampleBox" data-code>
+<div class="alert alert--failure">
+    There was <b>one</b> error submitting this request.
+</div>
+                    </div>
+
+
+                    <hr>
+
 
 					<h2 id="lists">Lists</h2>
                     <h4>Unordered List</h4>

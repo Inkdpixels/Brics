@@ -432,6 +432,135 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .u-w11\/12 {
   width: 91.666%; }
 
+@media screen and (min-width: 600px) {
+  .u-wm1\/1 {
+    width: 100%; }
+  .u-wm1\/2, .u-wm2\/4, .u-wm3\/6, .u-wm4\/8, .u-wm5\/10, .u-wm6\/12 {
+    width: 50%; }
+  .u-wm1\/3, .u-wm2\/6, .u-wm4\/12 {
+    width: 33.333%; }
+  .u-wm2\/3, .u-wm4\/6, .u-wm8\/12 {
+    width: 66.666%; }
+  .u-wm1\/4, .u-wm2\/8, .u-wm3\/12 {
+    width: 25%; }
+  .u-wm3\/4, .u-wm6\/8, .u-wm9\/12 {
+    width: 75%; }
+  .u-wm1\/5, .u-wm2\/10 {
+    width: 20%; }
+  .u-wm2\/5, .u-wm4\/10 {
+    width: 40%; }
+  .u-wm3\/5, .u-wm6\/10 {
+    width: 60%; }
+  .u-wm4\/5, .u-wm8\/10 {
+    width: 80%; }
+  .u-wm1\/6, .u-wm2\/12 {
+    width: 16.666%; }
+  .u-wm5\/6, .u-wm10\/12 {
+    width: 83.333%; }
+  .u-wm1\/8 {
+    width: 12.5%; }
+  .u-wm3\/8 {
+    width: 37.5%; }
+  .u-wm5\/8 {
+    width: 62.5%; }
+  .u-wm7\/8 {
+    width: 87.5%; }
+  .u-wm1\/10 {
+    width: 10%; }
+  .u-wm3\/10 {
+    width: 30%; }
+  .u-wm7\/10 {
+    width: 70%; }
+  .u-wm9\/10 {
+    width: 90%; }
+  .u-wm1\/12 {
+    width: 8.333%; }
+  .u-wm5\/12 {
+    width: 41.666%; }
+  .u-wm7\/12 {
+    width: 58.333%; }
+  .u-wm11\/12 {
+    width: 91.666%; } }
+
+@media screen and (min-width: 1200px) {
+  .u-wl1\/1 {
+    width: 100%; }
+  .u-wl1\/2, .u-wl2\/4, .u-wl3\/6, .u-wl4\/8, .u-wl5\/10, .u-wl6\/12 {
+    width: 50%; }
+  .u-wl1\/3, .u-wl2\/6, .u-wl4\/12 {
+    width: 33.333%; }
+  .u-wl2\/3, .u-wl4\/6, .u-wl8\/12 {
+    width: 66.666%; }
+  .u-wl1\/4, .u-wl2\/8, .u-wl3\/12 {
+    width: 25%; }
+  .u-wl3\/4, .u-wl6\/8, .u-wl9\/12 {
+    width: 75%; }
+  .u-wl1\/5, .u-wl2\/10 {
+    width: 20%; }
+  .u-wl2\/5, .u-wl4\/10 {
+    width: 40%; }
+  .u-wl3\/5, .u-wl6\/10 {
+    width: 60%; }
+  .u-wl4\/5, .u-wl8\/10 {
+    width: 80%; }
+  .u-wl1\/6, .u-wl2\/12 {
+    width: 16.666%; }
+  .u-wl5\/6, .u-wl10\/12 {
+    width: 83.333%; }
+  .u-wl1\/8 {
+    width: 12.5%; }
+  .u-wl3\/8 {
+    width: 37.5%; }
+  .u-wl5\/8 {
+    width: 62.5%; }
+  .u-wl7\/8 {
+    width: 87.5%; }
+  .u-wl1\/10 {
+    width: 10%; }
+  .u-wl3\/10 {
+    width: 30%; }
+  .u-wl7\/10 {
+    width: 70%; }
+  .u-wl9\/10 {
+    width: 90%; }
+  .u-wl1\/12 {
+    width: 8.333%; }
+  .u-wl5\/12 {
+    width: 41.666%; }
+  .u-wl7\/12 {
+    width: 58.333%; }
+  .u-wl11\/12 {
+    width: 91.666%; } }
+
+/**
+ * Alert
+*/
+/*
+ * The base class for all alerts.
+ */
+.alert {
+  padding: 0.75em;
+  margin-bottom: 1.5em;
+  border-radius: 2px;
+  background-color: #0097d7;
+  color: white; }
+  .alert :last-child {
+    margin-bottom: 0; }
+
+/*
+ * Display a positive / success alert to the user.
+ */
+.alert--success {
+  background-color: #8CD700;
+  color: white; }
+
+/*
+ * Display a negative / failure alert to the user.
+ */
+.alert--failure {
+  background-color: #8CD700;
+  color: white; }
+
 /**
  * Base and high-level wrapper elements
  */
@@ -502,6 +631,24 @@ body {
   color: #51585e;
   pointer-events: none;
   opacity: .5; }
+
+/*
+ * Visualize the positive purpose/action of the button.
+ */
+.btn--positive {
+  color: #8CD700; }
+  .btn--positive:hover {
+    background: #8CD700;
+    border-color: #8CD700; }
+
+/*
+ * Visualize the negative purpose/action of the button.
+ */
+.btn--negative {
+  color: #D75200; }
+  .btn--negative:hover {
+    background: #D75200;
+    border-color: #D75200; }
 
 /**
  * Code & pre-formatted text elements
@@ -627,6 +774,18 @@ input[type="checkbox"], input[type="radio"] {
 .textInput[disabled], .textInput--disabled {
   opacity: .5;
   pointer-events: none; }
+
+/*
+ * Positive validated state for inputs.
+ */
+.textInput--success {
+  border-color: #8CD700; }
+
+/*
+ * Negative validated state for inputs.
+ */
+.textInput--failure {
+  border-color: #D75200; }
 
 /**
  * Form elements
@@ -810,6 +969,26 @@ sup {
 
 sub {
   bottom: -0.25em; }
+
+/**
+ * Button group
+ * Displays a set of buttons in a group.
+ */
+.btnGroup:before, .btnGroup:after {
+  content: '';
+  display: table; }
+.btnGroup:after {
+  clear: both; }
+
+.btnGroup__btn {
+  float: left;
+  border-radius: 0;
+  border-right: 0; }
+  .btnGroup__btn:first-child {
+    border-radius: 2px 0 0 2px; }
+  .btnGroup__btn:last-child {
+    border-radius: 0 2px 2px 0;
+    border-right: 1px solid; }
 
 /**
  * Form
