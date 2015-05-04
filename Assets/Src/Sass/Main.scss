@@ -12,6 +12,9 @@ $brand-logos: (
 $sans-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $base-font-weight: 300;
 
+$layout-width: rs(1200);
+$is-responsive: false;
+
 @import "../../../Main";
 
 @import "Molecules/CodeExample";
