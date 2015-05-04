@@ -104,6 +104,7 @@ $link-color: map-get($brand-colors, primary) !default;
 $btn-color: map-get($brand-colors, primary) !default;
 
 // Mood and action colors used on buttons, alerts and other actions.
+$color-info: map-get($brand-colors, primary) !default;
 $color-positive: #8CD700 !default;
 $color-negative: #D75200 !default;
 
