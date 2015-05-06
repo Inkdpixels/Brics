@@ -28,6 +28,6 @@
   },
   "homepage": "https://github.com/Inkdpixels/Brics",
   "devDependencies": {
-    "node-sass": "^2.1.1"
+    "node-sass": "^3.0.0"
   }
 }
