@@ -16,7 +16,7 @@
   }
 }
 @mixin u-aniScaledUpFadeIn() {
-  animation: ScaleUpFadeIn .3s both;
+  animation: ScaleUpFadeIn $transition-duration both;
 }
 .u-aniScaledUpFadeIn {
   @include u-aniScaledUpFadeIn();
@@ -36,7 +36,7 @@
   }
 }
 @mixin u-aniFlyDown() {
-  animation: FlyDown .3s both;
+  animation: FlyDown $transition-duration both;
 }
 .u-aniFlyDown {
   @include u-aniFlyDown();
@@ -56,7 +56,7 @@
   }
 }
 @mixin u-aniFlyUpOut() {
-  animation: FlyUpOut .3s both;
+  animation: FlyUpOut $transition-duration both;
 }
 .u-aniFlyUpOut {
   @include u-aniFlyUpOut();
@@ -77,7 +77,7 @@
   }
 }
 @mixin u-aniPulsate() {
-  animation: Pulsate .3s infinite both;
+  animation: Pulsate $transition-duration infinite both;
 }
 .u-aniPulsate {
   @include u-aniPulsate();

@@ -117,6 +117,9 @@ $mq-unit: 1px !default;
 // =============================================================================
 // Design related variables
 // =============================================================================
+// Transition duration.
+$transition-duration: .3s;
+
 // Default color for all anchors and links.
 $link-color: map-get($brand-colors, primary) !default;
 
