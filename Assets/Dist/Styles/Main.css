@@ -1,5 +1,10 @@
 @import url(//fonts.googleapis.com/css?family=Exo+2:400,100,200,300,500,600,700,800,900);
 /**
+ * Brics - A Starter Sass-Kit which embraces OOCSS, BEM and the Atomic Design-Approach.
+ * @version 1.1.0
+ * @see https://inkdpixels.github.io/Brics/
+ */
+/**
  * Declarations which should be put at the top of the document e.g. @font-face declarations and CSS viewports.
  */
 /*
@@ -86,7 +91,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     opacity: 1; } }
 
 .u-aniScaledUpFadeIn {
-  animation: ScaleUpFadeIn .3s both; }
+  animation: ScaleUpFadeIn 0.3s both; }
 
 /*
  * Moves the element from the top into the users viewport.
@@ -101,7 +106,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     opacity: 1; } }
 
 .u-aniFlyDown {
-  animation: FlyDown .3s both; }
+  animation: FlyDown 0.3s both; }
 
 /*
  * Moves the element from the bottom out of the users viewport.
@@ -116,7 +121,23 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     opacity: 0; } }
 
 .u-aniFlyUpOut {
-  animation: FlyUpOut .3s both; }
+  animation: FlyUpOut 0.3s both; }
+
+/*
+ * Pulsates(fade out and in) an element.
+ */
+@keyframes Pulsate {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.u-aniPulsate {
+  animation: Pulsate 0.3s infinite both; }
 
 /**
  * Helper classes for brand related stylings.
@@ -159,20 +180,20 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 /*
  * Display the target as an block element.
  */
-.u-block {
+.u-isBlock {
   display: block !important; }
 
 /*
  * Hide from both screenreaders and browsers: http://www.h5bp.com/u
  */
-.u-hidden {
+.u-isHidden {
   display: none !important;
   visibility: hidden; }
 
 /*
  * Hide visually and from screenreaders, but maintain layout.
  */
-.u-invisible {
+.u-isInvisible {
   visibility: hidden; }
 
 /**
@@ -363,47 +384,68 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .u-w1\/1 {
   width: 100%; }
 
-.u-w1\/2, .u-w2\/4, .u-w3\/6, .u-w4\/8, .u-w5\/10, .u-w6\/12 {
+.u-w1\/2 {
   width: 50%; }
 
-.u-w1\/3, .u-w2\/6, .u-w4\/12 {
+.u-w1\/3 {
   width: 33.333%; }
 
-.u-w2\/3, .u-w4\/6, .u-w8\/12 {
+.u-w2\/3 {
   width: 66.666%; }
 
-.u-w1\/4, .u-w2\/8, .u-w3\/12 {
+.u-w1\/4 {
   width: 25%; }
 
-.u-w3\/4, .u-w6\/8, .u-w9\/12 {
+.u-w2\/4 {
+  width: 50%; }
+
+.u-w3\/4 {
   width: 75%; }
 
-.u-w1\/5, .u-w2\/10 {
+.u-w1\/5 {
   width: 20%; }
 
-.u-w2\/5, .u-w4\/10 {
+.u-w2\/5 {
   width: 40%; }
 
-.u-w3\/5, .u-w6\/10 {
+.u-w3\/5 {
   width: 60%; }
 
-.u-w4\/5, .u-w8\/10 {
+.u-w4\/5 {
   width: 80%; }
 
-.u-w1\/6, .u-w2\/12 {
+.u-w1\/6 {
   width: 16.666%; }
 
-.u-w5\/6, .u-w10\/12 {
+.u-w2\/6 {
+  width: 33.333%; }
+
+.u-w3\/6 {
+  width: 50%; }
+
+.u-w4\/6 {
+  width: 66.666%; }
+
+.u-w5\/6 {
   width: 83.333%; }
 
 .u-w1\/8 {
   width: 12.5%; }
 
+.u-w2\/8 {
+  width: 25%; }
+
 .u-w3\/8 {
   width: 37.5%; }
 
+.u-w4\/8 {
+  width: 50%; }
+
 .u-w5\/8 {
   width: 62.5%; }
+
+.u-w6\/8 {
+  width: 75%; }
 
 .u-w7\/8 {
   width: 87.5%; }
@@ -411,11 +453,26 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .u-w1\/10 {
   width: 10%; }
 
+.u-w2\/10 {
+  width: 20%; }
+
 .u-w3\/10 {
   width: 30%; }
 
+.u-w4\/10 {
+  width: 40%; }
+
+.u-w5\/10 {
+  width: 50%; }
+
+.u-w6\/10 {
+  width: 60%; }
+
 .u-w7\/10 {
   width: 70%; }
+
+.u-w8\/10 {
+  width: 80%; }
 
 .u-w9\/10 {
   width: 90%; }
@@ -423,11 +480,32 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .u-w1\/12 {
   width: 8.333%; }
 
+.u-w2\/12 {
+  width: 16.666%; }
+
+.u-w3\/12 {
+  width: 25%; }
+
+.u-w4\/12 {
+  width: 33.333%; }
+
 .u-w5\/12 {
   width: 41.666%; }
 
+.u-w6\/12 {
+  width: 50%; }
+
 .u-w7\/12 {
   width: 58.333%; }
+
+.u-w8\/12 {
+  width: 66.666%; }
+
+.u-w9\/12 {
+  width: 75%; }
+
+.u-w10\/12 {
+  width: 62.5%; }
 
 .u-w11\/12 {
   width: 91.666%; }
@@ -496,7 +574,7 @@ body {
   line-height: 1;
   color: #0097d7;
   vertical-align: top;
-  transition: all .2s ease; }
+  transition: all 0.3s ease; }
   .btn, .btn:hover {
     text-decoration: none; }
   .btn:hover {
@@ -640,19 +718,15 @@ input[type="checkbox"], input[type="radio"] {
   margin-right: .35em;
   cursor: pointer; }
 
-::-webkit-input-placeholder {
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font: 300 100%/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-
-:-moz-placeholder {
+input:-moz-placeholder, textarea:-moz-placeholder {
   font: 300 100%/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-
-::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   font: 300 100%/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-
-:-ms-input-placeholder {
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font: 300 100%/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-
-:placeholder {
+input:placeholder, textarea:placeholder {
   font: 300 100%/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 /*
@@ -972,6 +1046,32 @@ sub {
   width: 100%; }
   .nav--fit > li {
     display: table-cell; }
+
+/**
+ * Spinner (Displays a loading animation)
+ */
+.spinner {
+  position: relative;
+  display: inline-block;
+  width: 31px;
+  height: 7px;
+  vertical-align: middle;
+  text-align: center; }
+
+.spinner__dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  vertical-align: top;
+  border-radius: 50%;
+  background: #cccccc;
+  animation: Pulsate 1s infinite ease-in-out; }
+  .spinner__dot:first-child {
+    animation-delay: -0.16s; }
+  .spinner__dot:last-child {
+    animation-delay: .16s; }
+  .spinner--invert > .spinner__dot {
+    background: white; }
 
 /**
  * Table

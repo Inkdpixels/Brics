@@ -4,7 +4,7 @@
   "description": "A Starter Sass-Kit which embraces OOCSS, BEM and the Atomic Design-Approach",
   "main": "Main.scss",
   "scripts": {
-    "./node_modules/.bin/node-sass --o ./_Tests/ Main.scss && sass Main.scss > ./_Tests/RubySass.css --trace",
+    "test": "./node_modules/.bin/node-sass --o ./_Tests/ Main.scss && sass Main.scss > ./_Tests/RubySass.css --trace",
     "build-pages": "npm run build-pages-sass && npm run build-pages-scripts",
     "build-pages-sass": "./node_modules/.bin/node-sass --o ./Assets/Dist/Styles/ ./Assets/Src/Sass/Main.scss",
     "build-pages-scripts": "./node_modules/.bin/browserify ./Assets/Src/Scripts/App.js > ./Assets/Dist/Scripts/App.min.js"
