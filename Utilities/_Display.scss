@@ -5,7 +5,7 @@
 /*
  * Display the target as an block element.
  */
-@mixin u-block() {
+@mixin u-isBlock() {
   display: block !important;
 }
 .u-block {
@@ -15,7 +15,7 @@
 /*
  * Hide from both screenreaders and browsers: http://www.h5bp.com/u
  */
-@mixin u-hidden() {
+@mixin u-isHidden() {
   display: none !important;
   visibility: hidden;
 }
@@ -26,7 +26,7 @@
 /*
  * Hide visually and from screenreaders, but maintain layout.
  */
-@mixin u-invisible() {
+@mixin u-isInvisible() {
   visibility: hidden;
 }
 .u-invisible {
