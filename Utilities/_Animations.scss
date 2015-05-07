@@ -61,3 +61,24 @@
 .u-aniFlyUpOut {
   @include u-aniFlyUpOut();
 }
+
+/*
+ * Pulsates(fade out and in) an element.
+ */
+@keyframes Pulsate {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@mixin u-aniPulsate() {
+  animation: Pulsate .3s infinite both;
+}
+.u-aniPulsate {
+  @include u-aniPulsate();
+}
