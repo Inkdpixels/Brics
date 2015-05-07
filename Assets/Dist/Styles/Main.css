@@ -81,51 +81,99 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 /*
  * Scales the element up to it's initial proportions and fades it into the viewport.
  */
-@keyframes ScaledUpFadeIn {
+@-webkit-keyframes ScaledUpFadeIn {
   0% {
-    transform: scale(.4);
+    -webkit-transform: scale(.4);
+            transform: scale(.4);
     opacity: 0; }
 
   100% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+@keyframes ScaledUpFadeIn {
+  0% {
+    -webkit-transform: scale(.4);
+            transform: scale(.4);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1; } }
 
 .u-aniScaledUpFadeIn {
-  animation: ScaleUpFadeIn 0.3s both; }
+  -webkit-animation: ScaleUpFadeIn 0.3s both;
+          animation: ScaleUpFadeIn 0.3s both; }
 
 /*
  * Moves the element from the top into the users viewport.
  */
-@keyframes FlyDown {
+@-webkit-keyframes FlyDown {
   0% {
-    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
     opacity: 0; }
 
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1; } }
+@keyframes FlyDown {
+  0% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1; } }
 
 .u-aniFlyDown {
-  animation: FlyDown 0.3s both; }
+  -webkit-animation: FlyDown 0.3s both;
+          animation: FlyDown 0.3s both; }
 
 /*
  * Moves the element from the bottom out of the users viewport.
  */
-@keyframes FlyUpOut {
+@-webkit-keyframes FlyUpOut {
   0% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1; }
 
   100% {
-    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    opacity: 0; } }
+@keyframes FlyUpOut {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
     opacity: 0; } }
 
 .u-aniFlyUpOut {
-  animation: FlyUpOut 0.3s both; }
+  -webkit-animation: FlyUpOut 0.3s both;
+          animation: FlyUpOut 0.3s both; }
 
 /*
  * Pulsates(fade out and in) an element.
  */
+@-webkit-keyframes Pulsate {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
 @keyframes Pulsate {
   0% {
     opacity: 1; }
@@ -137,7 +185,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     opacity: 1; } }
 
 .u-aniPulsate {
-  animation: Pulsate 0.3s infinite both; }
+  -webkit-animation: Pulsate 0.3s infinite both;
+          animation: Pulsate 0.3s infinite both; }
 
 /**
  * Helper classes for brand related stylings.
@@ -351,7 +400,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  */
 .u-textBreak {
   word-wrap: break-word;
-  hyphens: auto; }
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; }
 
 /*
  * Inverts the text on the element and it's siblings.
@@ -574,7 +626,8 @@ body {
   line-height: 1;
   color: #0097d7;
   vertical-align: top;
-  transition: all 0.3s ease; }
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
   .btn, .btn:hover {
     text-decoration: none; }
   .btn:hover {
@@ -835,7 +888,10 @@ dl {
   clear: left;
   text-align: right;
   word-wrap: break-word;
-  hyphens: auto; }
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; }
 .dl--horizontal dd {
   margin-left: 21%; }
 
@@ -883,7 +939,6 @@ blockquote {
  * Rulers
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   display: block;
   height: 0;
@@ -1065,11 +1120,14 @@ sub {
   vertical-align: top;
   border-radius: 50%;
   background: #cccccc;
-  animation: Pulsate 1s infinite ease-in-out; }
+  -webkit-animation: Pulsate 1s infinite ease-in-out;
+          animation: Pulsate 1s infinite ease-in-out; }
   .spinner__dot:first-child {
-    animation-delay: -0.16s; }
+    -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s; }
   .spinner__dot:last-child {
-    animation-delay: .16s; }
+    -webkit-animation-delay: .16s;
+            animation-delay: .16s; }
   .spinner--invert > .spinner__dot {
     background: white; }
 
@@ -1186,6 +1244,7 @@ sub {
 .siteKeyvisual {
   position: relative;
   height: 30rem;
+  background: -webkit-linear-gradient(281deg, #045e9e 40%, #73c2fb 100%);
   background: linear-gradient(169deg, #045e9e 40%, #73c2fb 100%); }
 
 .siteKeyvisual__animation {
@@ -1224,7 +1283,8 @@ sub {
     padding-bottom: .2em; }
     .siteContent__nav > li > a {
       padding: .5em 0;
-      transition: padding .3s ease; }
+      -webkit-transition: padding .3s ease;
+              transition: padding .3s ease; }
       .siteContent__nav > li > a.active {
         padding-left: 10px; }
 
@@ -1233,7 +1293,8 @@ sub {
   .siteContent__nav__subNav > li > a {
     padding: .4em 1.5em;
     color: #0097d7;
-    transition: padding .3s ease; }
+    -webkit-transition: padding .3s ease;
+            transition: padding .3s ease; }
     .siteContent__nav__subNav > li > a.active {
       padding-left: 30px;
       color: currentColor; }
