@@ -1,10 +1,10 @@
 {
   "name": "Brics",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Starter Sass-Kit which embraces OOCSS, BEM and the Atomic Design-Approach",
   "main": "Main.scss",
   "scripts": {
-    "test": "./node_modules/.bin/node-sass --o ./_Tests/ Main.scss"
+    "test": "./node_modules/.bin/node-sass --o ./_Tests/ Main.scss && sass Main.scss > ./_Tests/RubySass.css --trace"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,6 @@
   },
   "homepage": "https://github.com/Inkdpixels/Brics",
   "devDependencies": {
-    "node-sass": "^2.1.1"
+    "node-sass": "^3.0.0"
   }
 }

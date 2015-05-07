@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/**
+ * Brics - A Starter Sass-Kit which embraces OOCSS, BEM and the Atomic Design-Approach.
+ * @version 1.1.0
+ * @see https://inkdpixels.github.io/Brics/
+ */
 
 // SASS Functions, Mixins and Variables
 @import '_Framework/_Index';
@@ -35,6 +40,7 @@
 @import 'Molecules/_Form';
 @import 'Molecules/_Grid';
 @import 'Molecules/_Navigation';
+@import 'Molecules/_Spinner';
 @import 'Molecules/_Table';
 
 // Organisms

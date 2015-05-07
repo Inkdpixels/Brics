@@ -22,7 +22,7 @@
   line-height: 1;
   color: $btn-color;
   vertical-align: top;
-  transition: all .2s ease;
+  transition: all $transition-duration ease;
 
   &,
   &:hover {
