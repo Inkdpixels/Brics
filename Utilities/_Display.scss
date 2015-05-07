@@ -8,8 +8,8 @@
 @mixin u-isBlock() {
   display: block !important;
 }
-.u-block {
-  @include u-block();
+.u-isBlock {
+  @include u-isBlock();
 }
 
 /*
@@ -19,8 +19,8 @@
   display: none !important;
   visibility: hidden;
 }
-.u-hidden {
-  @include u-hidden();
+.u-isHidden {
+  @include u-isHidden();
 }
 
 /*
@@ -29,6 +29,6 @@
 @mixin u-isInvisible() {
   visibility: hidden;
 }
-.u-invisible {
-  @include u-invisible();
+.u-isInvisible {
+  @include u-isInvisible();
 }
