@@ -16,7 +16,7 @@
   }
 }
 @mixin u-aniScaledUpFadeIn() {
-  animation: ScaleUpFadeIn $transition-duration both;
+  animation: ScaledUpFadeIn $transition-duration both;
 }
 .u-aniScaledUpFadeIn {
   @include u-aniScaledUpFadeIn();
