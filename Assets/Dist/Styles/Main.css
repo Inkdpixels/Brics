@@ -1,7 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Exo+2:400,100,200,300,500,600,700,800,900);
 /**
  * Brics - A Starter Sass-Kit which embraces OOCSS, BEM and the Atomic Design-Approach.
- * @version 1.1.1
+ * @version 1.2.0
  * @see https://inkdpixels.github.io/Brics/
  */
 /**
@@ -103,8 +103,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     opacity: 1; } }
 
 .u-aniScaledUpFadeIn {
-  -webkit-animation: ScaleUpFadeIn 0.3s both;
-          animation: ScaleUpFadeIn 0.3s both; }
+  -webkit-animation: ScaledUpFadeIn 0.3s both;
+          animation: ScaledUpFadeIn 0.3s both; }
 
 /*
  * Moves the element from the top into the users viewport.
