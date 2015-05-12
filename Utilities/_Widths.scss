@@ -155,8 +155,12 @@
 
 @if($is-responsive == true) {
   @each $key, $map in $mq-breakpoints {
-    @include mq($key) {
-      @include grid-setup(map-get($map, 'classNameShorthand'));
+    $classNameShortHand: map-get($map, 'classNameShorthand');
+
+    @if($classNameShortHand) {
+      @include mq($key) {
+        @include grid-setup($classNameShortHand);
+      }
     }
   }
 }
