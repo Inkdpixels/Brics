@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.2.0
+**Implemented enhancements:**
+- Added a duration argument for each predefined CSS Animation mixin
+- Added a webFont mixin for centralised handling of different font-families.
+- Generate the media-query specific utility widths only if a classNameShortHand was provided in the mq declaration.
+
+**Fixed issues:**
+- Fixed the CSS animation name reference for the u-aniScaledUpFadeIn class/mixin.
+
 ## 1.1.1
 **Fixed issues:**
 - Removed all pointer events if the u-aniFlyUpOut @mixin was applied
