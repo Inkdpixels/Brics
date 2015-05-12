@@ -39,12 +39,20 @@ $brand-logos: (
 // =============================================================================
 // Base Typesetting
 // =============================================================================
+// The webfont font-family stack of the project. Each Sass-Map represents a different font-family with it's unique style and weight.
+// F.e.
+// $webFonts:
+// (group: 'ff-din', id: 'condensed-light', font: ('FF-Din W01 Condensed Light', san-serif ), weight: 200, style: normal),
+// (group: 'ff-din', id: 'light-italic', font: ('FF-Din W01 Light Italic', san-serif ), weight: 200, style: italic);
+// After defining your font-stack, you can access your webfonts via the 'webFont' @mixin.
+$webFonts: false;
+
 // Font-family stack variables to standardize the font-setting
 $sans-font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
 $serif-font-family: Georgia, 'Times New Roman', Times, serif !default;
 $mono-font-family: Menlo, Monaco, Consolas, 'Courier New', monospace !default;
 
-// The font-weights below are used to handle webfonts and consistent stylings.
+// The font-weights below are used to emphasize written words instead of numbers in your Sass.
 $bold: 700 !default;
 $regular: 400 !default;
 $light: 300 !default;
