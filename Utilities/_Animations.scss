@@ -15,8 +15,8 @@
     opacity: 1;
   }
 }
-@mixin u-aniScaledUpFadeIn() {
-  animation: ScaleUpFadeIn $transition-duration both;
+@mixin u-aniScaledUpFadeIn($dur: $transition-duration) {
+  animation: ScaledUpFadeIn $dur both;
 }
 .u-aniScaledUpFadeIn {
   @include u-aniScaledUpFadeIn();
@@ -35,8 +35,8 @@
     opacity: 1;
   }
 }
-@mixin u-aniFlyDown() {
-  animation: FlyDown $transition-duration both;
+@mixin u-aniFlyDown($dur: $transition-duration) {
+  animation: FlyDown $dur both;
 }
 .u-aniFlyDown {
   @include u-aniFlyDown();
@@ -55,9 +55,9 @@
     opacity: 0;
   }
 }
-@mixin u-aniFlyUpOut() {
+@mixin u-aniFlyUpOut($dur: $transition-duration) {
   pointer-events: none;
-  animation: FlyUpOut $transition-duration both;
+  animation: FlyUpOut $dur both;
 }
 .u-aniFlyUpOut {
   @include u-aniFlyUpOut();
@@ -77,8 +77,8 @@
     opacity: 1;
   }
 }
-@mixin u-aniPulsate() {
-  animation: Pulsate $transition-duration infinite both;
+@mixin u-aniPulsate($dur: $transition-duration) {
+  animation: Pulsate $dur infinite both;
 }
 .u-aniPulsate {
   @include u-aniPulsate();

@@ -33,7 +33,14 @@
   }
 }
 
-
+// Adds vendor prefixed styling for HTML input placeholders.
+//
+// For example:
+// .textInput {
+// 		@include placeholder() {
+//            color: #ccc;
+//      };
+// }
 @mixin placeholder() {
   &::-webkit-input-placeholder {
     @content;
@@ -53,5 +60,30 @@
 
   &:placeholder {
     @content;
+  }
+}
+
+// Shorthand for embedding different webfont families.
+// Useful for webfonts where each weight is delivered under a separate font-family name.
+//
+// For example:
+// .selector {
+// 		@include webFont('ff-din', 'condensed-light');
+// }
+// .selector2 {
+// 		@include webFont('ff-din', 'light-italic');
+// }
+@mixin webFont($group, $id: regular) {
+  @if($webFonts) {
+    @each $font in $webFonts {
+      @if($group == map-get($font, group) and $id == map-get($font, id)) {
+        font-family: map-get($font, font);
+        font-weight: map-get($font, weight);
+
+        @if(map-get($font, style) != normal) {
+          font-style: map-get($font, style);
+        }
+      }
+    }
   }
 }
