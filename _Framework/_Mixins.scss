@@ -33,7 +33,14 @@
   }
 }
 
-
+// Adds vendor prefixed styling for HTML input placeholders.
+//
+// For example:
+// .textInput {
+// 		@include placeholder() {
+//            color: #ccc;
+//      };
+// }
 @mixin placeholder() {
   &::-webkit-input-placeholder {
     @content;
