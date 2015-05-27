@@ -47,7 +47,7 @@
   overflow: hidden;
   display: block;
 
-  // Remove the bottom margin of the last element.
+  // Removes the bottom margin of the last element.
   &,
   > :last-child {
     margin-bottom: 0;
