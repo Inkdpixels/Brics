@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.3.0
+**Implemented enhancements:**
+- Added a media Molecule
+- Added a flexible embeds Molecule
+- Added a flag Molecule
+
 ## 1.2.0
 **Implemented enhancements:**
 - Added a duration argument for each predefined CSS Animation mixin
