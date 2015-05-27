@@ -21,6 +21,10 @@
     display: block;
   }
 }
+
+/*
+ * Reverts the order of the elements.
+ */
 .media__img--rev {
   float: right;
   margin-left: rs($basic-spacing);
