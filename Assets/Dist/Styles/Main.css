@@ -1,7 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Exo+2:400,100,200,300,500,600,700,800,900);
 /**
  * Brics - A Starter Sass-Kit which embraces OOCSS, BEM and the Atomic Design-Approach.
- * @version 1.2.0
+ * @version 1.3.0
  * @see https://inkdpixels.github.io/Brics/
  */
 /**
@@ -1021,6 +1021,80 @@ sub {
     border-right: 1px solid; }
 
 /**
+ * Flag - Displays text like content vertically centered besides an image.
+ */
+/*
+ * The base class for the Flag wrapper.
+ */
+.flag {
+  display: table;
+  width: 100%; }
+
+/*
+ * The image wrapper cell.
+ */
+.flag__image {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 10px; }
+  .flag__image > img {
+    display: block;
+    max-width: none; }
+
+.flag__image--rev {
+  padding-right: 0;
+  padding-left: 10px; }
+
+/*
+ * The content wrapper cell.
+ */
+.flag__body {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%; }
+
+/**
+ * Embed a external iframe or media file with a fluid width/height ratio.
+ */
+/*
+ * The base class for all embed containers.
+ */
+.flexibleEmbed {
+  position: relative;
+  display: block;
+  overflow: hidden; }
+
+/*
+ * The class for the embedded content.
+ */
+.flexibleEmbed__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/*
+ * The class for the desired width/height ratio. Default ratio is 1:1.
+ */
+.flexibleEmbed__ratio {
+  display: block;
+  width: 100%;
+  padding-bottom: 100%; }
+
+.flexibleEmbed__ratio--16\/9 {
+  padding-bottom: 56.25%; }
+
+.flexibleEmbed__ratio--3\/1 {
+  padding-bottom: 33.333%; }
+
+.flexibleEmbed__ratio--2\/1 {
+  padding-bottom: 50%; }
+
+.flexibleEmbed__ratio--4\/3 {
+  padding-bottom: 75%; }
+
+/**
  * Form
  */
 /*
@@ -1066,6 +1140,52 @@ sub {
   float: left;
   padding-left: 10px;
   padding-right: 10px; }
+
+/**
+ * Media
+ */
+/*
+ * The base class for all media elements.
+ */
+.media {
+  display: block; }
+  .media:before, .media:after {
+    content: '';
+    display: table; }
+  .media:after {
+    clear: both; }
+
+/*
+ * The class for the floated media element.
+ */
+.media__img {
+  float: left;
+  margin-right: 1.5em; }
+  .media__img > img {
+    display: block; }
+
+/*
+ * Reverts the order of the elements.
+ */
+.media__img--rev {
+  float: right;
+  margin-left: 1.5em;
+  margin-right: 0; }
+
+.media__img--compact {
+  margin-right: 0.75em; }
+  .media__img--compact.media__img--rev {
+    margin-left: 0.75em;
+    margin-right: 0; }
+
+/*
+ * The class for the content beside the media element.
+ */
+.media__body {
+  overflow: hidden;
+  display: block; }
+  .media__body, .media__body > :last-child {
+    margin-bottom: 0; }
 
 /**
  * Navigations

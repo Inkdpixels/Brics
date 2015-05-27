@@ -43,6 +43,9 @@
                                 <li><a href="#navigations" data-component="SmoothScroll">Navigations</a></li>
                                 <li><a href="#spinner" data-component="SmoothScroll">Spinner</a></li>
                                 <li><a href="#tables" data-component="SmoothScroll">Tables</a></li>
+                                <li><a href="#media" data-component="SmoothScroll">Media</a></li>
+                                <li><a href="#flag" data-component="SmoothScroll">Flag</a></li>
+                                <li><a href="#flexibleEmbeds" data-component="SmoothScroll">Flexible Embeds</a></li>
                             </ul>
                         </li>
                         <li>
@@ -571,6 +574,83 @@
 	</tr>
 	</tbody>
 </table>
+					</div>
+
+
+					<hr>
+
+
+					<h2 id="media">Media</h2>
+					<h4>Basic Example</h4>
+					<div class="exampleBox" data-code>
+<div class="media">
+	<img class="media__img" src="http://placehold.it/300x200" alt="Media Image"/>
+	<div class="media__content">
+		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+		<p>Lorem ipsum dolor sit amet.</p>
+	</div>
+</div>
+					</div>
+
+
+					<h4>Reverted Example</h4>
+					<div class="exampleBox" data-code>
+<div class="media">
+	<img class="media__img media__img--rev" src="http://placehold.it/300x200" alt="Media Image"/>
+	<div class="media__content">
+		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+		<p>Lorem ipsum dolor sit amet.</p>
+	</div>
+</div>
+					</div>
+
+
+					<hr>
+
+
+					<h2 id="flag">Flag</h2>
+					<p>The Flag object behaves like the media Molecule, but centers the content vertically on the height of the image.</p>
+
+					<h4>Basic Example</h4>
+					<div class="exampleBox" data-code>
+<div class="flag">
+	<div class="flag__image">
+		<img src="http://placehold.it/300x200" alt="Media Image"/>
+	</div>
+	<div class="flag__body">
+		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+		<p>Lorem ipsum dolor sit amet.</p>
+	</div>
+</div>
+					</div>
+
+					<h4>Reverted Example</h4>
+					<div class="exampleBox" data-code>
+<div class="flag">
+	<div class="flag__body">
+		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+		<p>Lorem ipsum dolor sit amet.</p>
+	</div>
+	<div class="flag__image flag__image--rev">
+		<img src="http://placehold.it/300x200" alt="Media Image"/>
+	</div>
+</div>
+					</div>
+
+
+					<hr>
+
+
+					<h2 id="flexibleEmbeds">Flexible Embeds</h2>
+					<p>
+						Display an iframe or media file with a fluid width/height ratio. A bunch of different ratios are available as modifiers.
+						In this example the 16/9 ratio modifier was used, thus, resulting in a 16:9 aspect ratio. The default ratio was set to 1:1.
+					</p>
+					<div class="exampleBox" data-code>
+<div class="flexibleEmbed">
+	<iframe class="flexibleEmbed__content" src="https://www.youtube.com/embed/61UfGg6sf8I" allowfullscreen frameborder="0"></iframe>
+	<div class="flexibleEmbed__ratio flexibleEmbed__ratio--16/9"></div>
+</div>
 					</div>
 				</section>
 
