@@ -1,0 +1,38 @@
+/**
+ * Flag - Displays text like content vertically centered besides an image.
+ */
+
+/*
+ * The base class for the Flag wrapper.
+ */
+.flag {
+  display: table;
+  width: 100%;
+}
+
+/*
+ * The image wrapper cell.
+ */
+.flag__image {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 10px;
+
+  > img {
+    display: block;
+    max-width: none;
+  }
+}
+.flag__image--rev {
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+/*
+ * The content wrapper cell.
+ */
+.flag__body {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
