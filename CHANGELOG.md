@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.3.1
+**Implemented enhancements:**
+- Reset the bottom margin for each last child in the `.media__content` and `.flag__content` wrapper.
+
+**Fixed issues:**
+- Fixed the unit addition in the rs() function while using ruby sass.
+
 ## 1.3.0
 **Implemented enhancements:**
 - Added a media Molecule
