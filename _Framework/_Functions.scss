@@ -83,3 +83,12 @@ $end: right !default;
   @return map-get($zIndexes, $key);
 }
 
+// Returns a brand-color for the given key.
+//
+// For example:
+// .selector {
+//    color: brand('myElement');
+// }
+@function brand($key) {
+  @return map-get($brand-colors, $key);
+}
