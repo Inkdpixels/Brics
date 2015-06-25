@@ -8,7 +8,7 @@
 @mixin u-isBlock() {
   display: block !important;
 }
-.u-isBlock {
+@include class('u-isBlock') {
   @include u-isBlock();
 }
 
@@ -19,7 +19,7 @@
   display: none !important;
   visibility: hidden;
 }
-.u-isHidden {
+@include class('u-isHidden') {
   @include u-isHidden();
 }
 
@@ -29,6 +29,6 @@
 @mixin u-isInvisible() {
   visibility: hidden;
 }
-.u-isInvisible {
+@include class('u-isInvisible') {
   @include u-isInvisible();
 }

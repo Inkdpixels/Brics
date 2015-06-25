@@ -35,9 +35,6 @@
     color: color-adjust($btn-color, 100%);
   }
 }
-.btn {
-  @include btn();
-}
 
 /*
  * Set the button width to the width of it's parent element.
@@ -50,9 +47,6 @@
   padding-right: 0;
   padding-left: 0;
   width: 100%;
-}
-.btn--full {
-  @include btn--full();
 }
 
 /*
@@ -67,9 +61,6 @@
     color: $btn-color;
   }
 }
-.btn--invert {
-  @include btn--invert();
-}
 
 /*
  * Visualize the disabled state of the button.
@@ -78,10 +69,6 @@
   color: $base-text-color;
   pointer-events: none;
   opacity: .5;
-}
-.btn--disabled,
-.btn[disabled] {
-  @include btn--disabled();
 }
 
 /*
@@ -95,9 +82,6 @@
     border-color: $color-positive;
   }
 }
-.btn--positive {
-  @include btn--positive();
-}
 
 /*
  * Visualize the negative purpose/action of the button.
@@ -110,6 +94,27 @@
     border-color: $color-negative;
   }
 }
-.btn--negative {
-  @include btn--negative();
+
+@include class('btn') {
+  @include btn();
+
+  &[disabled] {
+    @include btn--disabled();
+  }
+
+  @include modifier('full') {
+    @include btn--full();
+  }
+  @include modifier('invert') {
+    @include btn--invert();
+  }
+  @include modifier('disabled') {
+    @include btn--disabled();
+  }
+  @include modifier('positive') {
+    @include btn--positive();
+  }
+  @include modifier('negative') {
+    @include btn--negative();
+  }
 }

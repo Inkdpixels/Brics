@@ -9,7 +9,7 @@
   font-family: $brand-font-family;
   color: map-get($brand-colors, primary);
  }
-.u-brand {
+@include class('u-brand') {
   @include u-brand();
 }
 
@@ -17,7 +17,7 @@
  * Brand color helpers.
  */
 @each $key, $value in $brand-colors {
-  .u-brandColor-#{$key} {
+  @include class('u-brandColor-#{$key}') {
     color: $value;
   }
 }
@@ -28,22 +28,23 @@
 @mixin u-brandFace() {
   font-family: $brand-font-family;
 }
-.u-brandFace {
+@include class('u-brandFace') {
   @include u-brandFace();
 }
 
 /*
  * Brand logos.
  */
-.u-brandLogo {
+@include class('u-brandLogo') {
   display: inline-block;
   background-size: cover;
   background-repeat: no-repeat;
-}
-@each $key, $brand-logo in $brand-logos {
-  .u-brandLogo--#{$key} {
-    width: map-get($brand-logo, width);
-    height: map-get($brand-logo, height);
-    background-image: image-url(map-get($brand-logo, image));
+
+  @each $key, $brand-logo in $brand-logos {
+    @include modifier($key) {
+      width: map-get($brand-logo, width);
+      height: map-get($brand-logo, height);
+      background-image: image-url(map-get($brand-logo, image));
+    }
   }
 }

@@ -12,7 +12,7 @@ body {
   background: $body-background;
 }
 
-.siteWrapper {
+@include class('siteWrapper') {
   position: relative;
   width: $layout-width;
   max-width: $layout-max-width;

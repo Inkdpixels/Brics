@@ -8,7 +8,7 @@
 @mixin u-floatRight() {
   float: $end;
 }
-.u-floatRight {
+@include class('u-floatRight') {
   @include u-floatRight();
 }
 
@@ -18,7 +18,7 @@
 @mixin u-floatLeft() {
   float: $start;
 }
-.u-floatLeft {
+@include class('u-floatLeft') {
   @include u-floatLeft();
 }
 
@@ -35,7 +35,7 @@
     clear: both;
   }
 }
-.u-cf,
-.u-clearfix {
+.#{$brics-namespace}u-cf,
+.#{$brics-namespace}u-clearfix {
   @include u-cf();
 }

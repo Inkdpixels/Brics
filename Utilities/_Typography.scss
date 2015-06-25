@@ -8,7 +8,7 @@
 @mixin u-alignCenter() {
   text-align: center;
 }
-.u-alignCenter {
+@include class('u-alignCenter') {
   @include u-alignCenter();
 }
 
@@ -18,7 +18,7 @@
 @mixin u-alignRight() {
   text-align: $end;
 }
-.u-alignRight {
+@include class('u-alignRight') {
   @include u-alignRight();
 }
 
@@ -28,7 +28,7 @@
 @mixin u-alignLeft() {
   text-align: $start;
 }
-.u-alignLeft {
+@include class('u-alignLeft') {
   @include u-alignLeft();
 }
 
@@ -38,7 +38,7 @@
 @mixin u-tinyText() {
   font-size: rs($base-font-size - 3, $unit: rem);
 }
-.u-tinyText {
+@include class('u-tinyText') {
   @include u-tinyText();
 }
 
@@ -48,7 +48,7 @@
 @mixin u-largeText() {
   font-size: rs($base-font-size + 6, $unit: rem);
 }
-.u-largeText {
+@include class('u-largeText') {
   @include u-largeText();
 }
 
@@ -59,7 +59,7 @@
   word-wrap: break-word;
   hyphens: auto;
 }
-.u-textBreak {
+@include class('u-textBreak') {
   @include u-textBreak();
 }
 
@@ -73,7 +73,7 @@
     color: color-adjust($base-text-color, 100%);
   }
 }
-.u-invertText {
+@include class('u-invertText') {
   @include u-invertText();
 }
 
@@ -85,7 +85,7 @@
   margin-bottom: 0;
   list-style: none;
 }
-.u-resetList {
+@include class('u-resetList') {
   @include u-resetList();
 }
 
@@ -106,6 +106,6 @@
     margin: 0;
   }
 }
-.u-linkReset {
+@include class('u-linkReset') {
   @include u-linkReset();
 }

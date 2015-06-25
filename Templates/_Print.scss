@@ -42,8 +42,8 @@
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  %print-hidden,
-  .print-hidden {
+
+  @include class('print-hidden') {
     display: none;
   }
 }

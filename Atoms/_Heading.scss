@@ -14,7 +14,7 @@
   // Use this only on large font-sizes (f.e. headings) to avoid performance issues.
   text-rendering: optimizeLegibility;
 }
-.h, %h {
+.#{$brics-namespace}h, %h {
   @include h();
 }
 
@@ -57,21 +57,27 @@
   @extend %h;
 }
 
-h1, .h1 {
+h1,
+.#{$brics-namespace}h1 {
   @include h1();
 }
-h2, .h2 {
+h2,
+.#{$brics-namespace}h2 {
   @include h2();
 }
-h3, .h3 {
+h3,
+.#{$brics-namespace}h3 {
   @include h3();
 }
-h4, .h4 {
+h4,
+.#{$brics-namespace}h4 {
   @include h4();
 }
-h5, .h5 {
+h5,
+.#{$brics-namespace}h5 {
   @include h5();
 }
-h6, .h6 {
+h6,
+.#{$brics-namespace}h6 {
   @include h6();
 }

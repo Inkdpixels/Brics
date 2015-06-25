@@ -16,9 +16,6 @@
     margin-bottom: 0;
   }
 }
-.alert {
-  @include alert();
-}
 
 /*
  * Display a positive / success alert to the user.
@@ -26,9 +23,6 @@
 @mixin alert--success() {
   background-color: $color-positive;
   color: color-adjust($color-positive, 100%);
-}
-.alert--success {
-  @include alert--success();
 }
 
 /*
@@ -38,6 +32,14 @@
   background-color: $color-negative;
   color: color-adjust($color-negative, 100%);
 }
-.alert--failure {
-  @include alert--failure();
+
+@include class('alert') {
+  @include alert();
+
+  @include modifier('success') {
+    @include alert--success();
+  }
+  @include modifier('failure') {
+    @include alert--failure();
+  }
 }

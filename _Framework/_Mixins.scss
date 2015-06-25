@@ -87,3 +87,50 @@
     }
   }
 }
+
+// Shorthand for creating a class with the class namespace
+// which is declared in the _Variables.scss.
+//
+// For example:
+// @include class('myClassName') {
+//    color: red;
+// }
+@mixin class($name) {
+  .#{$brics-namespace}#{$name} {
+    @content;
+  }
+}
+
+/// Shorthand which creates a block element according to the BEM namescheme
+// and therefore it's parent className.
+//
+// For example:
+// @include class('myClassName') {
+//    color: black;
+//
+//    @include element('myBlock') {
+//       color: red;
+//    }
+// }
+@mixin element($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+/// Shorthand which creates a modifier according to the BEM namescheme
+// and therefore it's parent className.
+//
+// For example:
+// @include class('myClassName') {
+//    color: black;
+//
+//    @include modifier('myModifier') {
+//       color: red;
+//    }
+// }
+@mixin modifier($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}

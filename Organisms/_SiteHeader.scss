@@ -2,4 +2,4 @@
  * Site Header
  */
 
-.siteHeader { }
+@include class('siteHeader') { }

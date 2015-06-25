@@ -60,20 +60,12 @@ input, textarea {
   color: lighten($base-text-color, 5%);
 }
 
-.textInput {
-  @include textInput();
-}
-
 /*
  * Disabled state for inputs.
  */
 @mixin textInput--disabled() {
   opacity: .5;
   pointer-events: none;
-}
-.textInput[disabled],
-.textInput--disabled {
-  @include textInput--disabled();
 }
 
 /*
@@ -82,9 +74,6 @@ input, textarea {
 @mixin textInput--success() {
   border-color: $color-positive;
 }
-.textInput--success {
-  @include textInput--success();
-}
 
 /*
  * Negative validated state for inputs.
@@ -92,6 +81,21 @@ input, textarea {
 @mixin textInput--failure() {
   border-color: $color-negative;
 }
-.textInput--failure {
-  @include textInput--failure();
+
+@include class('textInput') {
+  @include textInput();
+
+  &[disabled] {
+    @include textInput--disabled();
+  }
+
+  @include modifier('disabled') {
+    @include textInput--disabled();
+  }
+  @include modifier('success') {
+    @include textInput--success();
+  }
+  @include modifier('failure') {
+    @include textInput--failure();
+  }
 }

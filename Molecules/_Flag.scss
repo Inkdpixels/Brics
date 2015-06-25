@@ -5,40 +5,41 @@
 /*
  * The base class for the Flag wrapper.
  */
-.flag {
+@include class('flag') {
   display: table;
   width: 100%;
-}
 
-/*
- * The image wrapper cell.
- */
-.flag__image {
-  display: table-cell;
-  vertical-align: middle;
-  padding-right: 10px;
+  /*
+   * The image wrapper cell.
+   */
+  @include element('image') {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 10px;
 
-  > img {
-    display: block;
-    max-width: none;
+    > img {
+      display: block;
+      max-width: none;
+    }
+
+    @include modifier('rev') {
+      padding-right: 0;
+      padding-left: 10px;
+    }
   }
-}
-.flag__image--rev {
-  padding-right: 0;
-  padding-left: 10px;
-}
 
-/*
- * The content wrapper cell.
- */
-.flag__body {
-  display: table-cell;
-  vertical-align: middle;
-  width: 100%;
+  /*
+   * The content wrapper cell.
+   */
+  @include element('body') {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
 
-  // Removes the bottom margin of the last element.
-  &,
-  > :last-child {
-    margin-bottom: 0;
+    // Removes the bottom margin of the last element.
+    &,
+    > :last-child {
+      margin-bottom: 0;
+    }
   }
 }

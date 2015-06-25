@@ -18,7 +18,7 @@
 @mixin u-aniScaledUpFadeIn($dur: $transition-duration) {
   animation: ScaledUpFadeIn $dur both;
 }
-.u-aniScaledUpFadeIn {
+@include class('u-aniScaledUpFadeIn') {
   @include u-aniScaledUpFadeIn();
 }
 
@@ -38,7 +38,7 @@
 @mixin u-aniFlyDown($dur: $transition-duration) {
   animation: FlyDown $dur both;
 }
-.u-aniFlyDown {
+@include class('u-aniFlyDown') {
   @include u-aniFlyDown();
 }
 
@@ -59,7 +59,7 @@
   pointer-events: none;
   animation: FlyUpOut $dur both;
 }
-.u-aniFlyUpOut {
+@include class('u-aniFlyUpOut') {
   @include u-aniFlyUpOut();
 }
 
@@ -80,6 +80,6 @@
 @mixin u-aniPulsate($dur: $transition-duration) {
   animation: Pulsate $dur infinite both;
 }
-.u-aniPulsate {
+@include class('u-aniPulsate') {
   @include u-aniPulsate();
 }

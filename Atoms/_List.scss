@@ -25,7 +25,7 @@ dl {
 /*
  * Displays the definition element in a horizontal order.
  */
-.dl--horizontal {
+@mixin dl--horizontal() {
   @include u-cf();
 
   dt {
@@ -39,5 +39,11 @@ dl {
   }
   dd {
     margin-#{$start}: 21%;
+  }
+}
+
+@include class('dl') {
+  @include modifier('horizontal') {
+    @include dl--horizontal();
   }
 }
