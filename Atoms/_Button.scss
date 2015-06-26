@@ -59,11 +59,11 @@
  * Set the button width to the width of it's parent element.
  */
 @mixin btn--invert() {
-  color: color-adjust($btn-color, 100%);
+  color: color-adjust($base-text-color, 100%);
 
   &:hover {
-    background: color-adjust($btn-color, 100%);
-    border-color: color-adjust($btn-color, 100%);
+    background: color-adjust($base-text-color, 100%);
+    border-color: color-adjust($base-text-color, 100%);
     color: $btn-color;
   }
 }
