@@ -1,4 +1,4 @@
-![Brics](https://github.com/Inkdpixels/Brics/blob/gh-pages/Assets/Dist/Images/Brics.svg)
+![Brics](https://raw.githubusercontent.com/Inkdpixels/Brics/gh-pages/Assets/Dist/Images/Brics.png)
 
 # Brics [![Build Status](https://travis-ci.org/Inkdpixels/Brics.svg)](https://travis-ci.org/Inkdpixels/Brics) [![Dependency Status](https://david-dm.org/Inkdpixels/Brics.svg)](https://david-dm.org/Inkdpixels/Brics) [![devDependency Status](https://david-dm.org/Inkdpixels/Brics/dev-status.svg)](https://david-dm.org/Inkdpixels/Brics#info=devDependencies)
 
