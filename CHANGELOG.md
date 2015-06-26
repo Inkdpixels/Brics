@@ -1,11 +1,16 @@
 # Change Log
 
+## 1.3.2
+**Implemented enhancements:**
+- Added a shorthand function to  the `$brand-colors` Sass map.
+- The target color for the `.btn--invert` modifier is now the `$base-text-color`.
+
 ## 1.3.1
 **Implemented enhancements:**
 - Reset the bottom margin for each last child in the `.media__content` and `.flag__content` wrapper.
 
 **Fixed issues:**
-- Fixed the unit addition in the rs() function while using ruby sass.
+- Fixed the unit addition in the rs() function while using ruby Sass.
 
 ## 1.3.0
 **Implemented enhancements:**
@@ -35,5 +40,5 @@
 - All display utility classes have an 'is' prefix to create a clear reference to the state of the class.
 
 **Fixed issues:**
-- Fixed the compatibility with node-sass 3.0.0.
-- Fixed a compile error with ruby-sass while using the placeholder @mixin.
+- Fixed the compatibility with Node-Sass 3.0.0.
+- Fixed a compile error with Ruby-Sass while using the placeholder @mixin.
