@@ -5,19 +5,12 @@
 	<link rel="stylesheet" type="text/css" href="Assets/Dist/Styles/Main.css">
 </head>
 <body>
-<header class="siteHeader">
-	<div class="siteWrapper">
-		<a href="/" class="siteHeader__brandLogo u-linkReset u-brandFace" title="Home">Brics</a>
-	</div>
+<header class="siteHeader u-brandFace">
+	<img src="Assets/Dist/Images/Brics.svg" class="siteHeader__brandLogo">
+	<p>A starter Sass-Kit for responsive projects, <br>which embraces OOCSS, BEM and the Atomic Design-Approach.</p>
+	<a href="#components" class="btn btn--small">Documentation</a>
+	<a href="https://github.com/Inkdpixels/Brics/releases" class="btn btn--small" target="_blank">Download the latest release</a>
 </header>
-<section class="siteKeyvisual" data-component="AnimationHeader">
-	<div class="siteKeyvisual__animation" data-animation></div>
-	<div class="siteKeyvisual__claim u-invertText u-brandFace">
-		<p>A starter Sass-Kit for responsive projects, <br>which embraces OOCSS, BEM and the Atomic Design-Approach.</p>
-		<a href="#components" class="btn btn--invert">Documentation</a>
-		<a href="https://github.com/Inkdpixels/Brics/releases" class="btn btn--invert" target="_blank">Download the latest release</a>
-	</div>
-</section>
 <main class="siteContent">
 	<div class="siteWrapper">
 		<div class="g">
@@ -81,7 +74,9 @@
 							<a class="btn" href="https://github.com/sass/libsass" target="_blank">About Libsass</a>
 						</div>
 						<div class="gi u-w1/2">
-							<div class="siteHeader__brandLogo u-linkReset u-brandFace" style="color: #73c2fb !important; text-align: center; display: block; padding: 1em 0; font-size: 5em;height: 265px;">Brics</div>
+							<div class="u-alignCenter u-m1/1">
+								<img src="Assets/Dist/Images/Brics.svg" style="padding: 3.06em 0;">
+							</div>
 							<h5>Scalable to it's last piece</h5>
 							<p>Interested in the thoughts behind Brics? Take a peek at the used methodologies used in Brics, as well as some best practices for writing Sass.</p>
 							<a class="btn btn--disabled" aria-disabled="true" href="">Methodologies & Best practices</a>
