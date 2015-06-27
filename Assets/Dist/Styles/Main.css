@@ -1,7 +1,7 @@
 @import url("//fonts.googleapis.com/css?family=Exo+2:400,100,200,300,500,600,700,800,900");
 /**
  * Brics - A Starter Sass-Kit which embraces OOCSS, BEM and the Atomic Design-Approach.
- * @version 1.3.0
+ * @version 1.3.2
  * @see https://inkdpixels.github.io/Brics/
  */
 /**
@@ -677,10 +677,10 @@ body {
  * Set the button width to the width of it's parent element.
  */
 .btn--invert {
-  color: black; }
+  color: white; }
   .btn--invert:hover {
-    background: black;
-    border-color: black;
+    background: white;
+    border-color: white;
     color: #1fcfe3; }
 
 /*
@@ -1109,6 +1109,9 @@ sub {
   display: table-cell;
   vertical-align: middle;
   width: 100%; }
+  .flag__body,
+  .flag__body > :last-child {
+    margin-bottom: 0; }
 
 /**
  * Embed a external iframe or media file with a fluid width/height ratio.
