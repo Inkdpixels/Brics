@@ -35,4 +35,10 @@
   display: table-cell;
   vertical-align: middle;
   width: 100%;
+
+  // Removes the bottom margin of the last element.
+  &,
+  > :last-child {
+    margin-bottom: 0;
+  }
 }

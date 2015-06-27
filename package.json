@@ -1,6 +1,6 @@
 {
   "name": "Brics",
-  "version": "1.3.0",
+  "version": "1.3.2",
   "description": "A Starter Sass-Kit which embraces OOCSS, BEM and the Atomic Design-Approach",
   "main": "Main.scss",
   "scripts": {
