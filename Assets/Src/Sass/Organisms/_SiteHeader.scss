@@ -1,13 +1,12 @@
 .siteHeader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100%;
-  padding: 20px 2rem;
-  pointer-events: none;
+  height: 30rem;
+  text-align: center;
+  font-size: 26px;
+  line-height: 1.3;
+  background: #F3F3F3;
 }
+
 .siteHeader__brandLogo {
-  font-size: 3em;
-  color: #FFF !important;
+  display: inline-block;
+  padding: 3.5em 0 .5em;
 }

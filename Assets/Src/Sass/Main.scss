@@ -1,6 +1,6 @@
-@import url(//fonts.googleapis.com/css?family=Exo+2:400,100,200,300,500,600,700,800,900);
+@import url('//fonts.googleapis.com/css?family=Exo+2:400,100,200,300,500,600,700,800,900');
 
-$brand-font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$brand-font-family: 'Exo 2', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $brand-logos: (
         sass: (
                 image: 'Sass.svg',
@@ -8,17 +8,20 @@ $brand-logos: (
                 height: 170px
         )
 );
+$brand-colors: (
+        primary: #1fcfe3
+);
 
-$sans-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$sans-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $base-font-weight: 300;
 
 $layout-width: rs(1200);
 $is-responsive: false;
 
-@import "../../../Main";
+@import '../../../Main';
 
-@import "Molecules/CodeExample";
-@import "Organisms/SiteHeader";
-@import "Organisms/SiteKeyVisual";
-@import "Organisms/SiteContent";
-@import "Vendor/Prism";
+@import 'Atoms/Button';
+@import 'Molecules/CodeExample';
+@import 'Organisms/SiteHeader';
+@import 'Organisms/SiteContent';
+@import 'Vendor/Prism';
