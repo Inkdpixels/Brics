@@ -6,37 +6,37 @@
  * The base class for all media elements.
  */
 .media {
-  display: block;
-  @include u-cf();
+	display: block;
+	@include u-cf();
 }
 
 /*
  * The class for the floated media element.
  */
 .media__img {
-  float: left;
-  margin-right: rs($basic-spacing);
+	float: left;
+	margin-right: rs($basic-spacing);
 
-  > img {
-    display: block;
-  }
+	> img {
+		display: block;
+	}
 }
 
 /*
  * Reverts the order of the elements.
  */
 .media__img--rev {
-  float: right;
-  margin-left: rs($basic-spacing);
-  margin-right: 0;
+	float: right;
+	margin-left: rs($basic-spacing);
+	margin-right: 0;
 }
 .media__img--compact {
-  margin-right: rs($half-spacing);
+	margin-right: rs($half-spacing);
 
-  &.media__img--rev {
-    margin-left: rs($half-spacing);
-    margin-right: 0;
-  }
+	&.media__img--rev {
+		margin-left: rs($half-spacing);
+		margin-right: 0;
+	}
 }
 
 
@@ -44,12 +44,12 @@
  * The class for the content beside the media element.
  */
 .media__body {
-  overflow: hidden;
-  display: block;
+	overflow: hidden;
+	display: block;
 
-  // Removes the bottom margin of the last element.
-  &,
-  > :last-child {
-    margin-bottom: 0;
-  }
+	// Removes the bottom margin of the last element.
+	&,
+	> :last-child {
+		margin-bottom: 0;
+	}
 }

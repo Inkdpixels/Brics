@@ -4,19 +4,19 @@
  */
 
 .btnGroup {
-  @include u-cf();
+	@include u-cf();
 }
 
 .btnGroup__btn {
-  float: $start;
-  border-radius: 0;
-  border-right: 0;
+	float: $start;
+	border-radius: 0;
+	border-right: 0;
 
-  &:first-child {
-    border-radius: $brand-border-radius 0 0 $brand-border-radius;
-  }
-  &:last-child {
-    border-radius: 0 $brand-border-radius $brand-border-radius 0;
-    border-right: 1px solid;
-  }
+	&:first-child {
+		border-radius: $brand-border-radius 0 0 $brand-border-radius;
+	}
+	&:last-child {
+		border-radius: 0 $brand-border-radius $brand-border-radius 0;
+		border-right: 1px solid;
+	}
 }
