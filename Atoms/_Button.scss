@@ -6,110 +6,110 @@
  * The base class for all buttons.
  */
 @mixin btn() {
-  display: inline-block;
+	display: inline-block;
 
-  // Set in em's so we can change the size of the button depending on the font-size.
-  padding: .8em 1.5em;
-  border: 1px solid currentColor;
-  background: 0;
-  border-radius: $brand-border-radius;
-  cursor: pointer;
+	// Set in em's so we can change the size of the button depending on the font-size.
+	padding: .8em 1.5em;
+	border: 1px solid currentColor;
+	background: 0;
+	border-radius: $brand-border-radius;
+	cursor: pointer;
 
-  font-size: .8em;
+	font-size: .8em;
 
-  // Normalize some rules across the targeted elements (<input>, <button> and the .btn class).
-  font-weight: normal;
-  line-height: 1;
-  color: $btn-color;
-  vertical-align: top;
-  transition: all $transition-duration ease;
+	// Normalize some rules across the targeted elements (<input>, <button> and the .btn class).
+	font-weight: normal;
+	line-height: 1;
+	color: $btn-color;
+	vertical-align: top;
+	transition: all $transition-duration ease;
 
-  &,
-  &:hover {
-    text-decoration: none;
-  }
+	&,
+	&:hover {
+		text-decoration: none;
+	}
 
-  &:hover {
-    background: $btn-color;
-    border-color: $btn-color;
-    color: color-adjust($btn-color, 100%);
-  }
+	&:hover {
+		background: $btn-color;
+		border-color: $btn-color;
+		color: color-adjust($btn-color, 100%);
+	}
 }
 .btn {
-  @include btn();
+	@include btn();
 }
 
 /*
  * Set the button width to the width of it's parent element.
  */
 @mixin btn--full() {
-  display: block;
-  text-align: center;
+	display: block;
+	text-align: center;
 
-  // The following is so that this class works properly on inputs as well as anchor tags.
-  padding-right: 0;
-  padding-left: 0;
-  width: 100%;
+	// The following is so that this class works properly on inputs as well as anchor tags.
+	padding-right: 0;
+	padding-left: 0;
+	width: 100%;
 }
 .btn--full {
-  @include btn--full();
+	@include btn--full();
 }
 
 /*
  * Set the button width to the width of it's parent element.
  */
 @mixin btn--invert() {
-  color: color-adjust($base-text-color, 100%);
+	color: color-adjust($base-text-color, 100%);
 
-  &:hover {
-    background: color-adjust($base-text-color, 100%);
-    border-color: color-adjust($base-text-color, 100%);
-    color: $btn-color;
-  }
+	&:hover {
+		background: color-adjust($base-text-color, 100%);
+		border-color: color-adjust($base-text-color, 100%);
+		color: $btn-color;
+	}
 }
 .btn--invert {
-  @include btn--invert();
+	@include btn--invert();
 }
 
 /*
  * Visualize the disabled state of the button.
  */
 @mixin btn--disabled() {
-  color: $base-text-color;
-  pointer-events: none;
-  opacity: .5;
+	color: $base-text-color;
+	pointer-events: none;
+	opacity: .5;
 }
 .btn--disabled,
 .btn[disabled] {
-  @include btn--disabled();
+	@include btn--disabled();
 }
 
 /*
  * Visualize the positive purpose/action of the button.
  */
 @mixin btn--positive() {
-  color: $color-positive;
+	color: $color-positive;
 
-  &:hover {
-    background: $color-positive;
-    border-color: $color-positive;
-  }
+	&:hover {
+		background: $color-positive;
+		border-color: $color-positive;
+	}
 }
 .btn--positive {
-  @include btn--positive();
+	@include btn--positive();
 }
 
 /*
  * Visualize the negative purpose/action of the button.
  */
 @mixin btn--negative() {
-  color: $color-negative;
+	color: $color-negative;
 
-  &:hover {
-    background: $color-negative;
-    border-color: $color-negative;
-  }
+	&:hover {
+		background: $color-negative;
+		border-color: $color-negative;
+	}
 }
 .btn--negative {
-  @include btn--negative();
+	@include btn--negative();
 }

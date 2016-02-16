@@ -9,10 +9,10 @@ $grid-gutter: $column-gutter / 2;
  */
 .g,
 .grid {
-  margin-left: -#{$grid-gutter};
-  margin-right: -#{$grid-gutter};
+	margin-left: -#{$grid-gutter};
+	margin-right: -#{$grid-gutter};
 
-  @include u-cf();
+	@include u-cf();
 }
 
 /*
@@ -20,7 +20,7 @@ $grid-gutter: $column-gutter / 2;
  */
 .gi,
 .grid__item {
-  float: $start;
-  padding-left: $grid-gutter;
-  padding-right: $grid-gutter;
+	float: $start;
+	padding-left: $grid-gutter;
+	padding-right: $grid-gutter;
 }

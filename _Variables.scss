@@ -14,8 +14,8 @@ $image-base-path: '../Images/' !default;
 // All brand colors, for each of these keys, a utility color-class will be generated.
 // f.e. `.u-brandColor-primary { color: #0097d7; }`
 $brand-colors: (
-        primary: #0097d7
-)  !default;
+	primary: #0097d7
+)	!default;
 
 // The main brand font-family
 $brand-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
@@ -29,11 +29,11 @@ $brand-border-radius: 2px !default;
 //
 // Be aware that you need to specify the dimensions of your logo, otherwise it won't be displayed.
 $brand-logos: (
-        default: (
-                image: 'BrandLogo.svg',
-                width: 200px,
-                height: 100px
-        )
+	default: (
+		image: 'BrandLogo.svg',
+		width: 200px,
+		height: 100px
+	)
 ) !default;
 
 // =============================================================================
@@ -95,7 +95,7 @@ $content-background: #fff !default;
 // Z-Index Masterlist, describe your z-index'es here, and use the z() function in your Sass files.
 // F.e: z-index: z('myElement');
 $zIndexes: (
-        // myElement: 1000
+	// myElement: 1000
 ) !default;
 
 // =============================================================================
@@ -108,14 +108,14 @@ $is-responsive: true !default;
 // Breakpoints, each breakpoint is accessible via the mq('myKey') @mixin
 // and will output the written rules inside a media-query declaration.
 $mq-breakpoints: (
-        medium: (
-                query: 'screen and (min-width: 600px)',
-                classNameShorthand: 'm'
-        ),
-        large: (
-                query: 'screen and (min-width: 1200px)',
-                classNameShorthand: 'l'
-        )
+	medium: (
+		query: 'screen and (min-width: 600px)',
+		classNameShorthand: 'm'
+	),
+	large: (
+		query: 'screen and (min-width: 1200px)',
+		classNameShorthand: 'l'
+	)
 ) !default;
 
 // Default unit for media-query mixins(min-screen(), max-screen(), screen()) - it must include a digit e.g.:
