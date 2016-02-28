@@ -26,9 +26,11 @@
 		margin-bottom: 0;
 		vertical-align: middle;
 	}
+
 	.form__item {
 		margin-#{$end}: 1em;
 	}
+
 	label {
 		margin-#{$end}: .3em;
 	}
