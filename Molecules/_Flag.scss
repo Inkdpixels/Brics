@@ -16,7 +16,7 @@
 .flag__image {
 	display: table-cell;
 	vertical-align: middle;
-	padding-right: 10px;
+	padding-right: $column-gutter;
 
 	> img {
 		display: block;
@@ -25,7 +25,7 @@
 }
 .flag__image--rev {
 	padding-right: 0;
-	padding-left: 10px;
+	padding-left: $column-gutter;
 }
 
 /*

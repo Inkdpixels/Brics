@@ -15,7 +15,7 @@
  */
 .media__img {
 	float: left;
-	margin-right: rs($basic-spacing);
+	margin-right: $column-gutter;
 
 	> img {
 		display: block;
@@ -27,14 +27,14 @@
  */
 .media__img--rev {
 	float: right;
-	margin-left: rs($basic-spacing);
+	margin-left: $column-gutter;
 	margin-right: 0;
 }
 .media__img--compact {
-	margin-right: rs($half-spacing);
+	margin-right: $column-gutter / 2;
 
 	&.media__img--rev {
-		margin-left: rs($half-spacing);
+		margin-left: $column-gutter / 2;
 		margin-right: 0;
 	}
 }
