@@ -3,10 +3,12 @@
  */
 
 body {
+	$line-height: $base-line-height/$base-font-size;
+	$font-size: $base-font-size / 16 * 100%;
 	// Remove default margin.
 	margin: 0;
 
-	font: $base-font-weight #{$base-font-size/16*100}%/#{$base-line-height/$base-font-size} $base-font-family;
+	font: $base-font-weight #{$font-size }/#{$line-height} $base-font-family;
 	text-align: $start;
 	color: $base-text-color;
 	background: $body-background;

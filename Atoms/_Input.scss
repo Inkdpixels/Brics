@@ -40,7 +40,10 @@ input {
 // Fix the font-settings for input placeholders since they wont get inherited from parent elements e.g. <body>.
 input, textarea {
 	@include placeholder() {
-		font: $base-font-weight #{$base-font-size/16*100}%/#{$base-line-height/$base-font-size} $base-font-family;
+		$line-height: $base-line-height/$base-font-size;
+		$font-size: $base-font-size / 16 * 100%;
+
+		font: $base-font-weight #{$font-size }/#{$line-height} $base-font-family;
 	}
 }
 
