@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.3.3
+**Implemented enhancements:**
+- Add a consistent column gutter for both the Grid, Media and Flag Molecule
+
+**Fixed issues:**
+- Adjust the base font declaration to fix errors in newer builds of node-sass
+
 ## 1.3.2
 **Implemented enhancements:**
 - Added a shorthand function to  the `$brand-colors` Sass map.
